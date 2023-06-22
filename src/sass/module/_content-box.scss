@@ -1,9 +1,26 @@
 @use "global" as *;
 
 
-.content-box__image img {
+.content-box__image {
+  position: relative;
   width: 100%;
-  height: rem(227);
+}
+
+.content-box__color {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  background-color: #408F95;
+}
+
+
+.content-box__image img {
+  height: 100%;
+  width: 100%;
+  aspect-ratio: 345 / 227;
 }
 
 

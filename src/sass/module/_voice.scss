@@ -1,6 +1,10 @@
 @use "global" as *;
 
 
+.voice__inner.inner {
+  max-width: rem(500);
+}
+
 .voice__item {
   margin-top: rem(40);
 }

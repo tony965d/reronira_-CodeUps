@@ -37,9 +37,27 @@
   margin-top: rem(4);
 }
 
+.item__image {
+  position: relative;
+  width: 50%;
+  padding-top: rem(9);
+}
+
+.item__color {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  background-color: #408F95;
+}
+
 .item__image img {
-  width: rem(151);
-  height: rem(117);
+  width: 100%;
+  height: 100%;
+  aspect-ratio: 151 / 117;
+  object-fit: cover;
 }
 
 .item__text {

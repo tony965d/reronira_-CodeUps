@@ -1,6 +1,8 @@
 @use "global" as *;
 
-
+.about__inner.inner {
+  max-width: rem(500);
+}
 
 .about__wrapper {
   position: relative;  
@@ -15,7 +17,7 @@
   width: rem(281);
   height: rem(186);
   background-image: url("../../images/common/dummy.jpg");
-  border: solid 1px red;
+  // border: solid 1px red;
 }
 
 .about__contents {
