@@ -1,0 +1,29 @@
+@use "global" as *;
+
+.header {
+  width: 100%;
+  height: rem(80);
+  background: #0d2936ad;
+  position: fixed;
+  z-index: 100;
+}
+
+.header__inner.inner {
+  height: inherit;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header__logo {
+  display: flex;
+  align-items: center;
+  height: inherit;
+  z-index: 1000;
+}
+
+.header__logo img {
+  width: rem(102);
+  height: rem(38);
+}
+

@@ -1,0 +1,96 @@
+@use "global" as *;
+
+.button {
+  position: relative;
+  font-family: $english-font-family;
+  font-size: rem(14);
+  color: $white;
+  background-color: #408F95;
+  display: inline-block;
+  width: rem(202);
+  padding-top: rem(16);
+  padding-bottom: rem(16);
+  text-align: center;
+  z-index: 0;
+  transition: .3s;
+}
+
+
+
+.button::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  width: 0%;
+  height: 100%;
+  background-color: $white;
+  border: solid 1px #408F95;
+  transition: .3s;
+  // display: block;
+  // opacity: 1;
+}
+
+.button::after {
+  content: '';
+  position: absolute;
+  top: rem(4);
+  left: rem(4);
+  border: solid 1px #408F95;
+  width: 100%;
+  height: 100%;
+  z-index: -10;
+}
+
+
+.button:hover {
+  color: #408F95;
+  z-index: 100;
+  transition: .3s;
+  // opacity: 1;
+}
+
+.button:hover::before {
+  width: 100%;
+}
+
+
+
+.button:hover .button__arrow {
+  border-bottom: 1px solid #408F95;
+  border-right: 1px solid #408F95;
+}
+
+
+
+
+// .button::before {
+//   content: "";
+//   position: absolute;
+//   top: 0;
+//   left: 0;
+//   // width: rem(202);
+//   background-color: $white;
+//   color: #408F95;
+// }
+
+
+.button__arrow {
+  width: rem(40);
+  height: rem(6);
+  border-bottom: 1px solid $white;
+  border-right: 1px solid $white;
+  transform: skew(45deg);
+  display: inline-block;
+  margin-left: rem(8);
+  margin-bottom: rem(2);
+  transition: .3s;
+}
+
+
+
+.button--top {
+  margin-top: rem(40);
+}
+

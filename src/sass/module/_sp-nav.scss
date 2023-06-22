@@ -1,0 +1,28 @@
+@use "global" as *;
+
+.sp-nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: none;
+  height: rem(667);
+  width: 100%;
+  background-color: #408F95;
+  padding-top: rem(104);
+  z-index: 100;
+}
+
+
+
+// .sp-nav__inner.inner {
+//   padding-right: rem();
+//   padding-left: rem();
+// }
+
+.sp-nav__items {
+  // position: absolute;
+  // top: 0;
+  // left: 0;
+  height: rem(452);
+
+}

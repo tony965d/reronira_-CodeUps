@@ -1,0 +1,24 @@
+@use "global" as *;
+
+.section-header__title {
+  font-size: rem(32);
+  font-family: $english-font-family;
+  font-weight: 400;
+  color: $green;
+  text-align: center;
+}
+
+.section-header__title:first-letter {
+  color: #408F95;
+}
+
+.section-header__sub-title {
+  font-size: rem(12);
+  color: #408F95;
+  text-align: center;
+}
+
+.section-header__title--contact {
+  font-size: rem(80);
+  line-height: 1.0;
+}

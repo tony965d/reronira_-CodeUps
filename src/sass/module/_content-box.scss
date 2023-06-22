@@ -1,0 +1,26 @@
+@use "global" as *;
+
+
+.content-box__image img {
+  width: 100%;
+  height: rem(227);
+}
+
+
+.content-box__title {
+  margin-top: rem(24);
+  font-size: rem(20);
+  font-weight: $bold;
+  
+}
+
+.content-box__text {
+  border-top: solid 1px #408F95;
+  padding-top: rem(8);
+  color: $green;
+}
+
+.content-box__button {
+  text-align: center;
+  margin-top: rem(40);
+}

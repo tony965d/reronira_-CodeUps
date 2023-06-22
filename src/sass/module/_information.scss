@@ -1,0 +1,12 @@
+@use "global" as *;
+
+.information {
+  padding-top: rem(80);
+  padding-bottom: rem(80);
+  background-color: #DDF0F1;
+}
+
+
+.information__contents {
+  margin-top: rem(24);
+}

@@ -1,0 +1,17 @@
+@use "global" as *;
+
+
+.menu-item {
+  display: flex;
+  justify-content: space-between;
+}
+
+.menu-item__name {
+  color: $green;
+  font-size: rem(14);
+}
+ 
+.menu-item__value {
+  color: $green;
+  font-size: rem(14);
+}

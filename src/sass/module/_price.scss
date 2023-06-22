@@ -1,0 +1,124 @@
+@use "global" as *;
+
+
+.price {
+  padding-top: rem(80);
+  padding-bottom: rem(80);
+  background: #DDF0F1;
+}
+
+
+.price__wrapper {
+  margin-top: rem(24);
+}
+
+.price__slide {
+
+}
+
+.price__image {
+  position: relative;
+  display: inline-block;
+  width: rem(227);
+}
+
+.price__image::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 1;
+  display: inline-block;
+  width: 0;
+  height: 100%;
+  background-color: #408F95;
+}
+
+@keyframes barAnime{
+	0% {
+		left: 0;
+		width: 0;
+	}
+	50% {
+		left: 0;
+		width: 100%;
+	}
+	51% {
+		left: 0;
+		width: 100%;
+	}
+	75% {
+		left: 0;
+		width: 100%;
+	}
+	100% {
+		left: 100%;
+		width: 0;
+	}
+}
+
+
+
+
+// .price__image.slidein.is-animated {
+//   animation: slideIn 1s cubic-bezier(0.25, 1, 0.5, 1) 1 forwards;
+// }
+
+// @keyframes slideIn {
+//   0% {
+//     transform: translateX(180px);
+//     opacity: 0;
+//   }
+//   100% {
+//     transform: translateX(0);
+//   }
+//   40%,100% {
+//     opacity: 1;
+//   }
+// }
+
+// .price__image {
+//   position: relative;
+//   z-index: 0;
+// }
+
+// .price__image::before {
+//   content: '';
+//   position: absolute;
+//   top: 0;
+//   left: 0;
+//   width: 0%;
+//   height: 100%;
+//   background-color: red;
+//   transition: 3s;
+//   z-index: -1;
+// }
+
+// .price__image:hover {
+//   z-index: 1;
+// }
+
+// .price__image:hover::before {
+//   width: 100%;
+// }
+
+.price__image img {
+  height: rem(227);
+  width: 100%;
+}
+
+.price__box {
+  margin-top: rem(40);
+}
+
+
+.price__sub-title {
+  font-size: rem(16);
+  color: $green;
+  border-bottom: solid 1px #408F95;
+}
+
+.price__button {
+  margin-top: rem(40);
+  text-align: center;
+}

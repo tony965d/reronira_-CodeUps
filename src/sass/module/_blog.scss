@@ -1,0 +1,19 @@
+@use "global" as *;
+
+.blog__inner.inner {
+  padding-right: rem(21);
+  padding-left: rem(21);
+}
+
+.blog__card {
+  margin-top: rem(40);
+} 
+
+.blog__card--first {
+  margin-top: rem(24);
+}
+
+.blog__button {
+  margin-top: rem(40);
+  text-align: center;
+}
