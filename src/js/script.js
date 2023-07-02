@@ -24,7 +24,7 @@ jQuery(function ($) { // この中であればWordpressでも「$」が使用可
 
 
   var mySwiper = new Swiper ('.js-campaign-swiper', {
-    slidesPerView: 1.2,
+    slidesPerView: 1.26,
     spaceBetween: 24,
     
     loop: true,
@@ -32,6 +32,21 @@ jQuery(function ($) { // この中であればWordpressでも「$」が使用可
         delay: 3000,   
     },          
     speed: 500,    
+    breakpoints: {
+      // スライドの表示枚数：500px以上の場合
+      768: {
+        // slidesPerView: 'auto',
+        spaceBetween: 40,
+        slidesPerView: 3.485,
+        navigation: {
+          nextEl: '.swiper-button-next',
+          prevEl: '.swiper-button-prev',
+        },
+      },
+
+    },
+
+
   });
 
 
@@ -153,10 +168,79 @@ var box = $('.js-content-box__image'),
   });
  
 
+  // $(document).ready(function() {
+  //   var pagetop = $('.#page-top');
+  //     $(window).scroll(function () {
+  //        if ($(this).scrollTop() > 400) {
+  //             pagetop.fadeIn();
+  //        } else {
+  //             pagetop.fadeOut();
+  //             }
+  //             scrollHeight = $(document).height(); //ドキュメントの高さ 
+  //             scrollPosition = $(window).height() + $(window).scrollTop(); //現在地 
+  //             footHeight = $("footer").innerHeight(); //footerの高さ（＝止めたい位置）
+  //             if ( scrollHeight - scrollPosition  <= footHeight ) { //ドキュメントの高さと現在地の差がfooterの高さ以下になったら
+  //                 pagetop.css({
+  //                     "position":"absolute", //pisitionをabsolute（親：wrapperからの絶対値）に変更
+  //                     "bottom": footHeight + 20 //下からfooterの高さ + 20px上げた位置に配置
+  //           });
+  //       } else { //それ以外の場合は
+  //           pagetop.css({
+  //               "position":"fixed", //固定表示
+  //               "bottom": "20px" //下から20px上げた位置に
+  //           });
+  //       }
+  //        });
+  //        pagetop.click(function () {
+  //            $('body, html').animate({ scrollTop: 0 }, 500);
+  //               return false;
+  //    });
+  // });
 
   
 
+  $(function () {
+    const pageTop = $("#page-top");
+    pageTop.hide();
+    $(window).scroll(function () {
+      if ($(this).scrollTop() > 100) {
+        pageTop.fadeIn();
+      } else {
+        pageTop.fadeOut();
+      }
+    });
+    pageTop.click(function () {
+      $("body,html").animate(
+        {
+          scrollTop: 0,
+        },
+        500
+      );
+      return false;
+    });
+    // フッター手前でストップ
+    $("#page-top").hide();
+    $(window).on("scroll", function () {
+      var scrollHeight = $(document).height(); // scrollHeight を定義
+      var scrollPosition = $(window).height() + $(window).scrollTop();
+      var footHeight = $("footer").innerHeight();
+      if (scrollHeight - scrollPosition <= footHeight) {
+        $("#page-top").css({
+          "position": "absolute",
+          "bottom": footHeight + 15,
+        });
+      } else {
+        $("#page-top").css({
+          "position": "fixed",
+          "bottom": 15,
+        });
+      }
+    });
+  });
 
 
+
+
+  
 
 });

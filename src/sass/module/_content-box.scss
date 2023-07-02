@@ -4,6 +4,23 @@
 .content-box__image {
   position: relative;
   width: 100%;
+
+  @include mq(md) {
+    width: 50%;
+  }
+}
+
+.content-box__body {
+
+  margin-top: rem(24);
+  
+  @include mq(md) {
+    width: 50%;
+    padding-top: rem(60);
+    padding-left: rem(48);
+    padding-bottom: rem(60);
+    margin-top: 0;
+  }
 }
 
 .content-box__color {
@@ -21,23 +38,36 @@
   height: 100%;
   width: 100%;
   aspect-ratio: 345 / 227;
+  object-fit: cover;
 }
 
 
 .content-box__title {
-  margin-top: rem(24);
   font-size: rem(20);
   font-weight: $bold;
+  line-height: 1.2;
+  border-bottom: solid 1px #408F95;
+  padding-bottom: rem(4);
+
+  @include mq(md) {
+    font-size: rem(24);
+    line-height: 1.0;
+    padding-bottom: rem(8);
+  }
   
 }
 
 .content-box__text {
-  border-top: solid 1px #408F95;
-  padding-top: rem(8);
   color: $green;
+  line-height: 1.5;
+  margin-top: rem(8);
 }
 
 .content-box__button {
   text-align: center;
-  margin-top: rem(40);
+  margin-top: rem(38);
+  
+  @include mq(md) {
+    margin-top: rem(40);
+  }
 }

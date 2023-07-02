@@ -5,26 +5,109 @@
   display: flex;
   flex-wrap: wrap;
   flex-direction: column;
+  align-content: space-between;
 }
 
 .nav-items__item {
   color: $white;
-  width: 50%;
-  margin-top: rem(40);
+  // width: 47.46835443%;
+  // width: 49.3%;
+
+
+
+  // width: 48.65%;
+  width: 49.8%;
   display: flex;
   flex-direction: column;
+  // margin-top: rem(40);
+  
+  
+  
+  margin-top: 0;
+  
+  
+  @include mq(md) {
+    width: 19.5%;
+    height: 100%;
+  }
+}
+
+.nav-items__item--top {
+
+  @include mq(md) {
+    margin-top: 0;
+  }
 }
 
 .nav-items__item:first-child {
   margin-top: 0;
+
+  @include mq(md) {
+    width: rem(168);
+  }
 }
 
-.nav-items__item:nth-child(5) {
-  margin-top: 0;
+
+
+// .nav-items__item:nth-child(n + 5) {
+//   margin-left: rem(16);
+// }
+
+.nav-items__item:nth-child(n + 3) {
+  // margin-left: rem(16);
+  margin-left: rem(12);
+  margin-right: 0;
+
+  @include mq(md) {
+    margin-left: 0;
+  }
 }
+
+
+
+
+.nav-items__item:nth-child(2n) {
+  margin-top: rem(40);
+  
+  @include mq(md) {
+    margin-top: 0;
+  }
+}
+
+.nav-items__item:nth-child(2) {
+  
+  @include mq(md) {
+    width: rem(152);
+  }
+}
+
+.nav-items__item:nth-child(3) {
+  
+  @include mq(md) {
+    width: rem(152);
+  }
+}
+
+.nav-items__item:nth-child(4) {
+  margin-bottom: rem(8);
+
+  @include mq(md) {
+    width: rem(182);
+    margin-bottom: 0;
+  }
+}
+
 
 .nav-items__unit {
   display: flex;
+  // margin-top: rem(40);
+  // margin-top: rem(37);
+
+  margin-top: rem(40);
+}
+
+.nav-items__unit:first-child {
+  margin-top: 0;
 }
 
 .nav-items__icon {
@@ -36,18 +119,32 @@
   width: rem(18);
   height: rem(18);
   display: inline-block;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
 }
 
 .nav-items__main {
   font-weight: $bold;
   line-height: 1.1;
   display: inline-block;
+
 }
 
 
 .nav-items__sub {
   margin-top: rem(24);
-  margin-left: rem(18);
-  display: inline-block;
-  line-height: 1.1;
+  // margin-left: rem(24);
+  margin-left: rem(22);
+  display: block;
+  line-height: 1.125;
+  
+  @include mq(md) {
+    margin-top: rem(24);
+    margin-left: rem(22);
+
+  }
+}
+
+.nav-items__item.nav-items__item--left {
+  margin-left: 0;
 }

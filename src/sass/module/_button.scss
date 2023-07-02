@@ -4,6 +4,7 @@
   position: relative;
   font-family: $english-font-family;
   font-size: rem(14);
+  line-height: 1.58;
   color: $white;
   background-color: #408F95;
   display: inline-block;
@@ -36,7 +37,7 @@
   content: '';
   position: absolute;
   top: rem(4);
-  left: rem(4);
+  left: rem(2);
   border: solid 1px #408F95;
   width: 100%;
   height: 100%;

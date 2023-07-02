@@ -1,0 +1,46 @@
+@use "global" as *;
+
+.campaign__pre .swiper-button-prev, .swiper-rtl .swiper-button-next {
+
+  @include mq(md) {
+    // position: absolute;
+    // right: 50%;
+    // top: 25%;
+    // left: unset;
+    // transform: skewy(-45deg);
+    // width: rem(40);
+    // height: rem(6);
+    // border-top: 1px solid #408F95;
+    // border-right: 1px solid #408F95;
+    // display: block;
+    
+    position: absolute;
+    top: unset;
+    left: unset;
+    right: 22%;
+    bottom: 46%;
+    border-left: 1px solid #408F95;
+    border-bottom: 1px solid #408F95;
+    width: rem(40);
+    height: rem(6);
+    display: inline-block;
+    transform: skew(310deg);
+  }
+}
+
+.campaign__next .swiper-button-next, .swiper-rtl .swiper-button-prev {
+
+  @include mq(md) {
+    position: absolute;
+    top: unset;
+    left: unset;
+    right: 27%;
+    bottom: 47%;
+    border-right: 1px solid #408F95;
+    border-bottom: 1px solid #408F95;
+    width: rem(40);
+    height: rem(6);
+    display: inline-block;
+    transform: skew(45deg);
+  }
+}

@@ -6,6 +6,10 @@
   background: #0d2936ad;
   position: fixed;
   z-index: 100;
+
+  @include mq(md) {
+    height: rem(90);
+  }
 }
 
 .header__inner.inner {
@@ -13,6 +17,15 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+
+  @include mq(md) {
+    // max-width: rem(1410);
+    max-width: 100%;
+    width: 100%;
+    margin: 0;
+    padding-right: rem(40);
+    padding-left: rem(40);
+  }
 }
 
 .header__logo {
@@ -20,10 +33,34 @@
   align-items: center;
   height: inherit;
   z-index: 1000;
+
+  @include mq(md) {
+    // width: 9.8%;
+    width: 13.7%;
+  }
 }
 
 .header__logo img {
   width: rem(102);
   height: rem(38);
+  aspect-ratio: 102 / 38;
+  object-fit: cover;
+
+  @include mq(md) {
+    aspect-ratio: 133 / 50;
+    width: rem(133);
+    height: rem(50);
+  }
+}
+ 
+.header__pc-nav {
+  width: 62%;
 }
 
+.header__hamburger {
+
+  @include mq(md) {
+    display: none;
+  }
+
+}
