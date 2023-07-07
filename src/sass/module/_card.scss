@@ -8,6 +8,10 @@
   background-color: $white;
 }
 
+.card:hover {
+  opacity: 0.6;
+}
+
 
 .card__image img {
   width: 100%;
@@ -29,6 +33,7 @@
   font-size: rem(12);
   color: $green;
   font-family: $english-font-family;
+  display: block;
 }
 
 .card__title {

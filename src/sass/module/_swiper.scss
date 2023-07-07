@@ -1,46 +1,69 @@
 @use "global" as *;
 
-.campaign__pre .swiper-button-prev, .swiper-rtl .swiper-button-next {
+
+.swiper-button-prev, .swiper-rtl .swiper-button-next {
 
   @include mq(md) {
-    // position: absolute;
-    // right: 50%;
-    // top: 25%;
-    // left: unset;
-    // transform: skewy(-45deg);
-    // width: rem(40);
-    // height: rem(6);
-    // border-top: 1px solid #408F95;
-    // border-right: 1px solid #408F95;
-    // display: block;
-    
     position: absolute;
-    top: unset;
-    left: unset;
-    right: 22%;
-    bottom: 46%;
-    border-left: 1px solid #408F95;
-    border-bottom: 1px solid #408F95;
-    width: rem(40);
-    height: rem(6);
-    display: inline-block;
-    transform: skew(310deg);
+    top: 0;
+    left: 0;
+    width: rem(80);
+    height: rem(80);
+    border: solid 1px #408F95;
+    border-radius: 50%;
+    margin-top: 0;
   }
 }
 
-.campaign__next .swiper-button-next, .swiper-rtl .swiper-button-prev {
+.swiper-button-prev:hover {
+  opacity: 0.6;
+}
 
+
+// .campaign__pre .swiper-button-prev, .swiper-rtl .swiper-button-next {
+  
+  //   @include mq(md) {
+    
+    //     position: absolute;
+    //     top: unset;
+    //     left: unset;
+    //     right: 22%;
+    //     bottom: 46%;
+    //     border-left: 1px solid #408F95;
+    //     border-bottom: 1px solid #408F95;
+    //     width: rem(40);
+    //     height: rem(6);
+//     display: inline-block;
+//     transform: skew(310deg);
+//   }
+// }
+
+.swiper-button-next, .swiper-rtl .swiper-button-prev {
+  
+  
+  
   @include mq(md) {
     position: absolute;
-    top: unset;
-    left: unset;
-    right: 27%;
-    bottom: 47%;
-    border-right: 1px solid #408F95;
-    border-bottom: 1px solid #408F95;
-    width: rem(40);
-    height: rem(6);
-    display: inline-block;
-    transform: skew(45deg);
+    top: 0;
+    right: 0;
+    width: rem(80);
+    height: rem(80);
+    border: solid 1px #408F95;
+    border-radius: 50%;
+    margin-top: 0;
+
   }
+}
+
+.swiper-button-next:hover {
+
+  opacity: 0.6;
+}
+
+
+
+  .swiper-slide {
+    height: auto;
+    box-shadow: rem(2) rem(2) rem(10) rgba(0, 0, 0, 0.25);
+    margin-bottom: rem(10);
 }

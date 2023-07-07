@@ -2,9 +2,15 @@
 
 
 .menu-item {
+
   display: flex;
   justify-content: space-between;
   align-items: center;
+  gap: rem(40);
+
+  @include mq(md) {
+    gap: rem(92);
+  }
 }
 
 .menu-item__name {

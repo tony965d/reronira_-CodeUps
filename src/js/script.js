@@ -38,6 +38,7 @@ jQuery(function ($) { // この中であればWordpressでも「$」が使用可
         // slidesPerView: 'auto',
         spaceBetween: 40,
         slidesPerView: 3.485,
+        // slidesPerView: 4,
         navigation: {
           nextEl: '.swiper-button-next',
           prevEl: '.swiper-button-prev',

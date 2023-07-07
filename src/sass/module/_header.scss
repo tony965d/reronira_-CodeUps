@@ -19,7 +19,6 @@
   align-items: center;
 
   @include mq(md) {
-    // max-width: rem(1410);
     max-width: 100%;
     width: 100%;
     margin: 0;
@@ -35,12 +34,21 @@
   z-index: 1000;
 
   @include mq(md) {
-    // width: 9.8%;
     width: 13.7%;
   }
 }
 
-.header__logo img {
+.header__logo:hover {
+  opacity: 0.6;
+}
+
+.header__image {
+  display: flex;
+  height: inherit;
+  align-items: center;
+}
+
+.header__image img {
   width: rem(102);
   height: rem(38);
   aspect-ratio: 102 / 38;
