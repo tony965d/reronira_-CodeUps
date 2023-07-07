@@ -68,6 +68,10 @@
   }
 }
 
+.voice__item:hover {
+  opacity: 0.6;
+}
+
 .voice__item:first-child {
   margin-top: 0;
 }
