@@ -3,7 +3,12 @@
 
 .footer {
   background-color: #408F95;
-  position: relative;
+  position: relative; 
+  padding-bottom: rem(56);
+  
+  @include mq(md) {
+    padding-bottom: rem(80);
+  }
 }
 
 .footer__inner.inner {
@@ -121,13 +126,11 @@
 
 .footer__copyright {
   margin-top: rem(21);
-  padding-bottom: rem(56);
   text-align: center;
   
   
   @include mq(md) {
     margin-top: rem(76);
-    padding-bottom: rem(80);
     font-size: rem(14);
   }
 }

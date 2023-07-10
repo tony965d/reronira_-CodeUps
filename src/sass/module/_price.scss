@@ -31,21 +31,22 @@
   }
 }
 
-.price__inner::before {
-
-  @include mq(md) {
-    content: "";
-    position: absolute;
-    bottom: rem(-44);
-    // left: rem(-80);
-    left: calc(25% - 23.5vw);
-    width: rem(437);
-    height: rem(201);
-    background-image: url("../images/common/price_キンギョハナダイ.png");
-    background-size: cover;
-    aspect-ratio: 437 / 201;
-  }
+.price__background {
+  
+  position: absolute;
+  bottom: rem(-44);
+  right: clamp(rem(454) ,58vw ,rem(748));
+  width: rem(437);
+  height: rem(201);
 }
+
+.price__background img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  aspect-ratio: 437 / 201;
+}
+
 
 .price__wrapper {
   margin-top: rem(24);

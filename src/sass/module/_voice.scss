@@ -4,20 +4,6 @@
   position: relative;
 }
 
-.voice::before {
-
-  @include mq(md) {
-    content: "";
-    position: absolute;
-    top: rem(-117);
-    left: rem(101);
-    height: rem(138);
-    width: rem(301);
-    background-image: url("../images/common/voice_キンギョハナダイ.png");
-    background-size: cover;
-    aspect-ratio: 301 / 138;
-  }
-}
 
 .voice__inner.inner {
   max-width: rem(500);
@@ -31,20 +17,44 @@
   position: relative;
 }
 
-.voice__inner::before {
+ 
+.voice__bg-image {
+  position: absolute;
+  bottom: rem(-70);
+  right: rem(25);
+  height: rem(161);
+  width: rem(71);
+}
+
+.voice__bg-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  aspect-ratio: 71 / 161;
+}
+
+
+
+
+.voice__background {
 
   @include mq(md) {
-    content: "";
     position: absolute;
-    bottom: rem(-70);
-    right: rem(25);
-    height: rem(161);
-    width: rem(71);
-    background-image: url("../images/common/voice_イバラタツ.png");
-    background-size: cover;
-    aspect-ratio: 71 / 161;
+    top: rem(-120);
+    right: clamp(rem(545), 70vw, rem(884));
+    height: rem(138);
+    width: rem(301);
   }
 }
+
+.voice__background img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  aspect-ratio: 301 / 138;
+}
+
+
 
 .voice__wrapper {
   margin-top: rem(40);
@@ -63,8 +73,10 @@
   display: block;
 
   @include mq(md) {
-    width: 48.1%;
+    // width: 48.1%;
+    width: calc(50% - rem(40) / 2);
     margin-top: 0;
+    margin-right: rem(40);
   }
 }
 
@@ -74,6 +86,14 @@
 
 .voice__item:first-child {
   margin-top: 0;
+}
+
+.voice__item:nth-child(2n) {
+
+  @include mq(md) {
+    margin-right: 0;
+  }
+
 }
 
 

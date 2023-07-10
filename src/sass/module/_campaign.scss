@@ -62,11 +62,8 @@
 }
 
 
-.campaign__wrapper {
+.campaign__contents {
   margin-right: calc(50% - 50vw);
-
-  @include mq(md) {
-  }
 }
 
 .campaign__swiper {

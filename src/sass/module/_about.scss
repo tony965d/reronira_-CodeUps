@@ -1,28 +1,59 @@
 @use "global" as *;
 
+.about {
 
+  @include mq(md) {
+    padding-bottom: rem(60);
+  }
+}
 
 .about__inner {
   position: relative;
 }
 
-.about__inner::before {
+// .about__inner::before {
+
+//   @include mq(md) {
+//     content: "";
+//     position: absolute;
+//     bottom: rem(-88);
+//     right: calc(25% - 24.5vw);
+//     background-image: url("../images/common/_サンゴとイソギンチャク.png");
+//     aspect-ratio: 194 / 181;
+//     width: rem(194);
+//     height: rem(181);
+//     background-size: cover;
+//   }
+// }
+
+.about__background {
+  position: absolute;
+  top: rem(676);
+  // left: rem(983);
+  // right: calc(50% - 44.2vw);
+  left: clamp(rem(630), 79vw, rem(1008));
+  width: rem(194);
+  height: rem(181);
+}
+
+
+.about__background img {
 
   @include mq(md) {
-    content: "";
-    position: absolute;
-    bottom: rem(-88);
-    right: calc(25% - 24.5vw);
-    background-image: url("../images/common/_サンゴとイソギンチャク.png");
+    width: 100%;
+    height: 100%;
     aspect-ratio: 194 / 181;
-    width: rem(194);
-    height: rem(181);
-    background-size: cover;
+    object-fit: cover;
   }
 }
 
+
+
+
+
 .about__container {
   margin-top: rem(24);
+  position: relative;
 
   @include mq(md) {
     margin-top: rem(38);
@@ -46,35 +77,70 @@
   }
 }
 
-.about__wrapper::before {
-  content: "";
+.about__back-image {
   position: absolute;
-  bottom: 0;
-  right: 0;
   top: rem(26);
   left: rem(64);
   right: unset;
-  bottom: unset;
   width: rem(281);
   height: rem(186);
-  background-image: url("../images/common/about_2.png");
-  background-size: cover;
-  object-fit: cover;
-  aspect-ratio: 281 / 186;
   z-index: -10;
-  
+
   @include mq(md) {
   
     aspect-ratio: 880/581;
-    height: rem(581);
-    right: 0;
-    bottom: rem(5);
-    top: unset;
+    top: rem(80);
     left: unset;
+    right: 0;
     width: rem(880);
+    height: rem(581);
+  }
+
+}
+
+.about__back-image img {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+  aspect-ratio: 281 / 186;
+
+  @include mq(md) {
+  
+    aspect-ratio: 880/581;
     box-shadow: rem(2) rem(2) rem(10) rgba(0, 0, 0, 0.25);
   }
+
 }
+
+// .about__wrapper::before {
+//   content: "";
+//   position: absolute;
+//   bottom: 0;
+//   right: 0;
+//   top: rem(26);
+//   left: rem(64);
+//   right: unset;
+//   bottom: unset;
+//   width: rem(281);
+//   height: rem(186);
+//   background-image: url("../images/common/about_2.png");
+//   background-size: cover;
+//   object-fit: cover;
+//   aspect-ratio: 281 / 186;
+//   z-index: -10;
+  
+//   @include mq(md) {
+  
+//     aspect-ratio: 880/581;
+//     height: rem(581);
+//     right: 0;
+//     bottom: rem(5);
+//     top: unset;
+//     left: unset;
+//     width: rem(880);
+//     box-shadow: rem(2) rem(2) rem(10) rgba(0, 0, 0, 0.25);
+//   }
+// }
 
 
 .about__contents {
@@ -82,31 +148,34 @@
 
   @include mq(md) {
     position: absolute;
-    top: rem(305);
-    left: rem(223);
+    top: rem(200);
+    right: rem(40);
     width: rem(840);
     display: flex;
-    justify-content: space-between;
     margin-top: 0;
+    // justify-content: space-between;
   }
 }
 
 .about__image {
-
-  @include mq(md) {
-    padding-bottom: rem(60);
-  }
-}
-
-.about__image img {
   width: rem(128);
   height: rem(194);
-  aspect-ratio: 128 / 194;
-  object-fit: cover;
 
   @include mq(md) {
     width: rem(399);
     height: rem(606);
+    // padding-bottom: rem(60);
+    
+  }
+}
+
+.about__image img {
+  width: 100%;
+  height: 100%;
+  aspect-ratio: 128 / 194;
+  object-fit: cover;
+
+  @include mq(md) {
     aspect-ratio: 399 / 606;
   }
 }

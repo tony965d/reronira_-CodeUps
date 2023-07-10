@@ -17,24 +17,27 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-
+  
   @include mq(md) {
     max-width: 100%;
     width: 100%;
     margin: 0;
-    padding-right: rem(40);
+    padding-right: rem(20);
     padding-left: rem(40);
+    // gap: rem(408);
   }
 }
 
 .header__logo {
-  display: flex;
+  display: block;
   align-items: center;
   height: inherit;
   z-index: 1000;
+  // margin-right: auto;
 
   @include mq(md) {
-    width: 13.7%;
+    // width: 13.7%;
+    // width: 9.7%;
   }
 }
 
@@ -51,18 +54,20 @@
 .header__image img {
   width: rem(102);
   height: rem(38);
+  max-width: rem(102);
   aspect-ratio: 102 / 38;
-  object-fit: cover;
-
+  // object-fit: cover;
+  
   @include mq(md) {
-    aspect-ratio: 133 / 50;
     width: rem(133);
     height: rem(50);
+    max-width: rem(133);
+    aspect-ratio: 133 / 50;
   }
 }
  
 .header__pc-nav {
-  width: 62%;
+  // width: 62%;
 }
 
 .header__hamburger {
