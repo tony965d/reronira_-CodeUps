@@ -1,0 +1,45 @@
+@use "global" as *;
+
+
+.campaign-sub__contents {
+  margin-top: rem(40);
+}
+
+.campaign-sub__wrapper.inner {
+  padding: 0 rem(48);
+  max-width: rem(500);
+}
+
+.campaign-sub__feature {
+  box-shadow: rem(2) rem(2) rem(10) rgba(0, 0, 0, 0.25);
+  display: block;
+  margin-top: rem(40);
+}  
+
+.campaign-sub__feature:first-child {
+  margin-top: 0;
+}
+
+
+.campaign-sub__text {
+  display: none;
+
+  @include mq(md) {
+    display: block;
+    color: #408F95;
+    text-align: center;
+    font-size: rem(14);
+    font-weight: normal;
+  }
+}
+
+.campaign-sub__button {
+  display: none;
+  
+  @include mq(md) {
+    display: block;
+    margin-top: rem(16);
+  }
+}
+
+

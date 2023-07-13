@@ -1,41 +1,4 @@
-<!DOCTYPE html>
-<html lang="ja">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
-    <meta name="format-detection" content="telephone=no" />
-    <meta name="robots" content="noindex" />
-    <!-- meta情報 -->
-    <title>CodeUps</title>
-    <meta name="description" content="CodeUpsのポートフォリオです" />
-    <meta name="keywords" content="" />
-    <!-- ogp -->
-    <meta property="og:title" content="" />
-    <meta property="og:type" content="" />
-    <meta property="og:url" content="" />
-    <meta property="og:image" content="" />
-    <meta property="og:site_name" content="" />
-    <meta property="og:description" content="" />
-    <!-- ファビコン -->
-    <link rel="" href="#" />
-
-    <!-- Google font -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Gotu&family=Lato:wght@400;700&family=Noto+Sans+JP:wght@500&display=swap" rel="stylesheet">
-
-    <!-- css -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"/>
-    <link rel="stylesheet" href="./assets/css/style.css" />
-    <!-- JavaScript -->
-    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
-    <script type="text/javascript" src="./assets/js/jquery.inview.min.js"></script>
-    <script defer src="./assets/js/script.js"></script>
-
-
-  </head>
-  <body>
+<body>
     <header id="header" class="header js-header">
       <div class="header__inner inner">
         <h1 class="header__logo">
@@ -109,118 +72,112 @@
         <div class="sp-nav__inner inner">
 
           <div class="sp-nav__items nav-items">
-            <div class="nav-items__box">
+            <ul class="nav-items__item">
+              <li class="nav-items__unit">
+                <div class="nav-items__icon">
+                  <img src="./assets/images/common/starfish.png" alt="">
+                </div>
+                <a href="#" class="nav-items__main">キャンペーン</a>
+              </li>
+              <li class="nav-items__li">
+                <a href="#" class="nav-items__sub">ライセンス取得</a>
+              </li>
+              <li class="nav-items__li">
+                <a href="#" class="nav-items__sub">貸切体験ダイビング</a>
+              </li>
+              <li class="nav-items__li">
+                <a href="#" class="nav-items__sub">ナイトダイビング</a>
+              </li>
 
-              <ul class="nav-items__item">
-                <li class="nav-items__unit nav-items__unit--sp">
-                  <div class="nav-items__icon">
-                    <img src="./assets/images/common/starfish.png" alt="">
-                  </div>
-                  <a href="#" class="nav-items__main">キャンペーン</a>
-                </li>
-                <li class="nav-items__li">
-                  <a href="#" class="nav-items__sub">ライセンス取得</a>
-                </li>
-                <li class="nav-items__li">
-                  <a href="#" class="nav-items__sub">貸切体験ダイビング</a>
-                </li>
-                <li class="nav-items__li">
-                  <a href="#" class="nav-items__sub">ナイトダイビング</a>
-                </li>
-  
-                <li class="nav-items__unit">
-                  <div class="nav-items__icon">
-                    <img src="./assets/images/common/starfish.png" alt="">
-                  </div>
-                  <a href="#" class="nav-items__main">私たちについて</a>
-                </li>
-              </ul>
-              
-              
-              <ul class="nav-items__item">
-  
-  
-                <li class="nav-items__unit nav-items__unit--pc">
-                  <div class="nav-items__icon">
-                    <img src="./assets/images/common/starfish.png" alt="">
-                  </div>
-                  <a href="#" class="nav-items__main">ダイビング情報</a>
-                </li>
-                <li class="nav-items__li">
-                  <a href="#" class="nav-items__sub">ライセンス講習</a>
-                </li>
-                <li class="nav-items__li">
-                  <a href="#" class="nav-items__sub">体験ダイビング</a>
-                </li>
-                <li class="nav-items__li">
-                  <a href="#" class="nav-items__sub">ファンダイビング</a>
-                </li>
-                <li class="nav-items__unit">
-                  <div class="nav-items__icon">
-                    <img src="./assets/images/common/starfish.png" alt="">
-                  </div>
-                  <a href="#" class="nav-items__main">ブログ</a>
-                </li>
-              </ul>
-            </div>
+              <li class="nav-items__unit">
+                <div class="nav-items__icon">
+                  <img src="./assets/images/common/starfish.png" alt="">
+                </div>
+                <a href="#" class="nav-items__main">私たちについて</a>
+              </li>
+            </ul>
             
-            <div class="nav-items__box">
+            
+            <ul class="nav-items__item">
 
-              <ul class="nav-items__item nav-items__item--left">
-                <li class="nav-items__unit nav-items__unit--sp">
-                  <div class="nav-items__icon">
-                    <img src="./assets/images/common/starfish.png" alt="">
-                  </div>
-                  <a href="#" class="nav-items__main">お客様の声</a>
-                </li>
-                <li class="nav-items__unit">
-                  <div class="nav-items__icon">
-                    <img src="./assets/images/common/starfish.png" alt="">
-                  </div>
-                  <a href="#" class="nav-items__main">料金一覧</a>
-                </li>
-                <li class="nav-items__li">
-                  <a href="#" class="nav-items__sub">ライセンス講習</a>
-                </li>
-                <li class="nav-items__li">
-                  <a href="#" class="nav-items__sub">体験ダイビング</a>
-                </li>
-                <li class="nav-items__li">
-                  <a href="#" class="nav-items__sub">ファンダイビング</a>
-                </li>
-              </ul>
-              
-              
-              <ul class="nav-items__item nav-items__item--left">
-                <li class="nav-items__unit nav-items__unit--pc">
-                  <div class="nav-items__icon">
-                    <img src="./assets/images/common/starfish.png" alt="">
-                  </div>
-                  <a href="#" class="nav-items__main">よくある質問</a>
-                </li>
-                <li class="nav-items__unit">
-                  <div class="nav-items__icon">
-                    <img src="./assets/images/common/starfish.png" alt="">
-                  </div>
-                  <a href="#" class="nav-items__main">プライバシー<span class="u-mobile"><br></span>ポリシー</a>
-                </li>
-                
-                <li class="nav-items__unit">
-                  <div class="nav-items__icon">
-                    <img src="./assets/images/common/starfish.png" alt="">
-                  </div>
-                  <a href="#" class="nav-items__main">利用規約</a>
-                </li>
-                
-                <li class="nav-items__unit">
-                  <div class="nav-items__icon">
-                    <img src="./assets/images/common/starfish.png" alt="">
-                  </div>
-                  <a href="#" class="nav-items__main">お問い合わせ</a>
-                </li>
-              </ul>
-            </div>
+
+              <li class="nav-items__unit">
+                <div class="nav-items__icon">
+                  <img src="./assets/images/common/starfish.png" alt="">
+                </div>
+                <a href="#" class="nav-items__main">ダイビング情報</a>
+              </li>
+              <li class="nav-items__li">
+                <a href="#" class="nav-items__sub">ライセンス講習</a>
+              </li>
+              <li class="nav-items__li">
+                <a href="#" class="nav-items__sub">体験ダイビング</a>
+              </li>
+              <li class="nav-items__li">
+                <a href="#" class="nav-items__sub">ファンダイビング</a>
+              </li>
+              <li class="nav-items__unit">
+                <div class="nav-items__icon">
+                  <img src="./assets/images/common/starfish.png" alt="">
+                </div>
+                <a href="#" class="nav-items__main">ブログ</a>
+              </li>
+            </ul>
             
+            
+            <ul class="nav-items__item nav-items__item--left">
+              <li class="nav-items__unit">
+                <div class="nav-items__icon">
+                  <img src="./assets/images/common/starfish.png" alt="">
+                </div>
+                <a href="#" class="nav-items__main">お客様の声</a>
+              </li>
+              <li class="nav-items__unit">
+                <div class="nav-items__icon">
+                  <img src="./assets/images/common/starfish.png" alt="">
+                </div>
+                <a href="#" class="nav-items__main">料金一覧</a>
+              </li>
+              <li class="nav-items__li">
+                <a href="#" class="nav-items__sub">ライセンス講習</a>
+              </li>
+              <li class="nav-items__li">
+                <a href="#" class="nav-items__sub">体験ダイビング</a>
+              </li>
+              <li class="nav-items__li">
+                <a href="#" class="nav-items__sub">ファンダイビング</a>
+              </li>
+            </ul>
+            
+            
+            <ul class="nav-items__item nav-items__item--left">
+              <li class="nav-items__unit">
+                <div class="nav-items__icon">
+                  <img src="./assets/images/common/starfish.png" alt="">
+                </div>
+                <a href="#" class="nav-items__main">よくある質問</a>
+              </li>
+              <li class="nav-items__unit">
+                <div class="nav-items__icon">
+                  <img src="./assets/images/common/starfish.png" alt="">
+                </div>
+                <a href="#" class="nav-items__main">プライバシー<span class="u-mobile"><br></span>ポリシー</a>
+              </li>
+              
+              <li class="nav-items__unit">
+                <div class="nav-items__icon">
+                  <img src="./assets/images/common/starfish.png" alt="">
+                </div>
+                <a href="#" class="nav-items__main">利用規約</a>
+              </li>
+              
+              <li class="nav-items__unit">
+                <div class="nav-items__icon">
+                  <img src="./assets/images/common/starfish.png" alt="">
+                </div>
+                <a href="#" class="nav-items__main">お問い合わせ</a>
+              </li>
+            </ul>
             
           </div>
 
@@ -238,6 +195,7 @@
       
       
       <section class="mv">
+
 
         <div class="mv__wrapper">
 
@@ -875,116 +833,110 @@
 
 
           <div class="footer__nav-items nav-items">
-            <div class="nav-items__box">
+            <ul class="nav-items__item nav-items__item--top">
+              <li class="nav-items__unit">
+                <div class="nav-items__icon">
+                  <img src="./assets/images/common/starfish.png" alt="">
+                </div>
+                <a href="#" class="nav-items__main">キャンペーン</a>
+              </li>
+              <li class="nav-items__li">
+                <a href="#" class="nav-items__sub">ライセンス取得</a>
+              </li>
+              <li class="nav-items__li">
+                <a href="#" class="nav-items__sub">貸切体験ダイビング</a>
+              </li>
+              <li class="nav-items__li">
+                <a href="#" class="nav-items__sub">ナイトダイビング</a>
+              </li>
 
-              <ul class="nav-items__item nav-items__item--first">
-                <li class="nav-items__unit nav-items__unit--sp">
-                  <div class="nav-items__icon">
-                    <img src="./assets/images/common/starfish.png" alt="">
-                  </div>
-                  <a href="#" class="nav-items__main">キャンペーン</a>
-                </li>
-                <li class="nav-items__li">
-                  <a href="#" class="nav-items__sub">ライセンス取得</a>
-                </li>
-                <li class="nav-items__li">
-                  <a href="#" class="nav-items__sub">貸切体験ダイビング</a>
-                </li>
-                <li class="nav-items__li">
-                  <a href="#" class="nav-items__sub">ナイトダイビング</a>
-                </li>
-  
-                <li class="nav-items__unit">
-                  <div class="nav-items__icon">
-                    <img src="./assets/images/common/starfish.png" alt="">
-                  </div>
-                  <a href="#" class="nav-items__main">私たちについて</a>
-                </li>
-              </ul>
-              
-              
-              <ul class="nav-items__item">
-                <li class="nav-items__unit nav-items__unit--pc">
-                  <div class="nav-items__icon">
-                    <img src="./assets/images/common/starfish.png" alt="">
-                  </div>
-                  <a href="#" class="nav-items__main">ダイビング情報</a>
-                </li>
-                <li class="nav-items__li">
-                  <a href="#" class="nav-items__sub">ライセンス講習</a>
-                </li>
-                <li class="nav-items__li">
-                  <a href="#" class="nav-items__sub">体験ダイビング</a>
-                </li>
-                <li class="nav-items__li">
-                  <a href="#" class="nav-items__sub">ファンダイビング</a>
-                </li>
-                <li class="nav-items__unit">
-                  <div class="nav-items__icon">
-                    <img src="./assets/images/common/starfish.png" alt="">
-                  </div>
-                  <a href="#" class="nav-items__main">ブログ</a>
-                </li>
-              </ul>
-            </div>
+              <li class="nav-items__unit">
+                <div class="nav-items__icon">
+                  <img src="./assets/images/common/starfish.png" alt="">
+                </div>
+                <a href="#" class="nav-items__main">私たちについて</a>
+              </li>
+            </ul>
             
-            <div class="nav-items__box nav-items__box--right">
-
-              <ul class="nav-items__item">
-                <li class="nav-items__unit nav-items__unit--sp">
-                  <div class="nav-items__icon">
-                    <img src="./assets/images/common/starfish.png" alt="">
-                  </div>
-                  <a href="#" class="nav-items__main">お客様の声</a>
-                </li>
-                <li class="nav-items__unit">
-                  <div class="nav-items__icon">
-                    <img src="./assets/images/common/starfish.png" alt="">
-                  </div>
-                  <a href="#" class="nav-items__main">料金一覧</a>
-                </li>
-                <li class="nav-items__li">
-                  <a href="#" class="nav-items__sub">ライセンス講習</a>
-                </li>
-                <li class="nav-items__li">
-                  <a href="#" class="nav-items__sub">体験ダイビング</a>
-                </li>
-                <li class="nav-items__li">
-                  <a href="#" class="nav-items__sub">ファンダイビング</a>
-                </li>
-              </ul>
-              
-              
-              <ul class="nav-items__item">
-                <li class="nav-items__unit nav-items__unit--pc">
-                  <div class="nav-items__icon">
-                    <img src="./assets/images/common/starfish.png" alt="">
-                  </div>
-                  <a href="#" class="nav-items__main">よくある質問</a>
-                </li>
-                <li class="nav-items__unit">
-                  <div class="nav-items__icon">
-                    <img src="./assets/images/common/starfish.png" alt="">
-                  </div>
-                  <a href="#" class="nav-items__main">プライバシー<span class="u-mobile"><br></span>ポリシー</a>
-                </li>
-                
-                <li class="nav-items__unit">
-                  <div class="nav-items__icon">
-                    <img src="./assets/images/common/starfish.png" alt="">
-                  </div>
-                  <a href="#" class="nav-items__main">利用規約</a>
-                </li>
-                
-                <li class="nav-items__unit">
-                  <div class="nav-items__icon">
-                    <img src="./assets/images/common/starfish.png" alt="">
-                  </div>
-                  <a href="#" class="nav-items__main">お問い合わせ</a>
-                </li>
-              </ul>
-            </div>
             
+            <ul class="nav-items__item nav-items__item--top">
+              <li class="nav-items__unit">
+                <div class="nav-items__icon">
+                  <img src="./assets/images/common/starfish.png" alt="">
+                </div>
+                <a href="#" class="nav-items__main">ダイビング情報</a>
+              </li>
+              <li class="nav-items__li">
+                <a href="#" class="nav-items__sub">ライセンス講習</a>
+              </li>
+              <li class="nav-items__li">
+                <a href="#" class="nav-items__sub">体験ダイビング</a>
+              </li>
+              <li class="nav-items__li">
+                <a href="#" class="nav-items__sub">ファンダイビング</a>
+              </li>
+              <li class="nav-items__unit">
+                <div class="nav-items__icon">
+                  <img src="./assets/images/common/starfish.png" alt="">
+                </div>
+                <a href="#" class="nav-items__main">ブログ</a>
+              </li>
+            </ul>
+            
+            
+            <ul class="nav-items__item nav-items__item--top">
+              <li class="nav-items__unit">
+                <div class="nav-items__icon">
+                  <img src="./assets/images/common/starfish.png" alt="">
+                </div>
+                <a href="#" class="nav-items__main">お客様の声</a>
+              </li>
+              <li class="nav-items__unit">
+                <div class="nav-items__icon">
+                  <img src="./assets/images/common/starfish.png" alt="">
+                </div>
+                <a href="#" class="nav-items__main">料金一覧</a>
+              </li>
+              <li class="nav-items__li">
+                <a href="#" class="nav-items__sub">ライセンス講習</a>
+              </li>
+              <li class="nav-items__li">
+                <a href="#" class="nav-items__sub">体験ダイビング</a>
+              </li>
+              <li class="nav-items__li">
+                <a href="#" class="nav-items__sub">ファンダイビング</a>
+              </li>
+            </ul>
+            
+            
+            <ul class="nav-items__item nav-items__item--top">
+              <li class="nav-items__unit">
+                <div class="nav-items__icon">
+                  <img src="./assets/images/common/starfish.png" alt="">
+                </div>
+                <a href="#" class="nav-items__main">よくある質問</a>
+              </li>
+              <li class="nav-items__unit">
+                <div class="nav-items__icon">
+                  <img src="./assets/images/common/starfish.png" alt="">
+                </div>
+                <a href="#" class="nav-items__main">プライバシー<span class="u-mobile"><br></span>ポリシー</a>
+              </li>
+              
+              <li class="nav-items__unit">
+                <div class="nav-items__icon">
+                  <img src="./assets/images/common/starfish.png" alt="">
+                </div>
+                <a href="#" class="nav-items__main">利用規約</a>
+              </li>
+              
+              <li class="nav-items__unit">
+                <div class="nav-items__icon">
+                  <img src="./assets/images/common/starfish.png" alt="">
+                </div>
+                <a href="#" class="nav-items__main">お問い合わせ</a>
+              </li>
+            </ul>
             
           </div>
           
@@ -998,126 +950,3 @@
     
     
   </body>
-  </html>
-  
-  
-  
-  
-
-    <!-- <div class="section-header">
-          <h2 class="section-header__title">Price</h2>
-          <p class="section-header__sub-title">料金一覧</p>
-        </div> -->
-
-
-        <!-- <a href="#" class="button">View more<span class="button__arrow"></span></a> -->
-
-
-        <!-- <div class="cards">
-          <a class="card">
-            <div class="card__image">
-              <img src="" alt="">
-            </div>
-            <div class="card__body">
-              <div class="card__header">
-                <p class="card__date">2023.11/17</p>
-                <div class="card__title">ウミガメと泳ぐ</div>
-              </div>
-              <p class="card__text">
-                ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。<br>
-                ここにテキストが入ります。ここにテキストが入ります。ここにテキスト
-              </p>
-            </div>
-          </a>
-        </div> -->
-
-
-
-        <!-- <div class="content-box">
-          <div class="content-box__image">
-            <img src="" alt="">
-          </div>
-
-          <div class="content-box__body">
-            <div class="content-box__title">ライセンス講習</div>
-            <p class="content-box__text">
-              当店はダイビングライセンス（Cカード）世界最大の教育機関PADIの「正規店」として店舗登録されています。<br>
-              正規登録店として、安心安全に初めての方でも安心安全にライセンス取得をサポート致します。
-            </p>
-            <div class="content-box__button">
-              <a href="#" class="button">View more<span class="button__arrow"></span></a>
-            </div>
-            
-          </div>
-        </div> -->
-        
-        
-        <!-- <div class="item">
-          <div class="item__box">
-            <div class="item__header">
-              <div class="item__sub-title">
-                <p class="item__profile">20代(女性)</p>
-                <div class="item__category">
-                  <p class="item__category-text">ライセンス講習</p>
-                </div>
-              </div>
-              <div class="item__title">ここにタイトルが入ります。ここにタイトル</div>
-            </div>
-            <div class="item__image">
-              <img src="" alt="">
-            </div>
-          </div>
-          <p class="item__text">
-            ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。<br>
-            ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。<br>
-            ここにテキストが入ります。ここにテキストが入ります。
-          </p>
-        </div> -->
-
-
-
-        <!-- <div class="feature">
-          <div class="feature__image">
-            <img src="" alt="">
-          </div>
-          <div class="feature__body">
-            <div class="feature__header">
-              <div class="feature__cate">ライセンス講習</div>
-              <div class="feature__title">ライセンス取得</div>
-            </div>
-            <div class="feature__content">
-              <p class="feature__about">全部コミコミ(お一人様)</p>
-              <div class="feature__unit">
-                <p class="feature__text">¥56,000</p>
-                <div class="feature__pickup">¥46,000</div>
-              </div>
-            </div>
-          </div>
-        </div> -->
-
-
-        <!-- <ul class="menu-contents">
-              <li class="menu-contents__item menu-item">
-                <p class="menu-item__name">オープンウォーターダイバーコース</p>
-                <div class="menu-item__value">¥50,000</div>
-              </li>
-            </ul> -->
-
-            <!-- <a href="#" class="campaign__feature feature">
-            <div class="feature__image">
-              <img src="" alt="">
-            </div>
-            <div class="feature__body">
-              <div class="feature__header">
-                <div class="feature__cate">ライセンス講習</div>
-                <div class="feature__title">ライセンス取得</div>
-              </div>
-              <div class="feature__content">
-                <p class="feature__about">全部コミコミ(お一人様)</p>
-                <div class="feature__unit">
-                  <p class="feature__text">¥56,000</p>
-                  <div class="feature__pickup">¥46,000</div>
-                </div>
-              </div>
-            </div>
-          </a> -->

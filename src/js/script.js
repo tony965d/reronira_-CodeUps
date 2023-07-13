@@ -6,9 +6,11 @@ jQuery(function ($) { // この中であればWordpressでも「$」が使用可
     if($('.js-hamburger').hasClass('active')) {
       $('.js-hamburger').removeClass('active');
       $('.js-sp-nav').fadeOut(500);
+      $('body').css('overflow', 'auto');
     } else {
       $('.js-hamburger').addClass('active');
       $('.js-sp-nav').fadeIn(500);
+      $('body').css('overflow', 'hidden');
     }
     
   });

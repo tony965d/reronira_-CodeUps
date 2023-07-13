@@ -1,0 +1,30 @@
+@use "global" as *;
+
+.categories {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: rem(21);
+}
+
+
+.categories__all-bg {
+  display: inline-block;
+  background-color: #408F95;
+  color: $white;
+  text-align: center;
+  font-size: rem(14);
+  padding: rem(6) 0;
+  width: rem(162);
+}
+
+
+.categories__category-bg {
+  display: inline-block;
+  font-size: rem(14);
+  color: #408F95;
+  text-align: center;
+  border: solid 1px #408F95;
+  width: rem(162);
+  padding: rem(6) 0;
+}

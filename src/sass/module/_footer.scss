@@ -4,9 +4,11 @@
 .footer {
   background-color: #408F95;
   position: relative; 
+  padding-top: rem(48);
   padding-bottom: rem(56);
   
   @include mq(md) {
+    padding-top: rem(80);
     padding-bottom: rem(80);
   }
 }
@@ -16,16 +18,6 @@
 
   @include mq(md) {
     max-width: rem(1130);
-  }
-}
-
-.footer__nav {
-  padding-top: rem(48);
-  
-  @include mq(md) {
-    padding-top: rem(80);
-    padding-right: rem(72);
-    padding-left: rem(0);
   }
 }
 
@@ -115,17 +107,18 @@
 }
 
 .footer__nav-items {
-  height: rem(465);
+  // height: rem(465);
   margin-top: rem(40);
 
   @include mq(md) {
     margin-top: rem(24);
-    height: rem(202);
+    // height: rem(202);
   }
 }
 
 .footer__copyright {
-  margin-top: rem(21);
+  // margin-top: rem(21);
+  margin-top: rem(34);
   text-align: center;
   
   
