@@ -38,30 +38,25 @@
   }
 }
 
-.section-header__title--contact {
-  font-size: rem(80);
-  line-height: 1.0;
-  
-  @include mq(md) {
-    font-size: rem(80);
-  }
+.section-header--blog {
+
 }
 
-.section-header__title--blog {
+.section-header--blog .section-header__title {
 
   @include mq(md) {
     color: $white;
   }
 }
 
-.section-header__sub-title--blog {
+.section-header--blog .section-header__sub-title {
 
   @include mq(md) {
     color: $white;
   }
 }
 
-.section-header__title--blog:first-letter {
+.section-header--blog .section-header__title:first-letter {
 
   @include mq(md) {
     color: $white;
@@ -72,7 +67,16 @@
   padding-bottom: 0;
 }
 
-.section-header__sub-title--contact {
+.section-header--contact .section-header__title {
+  font-size: rem(80);
+  line-height: 1.0;
+  
+  @include mq(md) {
+    font-size: rem(80);
+  }
+}
+
+.section-header--contact .section-header__sub-title {
 
   position: absolute;
   top: rem(74);
@@ -83,5 +87,8 @@
   @include mq(md) {
     top: rem(66);
   }
+}
 
+.section-header--about-sub .section-header__title {
+  line-height: 1.0;
 }

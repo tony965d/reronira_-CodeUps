@@ -5,6 +5,14 @@
   position: relative;
 }
 
+.about__inner.inner {
+  max-width: rem(500);
+
+  @include mq(md) {
+    max-width: rem(1130);
+  }
+}
+
 .about__background {
   position: absolute;
   top: rem(676);
@@ -34,14 +42,6 @@
   }
 }
 
-
-.about__inner.inner {
-  max-width: rem(500);
-
-  @include mq(md) {
-    max-width: rem(1130);
-  }
-}
 
 .about__wrapper {
   position: relative;
@@ -145,9 +145,11 @@
 
 .about__text {
   line-height: 1.5;
+  color: $green;
 
   @include mq(md) {
     line-height: 1.5;
+    color: $white;
   }
 }
 

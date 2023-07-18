@@ -107,7 +107,7 @@
                           <img src="<?php echo get_template_directory_uri() ?>./dist/assets/images/common/campaign1.png" alt="">
                         </div>
                         <div class="feature__header">
-                          <div class="feature__cate">ライセンス講習</div>
+                          <div class="feature__category">ライセンス講習</div>
                           <div class="feature__title">ライセンス取得</div>
                         </div>
                         <div class="feature__content">
@@ -127,7 +127,7 @@
                           <img src="<?php echo get_template_directory_uri() ?>./dist/assets/images/common/campaign2.png" alt="">
                         </div>
                         <div class="feature__header">
-                          <div class="feature__cate">体験ダイビング</div>
+                          <div class="feature__category">体験ダイビング</div>
                           <div class="feature__title">貸切体験ダイビング</div>
                         </div>
                         <div class="feature__content">
@@ -147,7 +147,7 @@
                           <img src="<?php echo get_template_directory_uri() ?>./dist/assets/images/common/campaign3.png" alt="">
                         </div>
                         <div class="feature__header">
-                          <div class="feature__cate">体験ダイビング</div>
+                          <div class="feature__category">体験ダイビング</div>
                           <div class="feature__title">ナイトダイビング</div>
                         </div>
                         <div class="feature__content">
@@ -167,7 +167,7 @@
                           <img src="<?php echo get_template_directory_uri() ?>./dist/assets/images/common/campaign4.png" alt="">
                         </div>
                         <div class="feature__header">
-                          <div class="feature__cate">ファンダイビング</div>
+                          <div class="feature__category">ファンダイビング</div>
                           <div class="feature__title">貸切ファンダイビング</div>
                         </div>
                         <div class="feature__content">
@@ -249,7 +249,7 @@
           </div>
 
           <div class="information__contents content-box">
-            <div class="content-box__image js-content-box__image">
+            <div class="content-box__image js-content-box-image">
               <img src="<?php echo get_template_directory_uri() ?>./dist/assets/images/common/info_1.png" alt="">
             </div>
 
@@ -279,9 +279,9 @@
               <img src="<?php echo get_template_directory_uri() ?>./dist/assets/images/common/blog_goldfish.png" alt="">
             </div>
 
-            <div class="blog__header section-header">
-              <h2 class="section-header__title section-header__title--blog">Blog</h2>
-              <p class="section-header__sub-title section-header__sub-title--blog">ブログ</p>
+            <div class="blog__header section-header section-header--blog">
+              <h2 class="section-header__title">Blog</h2>
+              <p class="section-header__sub-title">ブログ</p>
             </div>
 
             <div class="blog__cards cards">
@@ -361,44 +361,44 @@
           </div>
           <div class="voice__wrapper">
 
-            <a href="#" class="voice__item item">
-              <div class="item__box">
-                <div class="item__header">
-                  <div class="item__sub-title">
-                    <p class="item__profile">20代(女性)</p>
-                    <div class="item__category">
-                      <p class="item__category-text">ライセンス講習</p>
+            <a href="#" class="voice__item voice-item">
+              <div class="voice-item__box">
+                <div class="voice-item__header">
+                  <div class="voice-item__sub-title">
+                    <p class="voice-item__profile">20代(女性)</p>
+                    <div class="voice-item__category">
+                      <p class="voice-item__category-text">ライセンス講習</p>
                     </div>
                   </div>
-                  <div class="item__title">ここにタイトルが入ります。ここにタイトル</div>
+                  <div class="voice-item__title">ここにタイトルが入ります。ここにタイトル</div>
                 </div>
-                <div class="item__image js-item__image">
+                <div class="voice-item__image js-voice-item-image">
                   <img src="<?php echo get_template_directory_uri() ?>./dist/assets/images/common/voice_1.png" alt="">
                 </div>
               </div>
-              <p class="item__text">
+              <p class="voice-item__text">
                 ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。<br>
                 ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。<br>
                 ここにテキストが入ります。ここにテキストが入ります。
               </p>
             </a>
   
-            <a href="#" class="voice__item item">
-              <div class="item__box">
-                <div class="item__header">
-                  <div class="item__sub-title">
-                    <p class="item__profile">20代(男性)</p>
-                    <div class="item__category">
-                      <p class="item__category-text">ファンダイビング</p>
+            <a href="#" class="voice__item voice-item">
+              <div class="voice-item__box">
+                <div class="voice-item__header">
+                  <div class="voice-item__sub-title">
+                    <p class="voice-item__profile">20代(男性)</p>
+                    <div class="voice-item__category">
+                      <p class="voice-item__category-text">ファンダイビング</p>
                     </div>
                   </div>
-                  <div class="item__title">ここにタイトルが入ります。ここにタイトル</div>
+                  <div class="voice-item__title">ここにタイトルが入ります。ここにタイトル</div>
                 </div>
-                <div class="item__image js-item__image">
+                <div class="voice-item__image js-voice-item-image">
                   <img src="<?php echo get_template_directory_uri() ?>./dist/assets/images/common/voice_2.png" alt="">
                 </div>
               </div>
-              <p class="item__text">
+              <p class="voice-item__text">
                 ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。<br>
                 ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。<br>
                 ここにテキストが入ります。ここにテキストが入ります。

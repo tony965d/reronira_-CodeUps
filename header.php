@@ -94,112 +94,89 @@
         <div class="sp-nav__inner inner">
 
           <div class="sp-nav__items nav-items">
-            <ul class="nav-items__item">
-              <li class="nav-items__unit">
-                <div class="nav-items__icon">
-                  <img src="<?php echo get_template_directory_uri() ?>./dist/assets/images/common/starfish.png" alt="">
-                </div>
-                <a href="<?php echo $campaign; ?>" class="nav-items__main">キャンペーン</a>
-              </li>
-              <li class="nav-items__li">
-                <a href="#" class="nav-items__sub">ライセンス取得</a>
-              </li>
-              <li class="nav-items__li">
-                <a href="#" class="nav-items__sub">貸切体験ダイビング</a>
-              </li>
-              <li class="nav-items__li">
-                <a href="#" class="nav-items__sub">ナイトダイビング</a>
-              </li>
+            <div class="nav-items__box">
 
-              <li class="nav-items__unit">
-                <div class="nav-items__icon">
-                  <img src="<?php echo get_template_directory_uri() ?>./dist/assets/images/common/starfish.png" alt="">
-                </div>
-                <a href="#" class="nav-items__main">私たちについて</a>
-              </li>
-            </ul>
-            
-            
-            <ul class="nav-items__item">
-
-
-              <li class="nav-items__unit">
-                <div class="nav-items__icon">
-                  <img src="<?php echo get_template_directory_uri() ?>./dist/assets/images/common/starfish.png" alt="">
-                </div>
-                <a href="<?php echo $information; ?>" class="nav-items__main">ダイビング情報</a>
-              </li>
-              <li class="nav-items__li">
-                <a href="#" class="nav-items__sub">ライセンス講習</a>
-              </li>
-              <li class="nav-items__li">
-                <a href="#" class="nav-items__sub">体験ダイビング</a>
-              </li>
-              <li class="nav-items__li">
-                <a href="#" class="nav-items__sub">ファンダイビング</a>
-              </li>
-              <li class="nav-items__unit">
-                <div class="nav-items__icon">
-                  <img src="<?php echo get_template_directory_uri() ?>./dist/assets/images/common/starfish.png" alt="">
-                </div>
-                <a href="#" class="nav-items__main">ブログ</a>
-              </li>
-            </ul>
-            
-            
-            <ul class="nav-items__item nav-items__item--left">
-              <li class="nav-items__unit">
-                <div class="nav-items__icon">
-                  <img src="<?php echo get_template_directory_uri() ?>./dist/assets/images/common/starfish.png" alt="">
-                </div>
-                <a href="<?php echo $voice; ?>" class="nav-items__main">お客様の声</a>
-              </li>
-              <li class="nav-items__unit">
-                <div class="nav-items__icon">
-                  <img src="<?php echo get_template_directory_uri() ?>./dist/assets/images/common/starfish.png" alt="">
-                </div>
-                <a href="<?php echo $price; ?>" class="nav-items__main">料金一覧</a>
-              </li>
-              <li class="nav-items__li">
-                <a href="#" class="nav-items__sub">ライセンス講習</a>
-              </li>
-              <li class="nav-items__li">
-                <a href="#" class="nav-items__sub">体験ダイビング</a>
-              </li>
-              <li class="nav-items__li">
-                <a href="#" class="nav-items__sub">ファンダイビング</a>
-              </li>
-            </ul>
-            
-            
-            <ul class="nav-items__item nav-items__item--left">
-              <li class="nav-items__unit">
-                <div class="nav-items__icon">
-                  <img src="<?php echo get_template_directory_uri() ?>./dist/assets/images/common/starfish.png" alt="">
-                </div>
-                <a href="<?php echo $faq; ?>" class="nav-items__main">よくある質問</a>
-              </li>
-              <li class="nav-items__unit">
-                <div class="nav-items__icon">
-                  <img src="<?php echo get_template_directory_uri() ?>./dist/assets/images/common/starfish.png" alt="">
-                </div>
-                <a href="#" class="nav-items__main">プライバシー<span class="u-mobile"><br></span>ポリシー</a>
-              </li>
+              <ul class="nav-items__items">
+                <li class="nav-items__unit nav-items__unit--sp">
+                  <a href="<?php echo $campaign; ?>" class="nav-items__main">キャンペーン</a>
+                </li>
+                <li class="nav-items__item">
+                  <a href="#" class="nav-items__sub">ライセンス取得</a>
+                </li>
+                <li class="nav-items__item">
+                  <a href="#" class="nav-items__sub">貸切体験ダイビング</a>
+                </li>
+                <li class="nav-items__item">
+                  <a href="#" class="nav-items__sub">ナイトダイビング</a>
+                </li>
+  
+                <li class="nav-items__unit">
+                  <a href="<?php echo $about; ?>" class="nav-items__main">私たちについて</a>
+                </li>
+              </ul>
               
-              <li class="nav-items__unit">
-                <div class="nav-items__icon">
-                  <img src="<?php echo get_template_directory_uri() ?>./dist/assets/images/common/starfish.png" alt="">
-                </div>
-                <a href="#" class="nav-items__main">利用規約</a>
-              </li>
               
-              <li class="nav-items__unit">
-                <div class="nav-items__icon">
-                  <img src="<?php echo get_template_directory_uri() ?>./dist/assets/images/common/starfish.png" alt="">
-                </div>
-                <a href="<?php echo $contact; ?>" class="nav-items__main">お問い合わせ</a>
-              </li>
-            </ul>
+              <ul class="nav-items__items">
+  
+  
+                <li class="nav-items__unit nav-items__unit--pc">
+                  <a href="<?php echo $information; ?>" class="nav-items__main">ダイビング情報</a>
+                </li>
+                <li class="nav-items__item">
+                  <a href="#" class="nav-items__sub">ライセンス講習</a>
+                </li>
+                <li class="nav-items__item">
+                  <a href="#" class="nav-items__sub">体験ダイビング</a>
+                </li>
+                <li class="nav-items__item">
+                  <a href="#" class="nav-items__sub">ファンダイビング</a>
+                </li>
+                <li class="nav-items__unit">
+                  <a href="#" class="nav-items__main">ブログ</a>
+                </li>
+              </ul>
+
+            </div>
+            <div class="nav-items__box nav-items__box--right">
+
+              <ul class="nav-items__items">
+                <li class="nav-items__unit nav-items__unit--sp">
+                  <a href="<?php echo $voice; ?>" class="nav-items__main">お客様の声</a>
+                </li>
+                <li class="nav-items__unit">
+                  <a href="<?php echo $price; ?>" class="nav-items__main">料金一覧</a>
+                </li>
+                <li class="nav-items__item">
+                  <a href="#" class="nav-items__sub">ライセンス講習</a>
+                </li>
+                <li class="nav-items__item">
+                  <a href="#" class="nav-items__sub">体験ダイビング</a>
+                </li>
+                <li class="nav-items__item">
+                  <a href="#" class="nav-items__sub">ファンダイビング</a>
+                </li>
+              </ul>
+              
+              
+              <ul class="nav-items__items">
+                <li class="nav-items__unit nav-items__unit--pc">
+                  <a href="<?php echo $faq; ?>" class="nav-items__main">よくある質問</a>
+                </li>
+                <li class="nav-items__unit">
+                  <a href="#" class="nav-items__main">プライバシー<span class="u-mobile"><br></span>ポリシー</a>
+                </li>
+                
+                <li class="nav-items__unit">
+                  <a href="#" class="nav-items__main">利用規約</a>
+                </li>
+                
+                <li class="nav-items__unit">
+                  <a href="<?php echo $contact; ?>" class="nav-items__main">お問い合わせ</a>
+                </li>
+              </ul>
+            </div>
+            
+            
             
           </div>
 

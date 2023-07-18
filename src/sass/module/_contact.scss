@@ -175,7 +175,7 @@
   margin-top: 0;
 }
 
-.contact__image {
+.contact__map {
   text-align: center;
   display: flex;
   justify-content: center;
@@ -191,7 +191,7 @@
   }
 }
 
-.contact__image iframe {
+.contact__map iframe {
 
   @include mq(md) {
     aspect-ratio: 273 / 148;

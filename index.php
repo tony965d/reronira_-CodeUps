@@ -93,7 +93,7 @@
                 <div class="nav-items__icon">
                   <img src="./assets/images/common/starfish.png" alt="">
                 </div>
-                <a href="#" class="nav-items__main">私たちについて</a>
+                <a href="<?php echo $about; ?>" class="nav-items__main">私たちについて</a>
               </li>
             </ul>
             
@@ -304,7 +304,7 @@
                           <img src="./assets/images/common/campaign1.png" alt="">
                         </div>
                         <div class="feature__header">
-                          <div class="feature__cate">ライセンス講習</div>
+                          <div class="feature__category">ライセンス講習</div>
                           <div class="feature__title">ライセンス取得</div>
                         </div>
                         <div class="feature__content">
@@ -324,7 +324,7 @@
                           <img src="./assets/images/common/campaign2.png" alt="">
                         </div>
                         <div class="feature__header">
-                          <div class="feature__cate">体験ダイビング</div>
+                          <div class="feature__category">体験ダイビング</div>
                           <div class="feature__title">貸切体験ダイビング</div>
                         </div>
                         <div class="feature__content">
@@ -344,7 +344,7 @@
                           <img src="./assets/images/common/campaign3.png" alt="">
                         </div>
                         <div class="feature__header">
-                          <div class="feature__cate">体験ダイビング</div>
+                          <div class="feature__category">体験ダイビング</div>
                           <div class="feature__title">ナイトダイビング</div>
                         </div>
                         <div class="feature__content">
@@ -364,7 +364,7 @@
                           <img src="./assets/images/common/campaign4.png" alt="">
                         </div>
                         <div class="feature__header">
-                          <div class="feature__cate">ファンダイビング</div>
+                          <div class="feature__category">ファンダイビング</div>
                           <div class="feature__title">貸切ファンダイビング</div>
                         </div>
                         <div class="feature__content">
@@ -453,7 +453,7 @@
           </div>
 
           <div class="information__contents content-box">
-            <div class="content-box__image js-content-box__image">
+            <div class="content-box__image js-content-box-image">
               <img src="./assets/images/common/info_1.png" alt="">
             </div>
 
@@ -483,9 +483,9 @@
               <img src="./assets/images/common/blog_goldfish.png" alt="">
             </div>
 
-            <div class="blog__header section-header">
-              <h2 class="section-header__title section-header__title--blog">Blog</h2>
-              <p class="section-header__sub-title section-header__sub-title--blog">ブログ</p>
+            <div class="blog__header section-header section-header--blog">
+              <h2 class="section-header__title">Blog</h2>
+              <p class="section-header__sub-title">ブログ</p>
             </div>
 
             <div class="blog__cards cards">
@@ -565,44 +565,44 @@
           </div>
           <div class="voice__wrapper">
 
-            <a href="#" class="voice__item item">
-              <div class="item__box">
-                <div class="item__header">
-                  <div class="item__sub-title">
-                    <p class="item__profile">20代(女性)</p>
-                    <div class="item__category">
-                      <p class="item__category-text">ライセンス講習</p>
+            <a href="#" class="voice__item voice-item">
+              <div class="voice-item__box">
+                <div class="voice-item__header">
+                  <div class="voice-item__sub-title">
+                    <p class="voice-item__profile">20代(女性)</p>
+                    <div class="voice-item__category">
+                      <p class="voice-item__category-text">ライセンス講習</p>
                     </div>
                   </div>
-                  <div class="item__title">ここにタイトルが入ります。ここにタイトル</div>
+                  <div class="voice-item__title">ここにタイトルが入ります。ここにタイトル</div>
                 </div>
-                <div class="item__image js-item__image">
+                <div class="voice-item__image js-voice-item-image">
                   <img src="./assets/images/common/voice_1.png" alt="">
                 </div>
               </div>
-              <p class="item__text">
+              <p class="voice-item__text">
                 ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。<br>
                 ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。<br>
                 ここにテキストが入ります。ここにテキストが入ります。
               </p>
             </a>
   
-            <a href="#" class="voice__item item">
-              <div class="item__box">
-                <div class="item__header">
-                  <div class="item__sub-title">
-                    <p class="item__profile">20代(男性)</p>
-                    <div class="item__category">
-                      <p class="item__category-text">ファンダイビング</p>
+            <a href="#" class="voice__item voice-item">
+              <div class="voice-item__box">
+                <div class="voice-item__header">
+                  <div class="voice-item__sub-title">
+                    <p class="voice-item__profile">20代(男性)</p>
+                    <div class="voice-item__category">
+                      <p class="voice-item__category-text">ファンダイビング</p>
                     </div>
                   </div>
-                  <div class="item__title">ここにタイトルが入ります。ここにタイトル</div>
+                  <div class="voice-item__title">ここにタイトルが入ります。ここにタイトル</div>
                 </div>
-                <div class="item__image js-item__image">
+                <div class="voice-item__image js-voice-item-image">
                   <img src="./assets/images/common/voice_2.png" alt="">
                 </div>
               </div>
-              <p class="item__text">
+              <p class="voice-item__text">
                 ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。<br>
                 ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。<br>
                 ここにテキストが入ります。ここにテキストが入ります。
@@ -774,7 +774,7 @@
                   </li>
                 </ul>
 
-                <div class="contact__image">
+                <div class="contact__map">
                   <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d57273.02319565179!2d127.64350204644842!3d26.210859430208657!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x34e5697141a6b58b%3A0x2cd8aff616585e98!2z5rKW57iE55yM6YKj6KaH5biC!5e0!3m2!1sja!2sjp!4v1687230539574!5m2!1sja!2sjp" width="295" height="160" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                 </div>
 
@@ -784,8 +784,8 @@
 
             <div class="contact__box inner">
               <div class="contact__header section-header section-header--contact">
-                <h2 class="section-header__title section-header__title--contact">Contact</h2>
-                <p class="section-header__sub-title section-header__sub-title--contact">お問い合わせ</p>
+                <h2 class="section-header__title">Contact</h2>
+                <p class="section-header__sub-title">お問い合わせ</p>
               </div>
               <p class="contact__text">ご予約・お問い合わせはコチラ</p>
 
@@ -817,7 +817,7 @@
               <img src="./assets/images/common/CodeUps_footer_logo.png" alt="">
             </a>
             
-            <ul class="footer__sns">
+            <ul class="footer__sns-links">
               <li class="footer__sns-link">
                 <a href="#" class="footer__facebook">
                   <img src="./assets/images/common/FacebookLogo.png" alt="">
@@ -854,7 +854,7 @@
                 <div class="nav-items__icon">
                   <img src="./assets/images/common/starfish.png" alt="">
                 </div>
-                <a href="#" class="nav-items__main">私たちについて</a>
+                <a href="<?php echo $about; ?>" class="nav-items__main">私たちについて</a>
               </li>
             </ul>
             

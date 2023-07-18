@@ -1,5 +1,50 @@
 @use "global" as *;
 
 .wp-breadcrumb {
+  position: relative;
+  line-height: 1.25;
   margin-top: rem(8);
+}
+
+.wp-breadcrumb::before {
+  content: "";
+  position: absolute;
+  top: rem(48);
+  // right: clamp(rem(452), 70vw, rem(882));
+  left: rem(15);
+  width: rem(120);
+  background-image: url('../images/common/campaign-sub_goldfish.png');
+  background-size: contain;
+  aspect-ratio: 120 / 55;
+  z-index: -1;
+  
+  @include mq(md) {
+    top: rem(100);
+    right: clamp(rem(452), 70vw, rem(882));
+    left: unset;
+    width: rem(301);
+    aspect-ratio: 301 / 138;
+  }
+
+}
+
+.wp-breadcrumb span {
+  font-size: rem(14);
+  color: $green;
+}
+
+.wp-breadcrumb--about::before {
+  z-index: 1;
+  
+  @include mq(md) {
+    z-index: -1;
+  }
+}
+
+.wp-breadcrumb--about.inner {
+  max-width: rem(500);
+
+  @include mq(md) {
+    max-width: rem(1130);
+  }
 }

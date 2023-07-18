@@ -98,15 +98,15 @@ var box = $('.js-price__image'),
 
 
 //要素の取得とスピードの設定
-var box = $('.js-item__image'),
+var box = $('.js-item-image'),
     speed = 700;  
  
 //.price__imageの付いた全ての要素に対して下記の処理を行う
   box.each(function(){
-    $(this).append('<div class="item__color"></div>')
+    $(this).append('<div class="voice-item__color"></div>')
     // 現在の要素（$(this)）の内部に<div class="price__color"></div>を追加します。
     // つまり、各要素に対してクラス名が「price__color」となるdiv要素が追加されます。
-    var color = $(this).find($('.item__color'));
+    var color = $(this).find($('.voice-item__color'));
     // 現在の要素内からクラス名が「price__color」となる要素を見つけて、color変数に格納
     var image = $(this).find('img');
     // 現在の要素内からimg要素を見つけて、image変数に格納
@@ -135,7 +135,7 @@ var box = $('.js-item__image'),
 
 
 //要素の取得とスピードの設定
-var box = $('.js-content-box__image'),
+var box = $('.js-content-box-image'),
     speed = 700;  
  
 //.price__imageの付いた全ての要素に対して下記の処理を行う
@@ -243,7 +243,112 @@ var box = $('.js-content-box__image'),
 
 
 
+   $(".js-about-sub-gallery img").click(function () {
+    // まず、クリックした画像の HTML(<img>タグ全体)を.js-about-sub__gallery-expansion内にコピー
+    $(".js-about-sub__gallery-expansion").html($(this).prop("outerHTML"));
+    //そして、fadeInで表示する。
+    $(".js-about-sub__gallery-expansion").fadeIn(200);
+    // $('body').css('overflow', 'hidden');
+    return false;
+  });
+  
+  // コース画像モーダル非表示イベント
+  // モーダル画像背景 または 拡大画像そのものをクリックで発火
+  $(".js-about-sub__gallery-expansion").click(function () {
+    // 非表示にする
+    $(".js-about-sub__gallery-expansion").fadeOut(200);
+    // $('body').css('overflow', 'auto');
+    return false;
+  });
 
   
+  // // タブメニュー
+  // $(function () {
+  //   // 最初のコンテンツは表示
+  //   $(".js-information-sub-box:first-of-type").css("display", "block");
+  //   // タブをクリックすると
+  //   $(".js-information-sub-category").on("click", function () {
+  //     // 現在選択されているタブからcurrentを外す
+  //     $(".current").removeClass("current");
+  //     // クリックされたタブにcurrentクラスを付与
+  //     $(this).addClass("current");
+  //     // クリックされた要素が何番目か取得（クリックしたタブのインデックス番号を取得）
+  //     const index = $(this).index();
+  //     // クリックしたタブのインデックス番号と同じコンテンツを表示
+  //     $(".js-information-sub-box").hide().eq(index).fadeIn(300);
+  //   });
+  // });
+
+
+  // タブメニュー
+  $(function () {
+    // 最初のコンテンツは表示
+    $(".js-information-sub-box:first-of-type").css("display", "block");
+
+    // タブをクリックすると
+    $(".js-information-sub-category").on("click", function () {
+      // 現在選択されているタブからcurrentを外す
+      $(".current").removeClass("current");
+      // クリックされたタブにcurrentクラスを付与
+      $(this).addClass("current");
+      // クリックされた要素が何番目か取得（クリックしたタブのインデックス番号を取得）
+      const index = $(this).index();
+      // クリックしたタブのインデックス番号と同じコンテンツを表示
+      $(".js-information-sub-box").hide().eq(index).fadeIn(300);
+      $(".js-information-sub-category-icon").hide().eq(index).fadeIn(300);
+      $(".js-information-sub-category-icon-sub").show().eq(index).fadeOut(300);
+
+    });
+    $(".js-information-sub-category.current").trigger("click");
+  });
+
 
 });
+
+
+    //  // クリックしたタブのインデックス番号と同じコンテンツを表示
+    //  $(".js-information-sub-box").hide().eq(index).fadeIn(300);
+    //  // クリックしたタブに対応するアイコンをフェードイン
+    //  $(".js-information-sub-category-icon").hide().eq(index).fadeIn(300);
+    //  // クリックしたタブ以外のアイコンをフェードアウト
+    //  $(".js-information-sub-category-icon").not(":eq(" + index + ")").fadeOut(300);
+    //  // クリックしたタブに対応するサブアイコンをフェードアウト
+    //  $(".js-information-sub-category-icon-sub").hide().eq(index).fadeIn(300);
+    //  // クリックしたタブ以外のサブアイコンをフェードイン
+    //  $(".js-information-sub-category-icon-sub").not(":eq(" + index + ")").fadeOut(300);
+  
+ 
+
+      // // クリックしたタブのインデックス番号と同じコンテンツを表示
+      // $(".js-information-sub-box").hide().eq(index).fadeIn(300);
+
+      // // アイコンのフェードイン/フェードアウト
+      // $(".js-information-sub-category-icon").each(function (i) {
+      //   if (i === index) {
+      //     $(this).fadeIn(300);
+      //   } else {
+      //     $(this).fadeOut(300);
+      //   }
+      // });
+
+      // // サブアイコンのフェードイン/フェードアウト
+      // $(".js-information-sub-category-icon-sub").each(function (i) {
+      //   if (i === index) {
+      //     $(this).fadeOut(300);
+      //   } else {
+      //     $(this).fadeIn(300);
+      //   }
+      // });
+
+    
+
+    // // クリックしたタブのインデックス番号と同じコンテンツを表示
+    // $(".js-information-sub-box").hide().eq(index).fadeIn(300);
+
+    // // アイコンのフェードイン/フェードアウト
+    // $(".js-information-sub-category-icon").hide().eq(index).fadeIn(300);
+    // $(".js-information-sub-category-icon").not(":eq(" + index + ")").fadeOut(300);
+
+    // // サブアイコンのフェードイン/フェードアウト
+    // $(".js-information-sub-category-icon-sub").hide().eq(index).fadeIn(300);
+    // $(".js-information-sub-category-icon-sub").not(":eq(" + index + ")").fadeOut(300);

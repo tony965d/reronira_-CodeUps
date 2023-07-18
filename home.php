@@ -16,9 +16,10 @@
   <section class="mv-sub">
     <div class="mv-sub__inner">
     <div class="mv-sub__wrapper">
-      <div class="mv-sub__image">
+      <picture class="mv-sub__image">
+        <source media="(min-width: 768px)" srcset="<?php echo get_template_directory_uri(); ?>./dist/assets/images/common/campaign_mv-pc.png">
         <img src="<?php echo get_template_directory_uri(); ?>./dist/assets/images/common/campaign_mv.png" alt="">
-      </div>
+      </picture>
       <div class="mv-sub__body">
         <h2 class="mv-sub__title">Campaign</h2>
       </div>
@@ -75,7 +76,7 @@
   
   
           <div class="feature__header">
-            <div class="feature__cate">
+            <div class="feature__category">
             <?php 
                 $terms = get_the_terms($post->ID,'category');
                   foreach ( $terms as $term ) {
@@ -113,9 +114,13 @@
         投稿がありません
         <?php endif; ?>
       </div>
-
+      
+      
     </div>
-
+    
+    <div class="page-nav page-nav--campaign inner">
+      <?php if(function_exists("wp_pagenavi")) wp_pagenavi(); ?>
+    </div>
 
   </section>
 
