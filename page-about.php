@@ -35,7 +35,7 @@
   </div>
 
 
-  <section class="about-sub">
+  <section class="about-sub top-about-sub">
     <div class="about-sub__inner inner">
       <div class="about-sub__container">
         <div class="about-sub__wrapper">

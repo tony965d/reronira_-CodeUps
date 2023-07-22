@@ -8,6 +8,8 @@
     $price = esc_url(home_url( '/price' ));
     $faq = esc_url(home_url( '/faq' ));
     $contact = esc_url(home_url( '/contact' ));
+    $privacy = esc_url(home_url( '/privacy' ));
+
   ?>
       
       <section class="contact top-contact top-contact--sub">
@@ -140,7 +142,7 @@
                   <a href="<?php echo $faq; ?>" class="nav-items__main">よくある質問</a>
                 </li>
                 <li class="nav-items__unit">
-                  <a href="#" class="nav-items__main">プライバシー<span class="u-mobile"><br></span>ポリシー</a>
+                  <a href="<?php echo $privacy; ?>" class="nav-items__main">プライバシー<span class="u-mobile"><br></span>ポリシー</a>
                 </li>
                 <li class="nav-items__unit">
                   <a href="#" class="nav-items__main">利用規約</a>

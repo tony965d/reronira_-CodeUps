@@ -4,3 +4,7 @@
 .menu-contents__item {
   margin-top: rem(8);
 }
+
+.menu-contents__item:first-child {
+  margin-top: 0;
+}

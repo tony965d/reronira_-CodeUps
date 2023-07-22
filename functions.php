@@ -191,3 +191,54 @@ function my_excerpt_more( $more ) {
 
 }
 add_filter( 'excerpt_more', 'my_excerpt_more' );
+
+
+
+
+// // カスタム投稿タイプ【ブログ】：メインクエリの変更（アーカイブページにて表示件数を9件にする）
+// function change_set_blog($query) {
+// 	if ( is_admin() || ! $query->is_main_query() ){
+// 		return;
+// 	}
+// 	if ( $query->is_post_type_archive('blog') || is_tax(['blog_category'])) {
+// 		$query->set( 'posts_per_page', '9' );
+// 		return;
+// 	}
+// }
+// add_action( 'pre_get_posts', 'change_set_blog' );
+
+
+function change_set_blog($query) {
+	if ( is_admin() || ! $query->is_main_query() )
+			return;
+	if ( $query->is_post_type_archive('blog') ) { //カスタム投稿タイプを指定
+			$query->set( 'posts_per_page', '10' ); //表示件数を指定
+	}
+}
+add_action( 'pre_get_posts', 'change_set_blog' );
+
+
+
+
+function change_set_voice($query) {
+	if ( is_admin() || ! $query->is_main_query() )
+			return;
+	if ( $query->is_post_type_archive('voice') ) { //カスタム投稿タイプを指定
+			$query->set( 'posts_per_page', '6' ); //表示件数を指定
+	}
+}
+add_action( 'pre_get_posts', 'change_set_voice' );
+
+
+
+
+// //pタグの除去
+
+remove_filter('the_content', 'wpautop');
+
+
+// Contact Form 7の自動pタグ無効
+add_filter('wpcf7_autop_or_not', 'wpcf7_autop_return_false');
+function wpcf7_autop_return_false() {
+	return false;
+}

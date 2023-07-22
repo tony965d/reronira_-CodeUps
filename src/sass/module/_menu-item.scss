@@ -12,6 +12,18 @@
     gap: rem(92);
   }
 }
+ 
+.menu-item--price {
+  gap: unset;
+  margin-top: 0;
+  border: solid 1px #408F95;
+  padding-right: rem(16);
+  
+  @include mq(md) {
+    gap: unset;
+    padding: 0 rem(16);
+  }
+}
 
 .menu-item__name {
   color: $green;
@@ -21,6 +33,22 @@
   @include mq(md) {
     font-size: rem(16);
     line-height: 1.5;
+  }
+}
+
+.menu-item__name--price {
+  width: 69.3%;
+  text-align: center;
+  font-size: rem(16);
+  line-height: 1.48;
+  border-right: none;
+  border-top: none;
+  // border: solid 1px #408F95;
+  // padding: rem(8) 0;
+
+  @include mq(md) {
+    text-align: left;
+    // padding-left: rem(16);
   }
 }
  
@@ -33,4 +61,19 @@
     font-size: rem(16);
     line-height: 1.5;
   }
+}
+
+
+.menu-item__value--price {
+  width: 30.7%;
+  text-align: right;
+  font-size: rem(16);
+  line-height: 1.59;
+  padding-top: rem(18);
+  padding-bottom: rem(18);
+  // padding-right: rem(16);
+  border-left: solid 1px #408F95;
+
+
+  // border: solid 1px #408F95;
 }

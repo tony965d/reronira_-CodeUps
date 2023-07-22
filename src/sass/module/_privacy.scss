@@ -1,0 +1,47 @@
+@use "global" as *;
+
+
+.privacy__inner.inner {
+  max-width: rem(500);
+
+  @include mq(md) {
+    max-width: rem(850);
+  }
+} 
+
+.privacy__wrapper {
+  margin-top: rem(40);
+}
+
+.privacy__text {
+  margin-top: rem(40);
+  line-height: 2;
+}
+
+.privacy__number-items--first {
+  margin-top: rem(40);
+}
+
+.privacy__items {
+  margin-top: rem(40);
+}
+
+.privacy__number-item {
+  list-style-type: decimal;
+  margin-left: rem(24);
+}
+
+
+.privacy__number-item-text {
+  line-height: 2;
+}
+
+.privacy__item {
+  list-style-type: disc;
+  margin-left: rem(24);
+
+}
+
+.privacy__item-text {
+  line-height: 2;
+}

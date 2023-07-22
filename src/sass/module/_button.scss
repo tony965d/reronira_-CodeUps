@@ -64,19 +64,6 @@
 }
 
 
-
-
-// .button::before {
-//   content: "";
-//   position: absolute;
-//   top: 0;
-//   left: 0;
-//   // width: rem(202);
-//   background-color: $white;
-//   color: #408F95;
-// }
-
-
 .button__arrow {
   width: rem(40);
   height: rem(6);
@@ -89,9 +76,34 @@
   transition: .3s;
 }
 
-
-
 .button--top {
   margin-top: rem(40);
 }
 
+.button__contact {
+  display: inline-block;
+  font-family: $english-font-family;
+  font-size: rem(14);
+  color: $white;
+  line-height: 1.58;
+  text-align: left;
+  transition: .3s;
+  width: 100%;
+  padding: rem(16) 0;
+  padding-left: rem(56);
+  z-index: 0;
+}
+
+.button:hover .button__contact {
+  color: #408F95;
+}
+
+.button--contact {
+  padding: 0;
+}
+
+.button__arrow--contact {
+  position: absolute;
+  top: 37%;
+  left: rem(106);
+}

@@ -60,11 +60,11 @@ jQuery(function ($) { // この中であればWordpressでも「$」が使用可
   // });
 
 
-//要素の取得とスピードの設定
-var box = $('.js-price__image'),
-    speed = 700;  
- 
-//.price__imageの付いた全ての要素に対して下記の処理を行う
+  //要素の取得とスピードの設定
+  var box = $('.js-price__image'),
+      speed = 700;  
+  
+  //.price__imageの付いた全ての要素に対して下記の処理を行う
   box.each(function(){
     $(this).append('<div class="price__color"></div>')
     // 現在の要素（$(this)）の内部に<div class="price__color"></div>を追加します。
@@ -97,11 +97,11 @@ var box = $('.js-price__image'),
   });
 
 
-//要素の取得とスピードの設定
-var box = $('.js-item-image'),
-    speed = 700;  
- 
-//.price__imageの付いた全ての要素に対して下記の処理を行う
+  //要素の取得とスピードの設定
+  var box = $('.js-item-image'),
+      speed = 700;  
+  
+  //.price__imageの付いた全ての要素に対して下記の処理を行う
   box.each(function(){
     $(this).append('<div class="voice-item__color"></div>')
     // 現在の要素（$(this)）の内部に<div class="price__color"></div>を追加します。
@@ -134,11 +134,11 @@ var box = $('.js-item-image'),
   });
 
 
-//要素の取得とスピードの設定
-var box = $('.js-content-box-image'),
-    speed = 700;  
- 
-//.price__imageの付いた全ての要素に対して下記の処理を行う
+  //要素の取得とスピードの設定
+  var box = $('.js-content-box-image'),
+      speed = 700;  
+  
+  //.price__imageの付いた全ての要素に対して下記の処理を行う
   box.each(function(){
     $(this).append('<div class="content-box__color"></div>')
     // 現在の要素（$(this)）の内部に<div class="price__color"></div>を追加します。
@@ -282,25 +282,68 @@ var box = $('.js-content-box-image'),
 
   // タブメニュー
   $(function () {
-    // 最初のコンテンツは表示
-    $(".js-information-sub-box:first-of-type").css("display", "block");
+      // 最初のコンテンツは表示
+        // $(".js-information-sub-box:first-of-type").css("display", "flex");
+      
 
-    // タブをクリックすると
-    $(".js-information-sub-category").on("click", function () {
-      // 現在選択されているタブからcurrentを外す
-      $(".current").removeClass("current");
-      // クリックされたタブにcurrentクラスを付与
-      $(this).addClass("current");
-      // クリックされた要素が何番目か取得（クリックしたタブのインデックス番号を取得）
-      const index = $(this).index();
-      // クリックしたタブのインデックス番号と同じコンテンツを表示
-      $(".js-information-sub-box").hide().eq(index).fadeIn(300);
-      $(".js-information-sub-category-icon").hide().eq(index).fadeIn(300);
-      $(".js-information-sub-category-icon-sub").show().eq(index).fadeOut(300);
+      // タブをクリックすると
+      $(".js-information-sub-category").on("click", function () {
+        // 現在選択されているタブからcurrentを外す
+        $(".current").removeClass("current");
+        // クリックされたタブにcurrentクラスを付与
+        $(this).addClass("current");
+        // クリックされた要素が何番目か取得（クリックしたタブのインデックス番号を取得）
+        const index = $(this).index();
+        // クリックしたタブのインデックス番号と同じコンテンツを表示
+        $(".js-information-sub-box").hide().eq(index).fadeIn(300);
 
-    });
-    $(".js-information-sub-category.current").trigger("click");
+        if (window.innerWidth >= 768) {
+          $(".js-information-sub-category-icon").hide().eq(index).fadeIn(0);
+          $(".js-information-sub-category-icon-sub").show().eq(index).fadeOut(0);
+        } else if (window.innerWidth <= 768)  {
+          $(".js-information-sub-category-icon").hide();
+          $(".js-information-sub-category-icon-sub").hide();
+        }
+      });
+      $(".js-information-sub-category.current").trigger("click");
+
   });
+
+
+  $(function() {
+      $('.side-bar__menu').click(function () {
+    $('.side-bar__menu-items').slideToggle(300);
+      });
+  });
+
+
+
+
+	$(function() {
+		//クリックで動く
+		$('.js-faq-nav-open').click(function(){
+			$(this).toggleClass('active');
+			$(this).next('.js-faq-nav').slideToggle();
+		});
+	});
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 });

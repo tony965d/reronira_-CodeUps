@@ -21,14 +21,21 @@
   }
 }
 
-.feature__body {
-  padding: rem(16) rem(16) rem(24) rem(16);
+.feature__image--side-bar img {
 
   @include mq(md) {
-    padding-top: rem(24);
-    padding-bottom: rem(40);
+    aspect-ratio: 294 / 188;
   }
 }
+
+// .feature__body {
+//   padding: rem(16) rem(16) rem(24) rem(16);
+
+//   @include mq(md) {
+//     padding-top: rem(24);
+//     padding-bottom: rem(40);
+//   }
+// }
 
 .feature__header {
   padding-bottom: rem(2);
@@ -42,6 +49,14 @@
     margin-top: rem(24);
   }
 }
+
+.feature__header--side-bar {
+
+  @include mq(md) {
+    margin-top: rem(16);
+  }
+}
+
 
 .feature__category {
   padding-top: rem(3.5);
@@ -73,6 +88,13 @@
   margin-top: rem(4);
 }
 
+.feature__title--side-bar {
+
+  @include mq(md) {
+    text-align: center;
+  }
+}
+
 .feature__content {
   display: flex;
   flex-direction: column;
@@ -97,6 +119,26 @@
   height: 1px;
   background-color: #408F95;
 }
+ 
+.feature__content--side-bar{
+
+  @include mq(md) {
+    padding-top: rem(8);
+    padding-left: rem(24);
+    padding-right: rem(24);
+    padding-bottom: rem(24);
+  }
+}
+
+.feature__content--campaign {
+
+  @include mq(md) {
+    padding-top: rem(24);
+    padding-right: rem(24);
+    padding-left: rem(24);
+    padding-bottom: 0;
+  }
+}
 
 .feature__about {
   color: $green;
@@ -118,6 +160,21 @@
     align-items: baseline
   }
 
+}
+
+.feature__unit--side-bar {
+
+  @include mq(md) {
+    gap: rem(16);
+  }
+}
+
+.feature__unit--campaign {
+
+  @include mq(md) {
+    justify-content: center;
+    gap: rem(40);
+  }
 }
 
 .feature__text {
@@ -148,6 +205,13 @@
   }
 }
 
+.feature__text--side-bar {
+
+  @include mq(md) {
+    font-size: rem(20);
+  }
+}
+
 
 .feature__pickup {
   font-family: 'Lato', sans-serif;
@@ -164,4 +228,59 @@
   }
 }
 
+.feature__pickup--side-bar {
 
+  @include mq(md) {
+    font-size: rem(32);
+    width: unset;
+  }
+}
+
+.feature__body {
+
+  @include mq(md) {
+    margin-top: rem(24);
+    padding-right: rem(24);
+    padding-left: rem(24);
+  }
+}
+
+.feature__contact {
+
+  @include mq(md) {
+    padding-left: rem(24);
+    padding-right: rem(24);
+    padding-bottom: rem(40);
+    margin-top: rem(32);
+  }
+}
+
+.feature__period {
+
+  @include mq(md) {
+    text-align: center;
+    color: #408F95;
+    font-weight: $bold;
+    font-family: 'Lato', sans-serif;
+    font-size: rem(16);
+  }
+}
+
+.feature__contact-text {
+  
+  @include mq(md) {
+    text-align: center;
+    color: #408F95;
+    font-size: rem(14);
+    margin-top: rem(7);
+  }
+}
+
+
+.feature__button {
+
+  @include mq(md) {
+    text-align: center;
+    margin-top: rem(16);
+  }
+}

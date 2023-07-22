@@ -1,0 +1,101 @@
+@use "global" as *;
+
+
+.faq__inner.inner {
+  max-width: rem(500);
+
+  @include mq(md) {
+    max-width: rem(750);
+  }
+}
+
+.faq__block {
+  // border: solid 1px #408F95;
+  margin-top: rem(40);
+}
+
+.faq__nav-open {
+	position: relative;
+	color: #fff;
+	font-size: rem(16);
+  font-weight: $normal;
+	padding-top: rem(16);
+	padding-bottom: rem(16);
+  padding-left: rem(16);
+	background: #408F95;
+
+  @include mq(md) {
+    font-size: rem(20);
+    padding-top: rem(26);
+    padding-bottom: rem(26);
+    padding-left: rem(40);
+  }
+}
+
+.faq__nav-open::before { /* 閉じている時 */
+	content: "";
+  position: absolute;
+  top: 50%;
+  right: rem(16);
+  width: rem(28);
+  height: rem(1);
+  background-color: $white;
+
+  @include mq(md) {
+    right: rem(40);
+    width: rem(32);
+  }
+
+}
+
+.faq__nav-open::after { /* 開いている時 */
+	content: "";
+  position: absolute;
+  top: 50%;
+  right: rem(16);
+  width: rem(28);
+  height: rem(1);
+  transform: rotate(0deg);
+  transition: .3s;
+  background: $white;
+
+  @include mq(md) {
+    right: rem(40);
+    width: rem(32);
+  }
+}
+
+
+.faq__nav-open.active::after { // 閉じている時
+	content: "";
+  position: absolute;
+  top: 50%;
+  right: rem(16);
+  width: rem(28);
+  height: rem(1);
+  transform: rotate(90deg);
+  transition: .3s;
+  background-color: $white;
+
+  @include mq(md) {
+    right: rem(40);
+    width: rem(32);
+  }
+}
+
+.faq__nav {
+  display: none; 
+  border: solid 1px #408F95;
+  margin-top: rem(16);
+}
+
+
+
+.faq__nav-item {
+  padding: rem(24) rem(16);
+
+  @include mq(md) {
+    padding: rem(40);
+  }
+}
+

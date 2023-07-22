@@ -1,0 +1,38 @@
+@use "global" as *;
+
+.blog-sub__inner.inner {
+  max-width: rem(500);
+
+  @include mq(md) {
+    max-width: rem(1130);
+  }
+}
+
+
+.blog-sub__container {
+  
+  @include mq(md) {
+    display: flex;
+    gap: rem(80);
+  }
+}
+
+
+.blog-sub__cards {
+
+  @include mq(md) {
+    // gap: rem(40);
+    display: block;
+    width: 65.37037%;
+  }
+}
+
+
+.blog-sub__side-bar {
+  margin-top: rem(80);
+
+  @include mq(md) {
+    width: 27.222222%;
+    margin-top: 0;
+  }
+}

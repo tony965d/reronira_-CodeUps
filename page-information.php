@@ -35,34 +35,34 @@
       }?>
   </div>
 
-  <div class="information-sub">
+  <section class="information-sub top-information-sub">
     <div class="information-sub__inner inner">
       <div class="information-sub__container">
 
         <ul class="information-sub__categories">
           <li class="information-sub__category current js-information-sub-category">
-            <div class="information-sub__category-icon">
+            <div class="information-sub__category-icon js-information-sub-category-icon u-desktop">
               <img src="<?php echo get_template_directory_uri(); ?>./dist/assets/images/common/information_category-icon1.png" alt="">
             </div>
-            <div class="information-sub__category-icon-sub js-information-sub-category-icon-sub">
+            <div class="information-sub__category-icon-sub js-information-sub-category-icon-sub u-desktop">
               <img src="<?php echo get_template_directory_uri(); ?>./dist/assets/images/common/information_category-icon01.png" alt="">
             </div>
             <p class="information-sub__category-name">ライセンス<span class="u-mobile"><br></span>講習</p>
           </li>
           <li class="information-sub__category js-information-sub-category">
-            <div class="information-sub__category-icon">
+            <div class="information-sub__category-icon js-information-sub-category-icon u-desktop">
               <img src="<?php echo get_template_directory_uri(); ?>./dist/assets/images/common/information_category-icon1.png" alt="">
             </div>
-            <div class="information-sub__category-icon-sub js-information-sub-category-icon-sub">
+            <div class="information-sub__category-icon-sub js-information-sub-category-icon-sub u-desktop">
               <img src="<?php echo get_template_directory_uri(); ?>./dist/assets/images/common/information_category-icon01.png" alt="">
             </div>
             <p class="information-sub__category-name">ファン<span class="u-mobile"><br></span>ダイビング</p>
           </li>
           <li class="information-sub__category js-information-sub-category">
-            <div class="information-sub__category-icon">
+            <div class="information-sub__category-icon js-information-sub-category-icon u-desktop">
               <img src="<?php echo get_template_directory_uri(); ?>./dist/assets/images/common/information_category-icon1.png" alt="">
             </div>
-            <div class="information-sub__category-icon-sub js-information-sub-category-icon-sub">
+            <div class="information-sub__category-icon-sub js-information-sub-category-icon-sub u-desktop">
               <img src="<?php echo get_template_directory_uri(); ?>./dist/assets/images/common/information_category-icon01.png" alt="">
             </div>
             <p class="information-sub__category-name">体験<span class="u-mobile"><br></span>ダイビング</p>
@@ -71,7 +71,7 @@
 
         <div class="information-sub__wrapper">
           <div class="information-sub__box js-information-sub-box">
-            <div class="information-unit">
+            <div class="information-sub__unit">
               <h3 class="information-sub__title">ライセンス講習</h3>
               <p class="information-sub__text">
               泳げない人も、ちょっと水が苦手な人も、ダイビングを「安全に」楽しんでいただけるよう、スタッフがサポートいたします！
@@ -85,7 +85,7 @@
             </div>
           </div>
           <div class="information-sub__box js-information-sub-box">
-            <div class="information-unit">
+            <div class="information-sub__unit">
               <h3 class="information-sub__title">ファンダイビング</h3>
               <p class="information-sub__text">
                 ブランクダイバー、ライセンスを取り立ての方も安心！
@@ -98,7 +98,7 @@
             </div>
           </div>
           <div class="information-sub__box js-information-sub-box">
-            <div class="information-unit">
+            <div class="information-sub__unit">
               <h3 class="information-sub__title">体験ダイビング</h3>
               <p class="information-sub__text">
               ブランクダイバー、ライセンスを取り立ての方も安心！
@@ -114,7 +114,7 @@
         </div>
       </div>
     </div>
-  </div>
+  </section>
 
 
 
