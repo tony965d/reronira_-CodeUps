@@ -37,7 +37,8 @@
   content: '';
   position: absolute;
   top: rem(4);
-  left: rem(2);
+  left: rem(4);
+  // left: rem(2);
   border: solid 1px #408F95;
   width: 100%;
   height: 100%;
@@ -54,6 +55,7 @@
 
 .button:hover::before {
   width: 100%;
+
 }
 
 
@@ -63,6 +65,9 @@
   border-right: 1px solid #408F95;
 }
 
+.button:hover .wpcf7-submit {
+  color: #408F95;
+}
 
 .button__arrow {
   width: rem(40);
@@ -106,4 +111,50 @@
   position: absolute;
   top: 37%;
   left: rem(106);
+}
+
+.button__arrow--contact-form {
+  position: absolute;
+  top: rem(22);
+  left: rem(106);
+}
+
+
+.button--contact-form {
+  padding: 0;
+}
+
+// .button--contact-form {
+//   width: 100%;
+//   padding-top: rem(16);
+//   padding-bottom: rem(16);
+//   color: $white;
+// }
+
+.button--error {
+  color: #408F95;
+  background-color: $white;
+}
+
+.button--error::before {
+  background-color: #408F95;
+  border: solid 1px $white;
+}
+
+.button--error::after {
+  border: solid 1px $white;
+}
+
+.button--error:hover {
+  color: $white;
+}
+
+.button__arrow--error {
+  border-bottom: 1px solid #408F95;
+  border-right: 1px solid #408F95;
+}
+
+.button:hover .button__arrow--error {
+  border-bottom: 1px solid $white;
+  border-right: 1px solid $white;
 }

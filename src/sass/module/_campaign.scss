@@ -12,7 +12,6 @@
 .campaign__pre {
 
   @include mq(md) {
-    
     position: absolute;
     top: unset;
     left: unset;
@@ -48,7 +47,6 @@
 
 
 .campaign__container {
-
   margin-top: rem(23);
 
   @include mq(md) {
@@ -110,4 +108,42 @@
     margin-top: rem(70);
   }
 
+}
+
+
+.campaign__swiper-button .swiper-button-prev, .swiper-rtl .swiper-button-next {
+
+  @include mq(md) {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: rem(80);
+    height: rem(80);
+    border: solid 1px #408F95;
+    border-radius: 50%;
+    margin-top: 0;
+  }
+}
+
+.campaign__swiper-button .swiper-button-prev:hover {
+  opacity: 0.6;
+}
+
+
+.campaign__swiper-button .swiper-button-next, .swiper-rtl .swiper-button-prev {
+  
+  @include mq(md) {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: rem(80);
+    height: rem(80);
+    border: solid 1px #408F95;
+    border-radius: 50%;
+    margin-top: 0;
+  }
+}
+
+.campaign__swiper-button .swiper-button-next:hover {
+  opacity: 0.6;
 }

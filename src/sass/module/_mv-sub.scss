@@ -6,6 +6,15 @@
   height: rem(460);
 }
 
+.mv-sub--404 {
+  height: rem(80);
+  background-color: #408F95;
+  
+  @include mq(md) {
+    height: rem(90);
+  }
+}
+
 .mv-sub__inner {
   height: inherit;
 }

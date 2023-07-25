@@ -5,62 +5,43 @@
         <div class="mv__wrapper">
           <div class="mv__images">
             <div class="swiper js-mv-swiper u-desktop">
-
               <div class="swiper-wrapper">
                 <div class="swiper-slide mv__image">
                   <img src="<?php echo get_template_directory_uri() ?>./dist/assets/images/common/mv_pc1.png" alt="">
                 </div>
-
                 <div class="swiper-slide mv__image">
                   <img src="<?php echo get_template_directory_uri() ?>./dist/assets/images/common/mv_pc2.png" alt="">
                 </div>
-
                 <div class="swiper-slide mv__image">
                   <img src="<?php echo get_template_directory_uri() ?>./dist/assets/images/common/mv_pc3.png" alt="">
                 </div>
-
                 <div class="swiper-slide mv__image">
                   <img src="<?php echo get_template_directory_uri() ?>./dist/assets/images/common/mv_pc4.png" alt="">
                 </div>
               </div>
             </div>
-
             <div class="swiper js-mv-swiper u-mobile">
-
               <div class="swiper-wrapper">
-  
                 <div class="swiper-slide mv__image">
                   <img src="<?php echo get_template_directory_uri() ?>./dist/assets/images/common/mv_1.png" alt="">
                 </div>
-  
-  
                 <div class="swiper-slide mv__image">
                   <img src="<?php echo get_template_directory_uri() ?>./dist/assets/images/common/mv_2.png" alt="">
                 </div>
-  
-  
-  
                 <div class="swiper-slide mv__image">
                   <img src="<?php echo get_template_directory_uri() ?>./dist/assets/images/common/mv_3.png" alt="">
                 </div>
-  
-  
                 <div class="swiper-slide mv__image">
                   <img src="<?php echo get_template_directory_uri() ?>./dist/assets/images/common/mv_4.png" alt="">
                 </div>
-  
               </div>
             </div>
-
           </div>
-          
           <div class="mv__body">
             <h2 class="mv__title">DIVING</h2>
             <p class="mv__sub-title">into the ocean</p>
           </div>
-
         </div>
-
       </section>
 
       <section class="campaign top-campaign">
@@ -69,124 +50,75 @@
             <h2 class="section-header__title">Campaign</h2>
             <p class="section-header__sub-title">キャンペーン</p>
           </div>
-          <!-- <div class="campaign__pre u-desktop">
-            <div class="swiper-button-prev">
-              
-            </div>
-          </div> -->
-
           <div class="campaign__swiper-button">
             <div class="swiper-button-prev u-desktop">
               <div class="campaign__pre">
-                
               </div>
             </div>
-            <div class="swiper-button-next u-desltop">
+            <div class="swiper-button-next u-desktop">
               <div class="campaign__next">
               </div>
             </div>
           </div>
-
-
-          <!-- <div class="campaign__next u-desltop">
-            <div class="swiper-button-next"></div>
-          </div> -->
-
           <div class="campaign__container">
-
             <div class="campaign__wrapper inner">
               <div class="campaign__contents">
-
                 <div class="swiper campaign__swiper js-campaign-swiper">
-    
                   <div class="swiper-wrapper">
-      
+                    <?php 
+                    $campaign_query = new WP_Query(
+                    array(
+                    'post_type'      => 'post',
+                    'posts_per_page' => 4,
+                    )
+                    );
+                    ?>
+                    <?php if ( $campaign_query->have_posts() ) : ?>
+                    <?php while ( $campaign_query->have_posts() ) : ?>
+                    <?php $campaign_query->the_post(); ?>
+
                     <div class="swiper-slide campaign__swiper-slide">
-                      <a href="#" class="campaign__feature feature">
+                      <div href="#" class="campaign__feature feature">
                         <div class="feature__image">
-                          <img src="<?php echo get_template_directory_uri() ?>./dist/assets/images/common/campaign1.png" alt="">
+                          <?php if (has_post_thumbnail()) { ?>
+                          <?php the_post_thumbnail('campaign'); ?>
+                          <?php } else { ?>
+                          <img src="<?php echo get_template_directory_uri() ?>./dist/assets/images/common/noimage.png" alt="画像がありません">
+                          <?php } ?> 
                         </div>
                         <div class="feature__header">
-                          <div class="feature__category">ライセンス講習</div>
-                          <div class="feature__title">ライセンス取得</div>
+                          <a href="<?php the_permalink(); ?>" class="feature__category">
+                          <?php 
+                              $terms = get_the_terms($post->ID,'category');
+                                foreach ( $terms as $term ) {
+                                  echo $term->name ;
+                                }
+                              ?>
+                          </a>
+                          <div class="feature__title"><?php the_title(); ?></div>
                         </div>
+                        <?php
+                          $campaign_card = SCF::get('campaign_card');
+                          foreach ($campaign_card as $fields ) 
+                        { ?>
                         <div class="feature__content">
-                          <p class="feature__about">全部コミコミ(お一人様)</p>
+                          <p class="feature__about"><?php echo $fields['card_sub-text']; ?></p>
                           <div class="feature__unit">
-                            <p class="feature__text">¥56,000</p>
-                            <div class="feature__pickup">¥46,000</div>
+                            <p class="feature__text"><?php echo $fields['original_price']; ?></p>
+                            <div class="feature__pickup"><?php echo $fields['campaign_price']; ?></div>
                           </div>
                         </div>
-                        <!-- <div class="feature__body">
-                        </div> -->
-                      </a>
+                        <?php }; ?>
+                      </div>
                     </div>
-                    <div class="swiper-slide">
-                      <a href="#" class="campaign__feature feature">
-                        <div class="feature__image">
-                          <img src="<?php echo get_template_directory_uri() ?>./dist/assets/images/common/campaign2.png" alt="">
-                        </div>
-                        <div class="feature__header">
-                          <div class="feature__category">体験ダイビング</div>
-                          <div class="feature__title">貸切体験ダイビング</div>
-                        </div>
-                        <div class="feature__content">
-                          <p class="feature__about">全部コミコミ(お一人様)</p>
-                          <div class="feature__unit">
-                            <p class="feature__text">¥24,000</p>
-                            <div class="feature__pickup">¥18,000</div>
-                          </div>
-                        </div>
-                        <!-- <div class="feature__body">
-                        </div> -->
-                      </a>
-                    </div>
-                    <div class="swiper-slide">
-                      <a href="#" class="campaign__feature feature">
-                        <div class="feature__image">
-                          <img src="<?php echo get_template_directory_uri() ?>./dist/assets/images/common/campaign3.png" alt="">
-                        </div>
-                        <div class="feature__header">
-                          <div class="feature__category">体験ダイビング</div>
-                          <div class="feature__title">ナイトダイビング</div>
-                        </div>
-                        <div class="feature__content">
-                          <p class="feature__about">全部コミコミ(お一人様)</p>
-                          <div class="feature__unit">
-                            <p class="feature__text">¥10,000</p>
-                            <div class="feature__pickup">¥8,000</div>
-                          </div>
-                        </div>
-                        <!-- <div class="feature__body">
-                        </div> -->
-                      </a>
-                    </div>
-                    <div class="swiper-slide">
-                      <a href="#" class="campaign__feature feature">
-                        <div class="feature__image">
-                          <img src="<?php echo get_template_directory_uri() ?>./dist/assets/images/common/campaign4.png" alt="">
-                        </div>
-                        <div class="feature__header">
-                          <div class="feature__category">ファンダイビング</div>
-                          <div class="feature__title">貸切ファンダイビング</div>
-                        </div>
-                        <div class="feature__content">
-                          <p class="feature__about">全部コミコミ(お一人様)</p>
-                          <div class="feature__unit">
-                            <p class="feature__text">¥20,000</p>
-                            <div class="feature__pickup">¥16,000</div>
-                          </div>
-                        </div>
-                        <!-- <div class="feature__body">
-                        </div> -->
-                      </a>
-                    </div>
+                    <?php wp_reset_postdata(); ?>
+                    <?php endwhile; ?>
+                    <?php endif; ?>
                   </div>
                 </div>
               </div>
             </div>
           </div>
-
           <div class="campaign__button">
             <a href="#" class="button">View more<span class="button__arrow"></span></a>
           </div>

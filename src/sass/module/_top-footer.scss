@@ -8,3 +8,19 @@
   }
 }
 
+.top-footer--thanks {
+  margin-top: rem(144);
+  
+  @include mq(md) {
+    margin-top: rem(120);
+  }
+}
+
+.top-footer--404 {
+  margin-top: 0;
+  
+
+  @include mq(md) {
+    padding-top: rem(148);
+  }
+}

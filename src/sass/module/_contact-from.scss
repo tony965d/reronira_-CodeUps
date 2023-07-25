@@ -3,201 +3,208 @@
 
 .contact-form__content {
   display: flex;
+  flex-direction: column;
   border-bottom: dotted 1px #408F95;
-  padding-bottom: 40px;
-  margin-top: 40px;
+  padding-bottom: rem(24);
+  margin-top: rem(24);
+  
+  @include mq(md) {
+    padding-bottom: rem(40);
+    margin-top: rem(40);
+    flex-direction: row;
+  }
+}
+
+.contact-form__content--top {
+  margin-top: 0;
+  
+  @include mq(md) {
+    margin-top: 0;
+  }
 }
 
 .contact-form__title {
-  width: 31.4%;
+  width: 100%;
+  font-weight: $bold;
+  color: $green;
+
+  @include mq(md) {
+    width: 31.4%;
+  }
 } 
 
 .contact-form__text {
+  // width: 68.6%;
   width: 100%;
   border: solid 1px #408F95;
+  padding: rem(8) rem(16) rem(8) rem(16);
+} 
+
+.contact-form__required {
+  background-color: #C94800;
+  color: $white;
+  font-size: rem(12);
+  font-weight: $normal;
+  padding: rem(2) rem(16);
+  margin-left: rem(8);
 }
 
-.contact-form__content .wpcf7-form-control-wrap {
-  width: 68.6%;
+.contact-form__check-box {
+  display: flex;
+  flex-direction: column;
+  padding-bottom: rem(24);
+  margin-top: rem(24);
+  border-bottom: dotted 1px #408F95;
+  
+  @include mq(md) {
+    flex-direction: row;
+    padding-bottom: rem(40);
+    margin-top: rem(40);
+  }
 }
+
+.contact-form__menu {
+  position: relative;
+  width: 100%;
+  margin-top: rem(16);
+  
+  @include mq(md) {
+    margin-top: 0;
+    width: 68.6%;
+  }
+}
+
+.contact-form__menu::before {
+  content: "";
+  position: absolute;
+  top: rem(14);
+  right: rem(8);
+  // transform: translateY(-25%);
+  border: 6px solid transparent;
+  border-top: 10px solid #408F95;
+  // z-index: 1;
+}
+
+.contact-form__menu-item {
+  width: 100%;
+  padding: rem(6) rem(0) rem(6) rem(8);
+  border: solid 1px #408F95;
+} 
+
+
+// .contact-form__menu .wpcf7-form-control-wrap .wpcf7-form-control {
+//   width: 100%;
+// }
+
+
+
+.contact-form__content .wpcf7-form-control-wrap {
+  width: 100%;
+  margin-top: rem(18);
+
+  @include mq(md) {
+    width: 68.6%;
+    margin-top: 0;
+  }
+}
+
+.contact-form__check-box .wpcf7-form-control-wrap {
+  width: 100%;
+  margin-top: rem(18);
+  
+  @include mq(md) {
+    width: 68.6%;
+    margin-top: 0;
+  }
+}
+
+
+.contact-form__acceptance {
+  text-align: center;
+  margin-top: rem(40);
+  
+  @include mq(md) {
+    margin-top: rem(80);
+  }
+}
+
+.contact-form__acceptance .wpcf7-list-item input[type="checkbox"] {
+  position: relative;
+  width: rem(22);
+  height: rem(22);
+  display: inline-block;
+  vertical-align: rem(-8);
+  border: 1px solid #408F95;
+  margin-right: rem(16);
+}
+
+
+.contact-form__acceptance .wpcf7-list-item input[type="checkbox"]:checked:before {
+  content: '';
+  position: absolute;
+  top: rem(0);
+  left: rem(6);
+  transform: rotate(50deg);
+  width: rem(8);
+  height: rem(16);
+  display: inline-block;
+  border-right: 2px solid #C94800;
+  border-bottom: 2px solid #C94800;
+}
+
+
+
+.contact-form__button {
+  text-align: center;
+  margin-top: rem(24);
+  
+  @include mq(md) {
+    margin-top: rem(40);
+  }
+}
+
+.contact-form__textarea {
+  // width: 68.6%;
+  width: 100%;
+  border: solid 1px #408F95;
+  padding: rem(8) rem(16) rem(8) rem(16);
+}
+
 
 .contact-form__check {
   display: flex;
   flex-direction: column;
-}
-
-.contact-form__acceptance {
-  text-align: center;
-  margin-top: rem(80);
-}
-
-.contact-form__acceptance .wpcf7-list-item-label::before {
-  /* チェックボックスのデザイン */
-  content: "";
-  position: relative;
-  top: rem(-1);
-  display: inline-block;
-  width: rem(22);
-  height: rem(22);
-  vertical-align: middle;
-  border: 1px solid #408F95;
-  margin-right: rem(10);
-}
-
-.contact-form__acceptance input[type="checkbox"]:checked + .wpcf7-list-item-label::after {
-  /* チェックアイコン */
-  content: "";
-  position: absolute;
-  top: rem(0);
-  left: rem(24);
-  transform: rotate(45deg);
-  width: rem(8);
-  height: rem(16);
-  border-right: 2px solid #C94800; 
-  border-bottom: 2px solid #C94800; 
-
-}
-
-.contact-form__acceptance input[type="checkbox"]:checked + .wpcf7-list-item-label::before {
-  /* チェックしたボックスの背景色を設定 */
-  background-color: $white;
-}
-
-.contact-form__acceptance .wpcf7-form-control-wrap input[type="checkbox"] {
-  cursor: pointer;
-  padding-left: 30px;/*label手前にチェックボックス用の余白を開ける*/
-  vertical-align: middle;
-  position: relative;
-
-  // border: solid 1px #408F95;
-}
-
-.contact-form__acceptance .wpcf7-form-control-wrap input[type="checkbox"]::before,
-.contact-form__acceptance .wpcf7-form-control-wrap input[type="checkbox"]::after {
-  content: "";
-  display: block; 
-  position: absolute;
-}
-
-
-/* チェックボックスデザイン */
-
-
-.contact-form__acceptance .wpcf7-form-control-wrap input[type="checkbox"]::before {
-  background-color: #fff;
-  border-radius: 0%;
-  border: 1px solid #408F95;
-  top: 50%;
-  left: 5px;
-  transform: translateY(-50%);
-  width: rem(22);
-  height: rem(22);
-  aspect-ratio: 1 / 1;
-}
-
-
-.contact-form__acceptance .wpcf7-form-control-wrap input[type="checkbox"]::after {
-  border-bottom: 1px solid #408F95;/*チェックの太さ*/
-  border-left: 1px solid #408F95;/*チェックの太さ*/
-  opacity: 0;/*チェック前は非表示*/
-  height: 6px;/*チェックの高さ*/
-  width: 11px;/*チェックの横幅*/
-  transform: rotate(-45deg);
-  top: -7px;/*チェック時の位置調整*/
-  left: 10px;/*チェック時の位置調整*/
-}
-
-.contact-form__acceptance .wpcf7-form-control-wrap input[type="checkbox"]:checked::after {
-  opacity: 1;/*チェック後表示*/
-}
-
-.contact-form__button {
-  text-align: center;
-  margin-top: rem(40);
-}
-
-.contact-form__textarea {
   width: 100%;
-  border: solid 1px #408F95;
 }
 
+.contact-form__check .wpcf7-list-item {
+  margin-top: rem(4);
+}
 
-.contact-form__check-box .wpcf7-list-item-label::before {
-  /* チェックボックスのデザイン */
-  content: "";
+.contact-form__check .wpcf7-list-item.first {
+  margin-top: 0;
+}
+
+.contact-form__check .wpcf7-list-item input[type="checkbox"] {
   position: relative;
-  top: rem(-1);
+  width: rem(16);
+  height: rem(14);
   display: inline-block;
-  width: rem(22);
-  height: rem(22);
-  vertical-align: middle;
+  vertical-align: rem(-5);
   border: 1px solid #408F95;
-  margin-right: rem(10);
 }
 
-.contact-form__check-box input[type="checkbox"]:checked + .wpcf7-list-item-label::after {
-  /* チェックアイコン */
-  content: "";
+
+.contact-form__check .wpcf7-list-item input[type="checkbox"]:checked:before {
+  content: '';
   position: absolute;
   top: rem(0);
-  left: rem(24);
-  transform: rotate(45deg);
-  width: rem(8);
-  height: rem(16);
-  border-right: 2px solid #C94800; 
-  border-bottom: 2px solid #C94800; 
-
+  left: rem(5);
+  transform: rotate(50deg);
+  width: rem(5);
+  height: rem(9);
+  display: inline-block;
+  border-right: 2px solid #C94800;
+  border-bottom: 2px solid #C94800;
 }
 
-.contact-form__check-box input[type="checkbox"]:checked + .wpcf7-list-item-label::before {
-  /* チェックしたボックスの背景色を設定 */
-  background-color: $white;
-}
-
-.contact-form__check-box .wpcf7-form-control-wrap input[type="checkbox"] {
-  cursor: pointer;
-  padding-left: 30px;/*label手前にチェックボックス用の余白を開ける*/
-  vertical-align: middle;
-  position: relative;
-
-  // border: solid 1px #408F95;
-}
-
-.contact-form__check-box .wpcf7-form-control-wrap input[type="checkbox"]::before,
-.contact-form__check-box .wpcf7-form-control-wrap input[type="checkbox"]::after {
-  content: "";
-  display: block; 
-  position: absolute;
-}
-
-
-/* チェックボックスデザイン */
-
-
-.contact-form__check-box .wpcf7-form-control-wrap input[type="checkbox"]::before {
-  background-color: #fff;
-  border-radius: 0%;
-  border: 1px solid #408F95;
-  top: 50%;
-  left: 5px;
-  transform: translateY(-50%);
-  width: rem(22);
-  height: rem(22);
-  aspect-ratio: 1 / 1;
-}
-
-
-.contact-form__check-box .wpcf7-form-control-wrap input[type="checkbox"]::after {
-  border-bottom: 1px solid #408F95;/*チェックの太さ*/
-  border-left: 1px solid #408F95;/*チェックの太さ*/
-  opacity: 0;/*チェック前は非表示*/
-  height: 6px;/*チェックの高さ*/
-  width: 11px;/*チェックの横幅*/
-  transform: rotate(-45deg);
-  top: -7px;/*チェック時の位置調整*/
-  left: 10px;/*チェック時の位置調整*/
-}
-
-.contact-form__check-box .wpcf7-form-control-wrap input[type="checkbox"]:checked::after {
-  opacity: 1;/*チェック後表示*/
-}

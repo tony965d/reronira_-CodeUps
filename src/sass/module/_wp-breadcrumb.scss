@@ -56,3 +56,13 @@
     max-width: rem(1130);
   }
 }
+
+.wp-breadcrumb--error {
+  color: $white;
+  margin-top: 0;
+  padding-top: rem(8);
+}
+
+.wp-breadcrumb--error span {
+  color: $white;
+}

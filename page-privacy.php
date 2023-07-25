@@ -11,6 +11,7 @@
     $faq = esc_url(home_url( '/faq' ));
     $contact = esc_url(home_url( '/contact' ));
     $privacy = esc_url(home_url( '/privacy' ));
+    $terms = esc_url(home_url( '/terms' ));
   ?>
 
 <main>
@@ -40,7 +41,40 @@
   <section class="privacy top-privacy">
     <div class="privacy__inner inner">
       <div class="privacy__container">
-        <h3 class="privacy__title">プライバシーポリシー</h3>
+
+      <?php if (have_posts()) : ?>
+      <?php while (have_posts()) : the_post(); ?>
+
+      <h3 class="privacy__title">
+        <?php the_title(); ?>
+      </h3>
+
+      <div class="privacy__contents">
+        <?php the_content(); ?>
+      </div>
+
+
+      <?php endwhile; ?>
+      <?php endif; ?>
+
+
+
+
+
+        
+      
+
+      </div>
+    </div>
+  </section>
+
+
+
+
+<?php get_footer(); ?>
+
+<!-- 
+<h3 class="privacy__title">プライバシーポリシー</h3>
         <div class="privacy__wrapper">
           <p class="privacy__text">
             以下は、Webサイトで使用するための一般的なプライバシーポリシーの例です。
@@ -139,14 +173,5 @@
           </p>
 
 
-        </div>
-      
+        </div> -->
 
-      </div>
-    </div>
-  </section>
-
-
-
-
-<?php get_footer(); ?>

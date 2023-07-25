@@ -88,14 +88,15 @@
 
 
 .information-sub__box {
+  display: none;
+  padding: rem(24);
   border: 1px solid #408F95;
   margin-top: rem(16);
-  padding: rem(24);
-  display: none;
 
   @include mq(md) {
     display: flex;
     gap: rem(48);
+    margin-top: rem(24);
   }
 }
 

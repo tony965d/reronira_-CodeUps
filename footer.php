@@ -9,6 +9,8 @@
     $faq = esc_url(home_url( '/faq' ));
     $contact = esc_url(home_url( '/contact' ));
     $privacy = esc_url(home_url( '/privacy' ));
+    $terms = esc_url(home_url( '/terms' ));
+
 
   ?>
       
@@ -145,7 +147,7 @@
                   <a href="<?php echo $privacy; ?>" class="nav-items__main">プライバシー<span class="u-mobile"><br></span>ポリシー</a>
                 </li>
                 <li class="nav-items__unit">
-                  <a href="#" class="nav-items__main">利用規約</a>
+                  <a href="<?php echo $terms; ?>" class="nav-items__main">利用規約</a>
                 </li>
                 <li class="nav-items__unit">
                   <a href="<?php echo $contact; ?>" class="nav-items__main">お問い合わせ</a>

@@ -1,0 +1,46 @@
+@use "global" as *;
+
+
+.terms__inner.inner {
+  max-width: rem(500);
+
+  @include mq(md) {
+    max-width: rem(850);
+  }
+} 
+
+.terms__title {
+  color: $green;
+  font-size: rem(32);
+  font-weight: 500;
+}
+
+.terms__contents {
+  margin-top: rem(40);
+}
+
+.terms__contents p {
+  margin-top: rem(40);
+  line-height: 2;
+}
+
+.terms__contents p:first-child {
+  margin-top: 0;
+}
+
+.terms__contents ol {
+  list-style: decimal;
+}
+
+.terms__contents ol {
+  margin-top: rem(40);
+}
+
+.terms__contents ul {
+  list-style: disc;
+}
+
+
+.terms__contents li {
+  line-height: 2;
+}
