@@ -24,7 +24,7 @@
           <img src="<?php echo get_template_directory_uri(); ?>./dist/assets/images/common/blog_mv.png" alt="">
         </picture>
         <div class="mv-sub__body">
-          <h2 class="mv-sub__title">Blog</h2>
+          <h2 class="mv-sub__title">Voice</h2>
         </div>
       </div>
     </div>
@@ -49,7 +49,7 @@
 
             <div class="single__thumbnail">
               <?php if (has_post_thumbnail()) { ?>
-              <?php the_post_thumbnail('full'); ?>
+              <?php the_post_thumbnail(); ?>
               <?php } ?>
             </div>
 
@@ -57,8 +57,18 @@
               <?php the_content(); ?>
             </div>
 
-            <div class="page-nav page-nav--blog inner">
+            <!-- <div class="page-nav page-nav--blog inner">
               <?php if(function_exists("wp_pagenavi")) wp_pagenavi(); ?>
+            </div> -->
+
+
+            <div class="page-nav page-nav--single">
+              <div class="page-nav__left">
+                <?php next_post_link('%link', ''); ?>
+              </div>
+              <div class="page-nav__right">
+                <?php previous_post_link('%link', ''); ?>
+              </div>
             </div>
           
           <?php endwhile; ?>

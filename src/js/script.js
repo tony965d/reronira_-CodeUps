@@ -310,11 +310,11 @@ jQuery(function ($) { // この中であればWordpressでも「$」が使用可
   });
 
 
-  $(function() {
-      $('.side-bar__menu').click(function () {
-    $('.side-bar__menu-items').slideToggle(300);
-      });
-  });
+  // $(function() {
+  //     $('.side-bar__menu').click(function () {
+  //   $('.side-bar__menu-items').slideToggle(300);
+  //     });
+  // });
 
 
 
@@ -324,6 +324,16 @@ jQuery(function ($) { // この中であればWordpressでも「$」が使用可
 		$('.js-faq-nav-open').click(function(){
 			$(this).toggleClass('active');
 			$(this).next('.js-faq-nav').slideToggle();
+		});
+	});
+
+
+
+	$(function() {
+		//クリックで動く
+		$('.js-side-bar-open').click(function(){
+			$(this).toggleClass('active');
+			$(this).next('.js-side-bar-nav').slideToggle();
 		});
 	});
 

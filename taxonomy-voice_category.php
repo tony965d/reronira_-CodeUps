@@ -43,7 +43,7 @@
 
       <div class="voice-sub__categories categories">
         <div class="categories__all">
-          <a href="<?php echo $voice ?>" class="<?php if(!is_front_page() && is_post_type_archive('voice')) echo 'categories__all-bg is-active'; ?>">ALL</a>
+          <a href="<?php echo $voice ?>" class="categories__all-btn is-active">ALL</a>
         </div>
         <?php
           $args = [
@@ -51,8 +51,17 @@
             'hide_empty' => 0, 
           ];
             $terms = get_terms($args);
-            foreach ( $terms as $term ) {
-              echo '<div class="categories__category"><a class="categories__category-bg is-active" href="'.get_term_link($term).'">'.$term->name.'</a></div>';
+
+            if ( count( $terms ) != 0 ) {
+              // タームのリスト $terms を $term に格納してループ
+              foreach ( $terms as $term ) {
+                  // 投稿でタームのスラッグを選択していれば、currentを付与
+                  if ( is_object_in_term( $post->ID, 'voice_category', $term->slug ) ) {
+                      echo '<div class="categories__category"><a class="categories__category-bg is-active current" href="'.get_term_link($term).'">'.$term->name.'</a></div>';
+                  } else {
+                      echo '<div class="categories__category"><a class="categories__category-bg is-active" href="'.get_term_link($term).'">'.$term->name.'</a></div>';
+                  }          
+              }
             }
         ?>
       </div>  
@@ -118,4 +127,3 @@
 
 
 <?php get_footer(); ?>
-

@@ -21,6 +21,7 @@
   
 
   @include mq(md) {
-    padding-top: rem(148);
+    // padding-top: rem(148);
+    margin-top: 0;
   }
 }

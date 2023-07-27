@@ -93,7 +93,7 @@
                 <div class="nav-items__icon">
                   <img src="./assets/images/common/starfish.png" alt="">
                 </div>
-                <a href="<?php echo $about; ?>" class="nav-items__main">私たちについて</a>
+                <a href="<?php echo $about ?>" class="nav-items__main">私たちについて</a>
               </li>
             </ul>
             
@@ -854,7 +854,7 @@
                 <div class="nav-items__icon">
                   <img src="./assets/images/common/starfish.png" alt="">
                 </div>
-                <a href="<?php echo $about; ?>" class="nav-items__main">私たちについて</a>
+                <a href="<?php echo $about ?>" class="nav-items__main">私たちについて</a>
               </li>
             </ul>
             

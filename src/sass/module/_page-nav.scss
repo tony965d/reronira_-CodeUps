@@ -17,3 +17,81 @@
 .page-nav--voice {
   margin-top: rem(72);
 }
+
+.page-nav--single {
+  display: flex;
+  justify-content: center;
+  gap: rem(82);
+  margin-top: rem(40);
+
+  @include mq(md) {
+    margin-top: rem(80);
+  }
+}
+
+.page-nav__right a {
+  position: relative;
+  display: inline-block;
+  height: rem(38);
+  width: rem(38);
+  border: solid 1px #408F95;
+  padding: 0;
+  // margin-left: rem(28);
+}
+
+
+.page-nav__right a::before {
+  content: '';
+  position: absolute;
+  top: rem(13);
+  left: rem(9);
+  transform: rotate(45deg);
+  width: rem(12);
+  height: rem(12);
+  border-top: solid 1px #408F95;
+  border-right: solid 1px #408F95;
+}
+
+.page-nav__right a:hover {
+  background-color: #408F95;
+  // cursor: pointer;
+}
+
+.page-nav__right a:hover::before {
+  border-top: solid 1px $white;
+  border-right: solid 1px $white;
+}
+
+
+.page-nav__left a {
+  position: relative;
+  display: inline-block;
+  height: rem(38);
+  width: rem(38);
+  border: solid 1px #408F95;
+  padding: 0;
+  // margin-left: rem(28);
+}
+
+
+.page-nav__left a::before {
+  content: '';
+  position: absolute;
+  top: rem(13);
+  left: rem(15);
+  transform: rotate(225deg);
+  width: rem(12);
+  height: rem(12);
+  border-top: solid 1px #408F95;
+  border-right: solid 1px #408F95;
+}
+
+.page-nav__left a:hover {
+  background-color: #408F95;
+  // cursor: pointer;
+}
+
+.page-nav__left a:hover::before {
+  border-top: solid 1px $white;
+  border-right: solid 1px $white;
+}

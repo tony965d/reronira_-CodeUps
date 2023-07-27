@@ -10,10 +10,6 @@
   }
 }
 
-
-
-
-
 .side-bar__title {
   position: relative;
   padding-left: rem(74);
@@ -108,18 +104,102 @@
   }
 }
 
-
-
-.side-bar__menu-items {
-  
-  @include mq(md) {
-    display: none;
-    position:absolute;
-    padding:0;
-    margin:0;
-    top:1.5em;
-    left:0;
-    list-style-type:none;
-    border:1px solid gray;
-  }
+.side-bar__menus {
+  margin-top: rem(24);
 }
+
+.side-bar__menu {
+  margin-top: rem(4);
+}
+
+.side-bar__menu:first-child {
+  margin-top: 0;
+}
+
+.side-bar__menu-open {
+  position: relative;
+	font-size: rem(24);
+  font-weight: $normal;
+  color: #408F95;
+  cursor: pointer;
+  padding-left: rem(32);
+}
+
+.side-bar__menu-open::after { /* 開いている時 */
+	content: "";
+  position: absolute;
+  top: rem(9);
+  left: rem(0);
+  transform: rotate(360deg);
+  transition: .3s;
+  border-style: solid;
+  border-width: rem(20) rem(10) 0 rem(10);
+  border-color: #408F95 transparent transparent transparent;
+  display: inline-block;
+  width: 0;
+  height: 0;
+}
+
+
+.side-bar__menu-open.active::after { // 閉じている時
+  content: "";
+  position: absolute;
+  left: 0;
+  top: rem(6);
+  display: inline-block;
+  transform: rotate(270deg);
+  width: 0;
+  height: 0;
+}
+
+
+.side-bar__nav {
+  display: none; 
+  margin-top: rem(4);
+}
+
+.side-bar__menu-items li {
+  margin-top: rem(4);
+  margin-left: rem(32);
+}
+
+.side-bar__menu-items li:first-child {
+  margin-top: rem(4);
+  margin-left: rem(32);
+}
+
+// .side-bar__menu-item {
+//   margin-top: rem(4);
+//   margin-left: rem(32);
+// }
+
+// .side-bar__menu-item:first-child {
+//   margin-top: 0;
+// }
+
+.side-bar__menu-text {
+  position: relative;
+  display: block;
+  color: #408F95;
+  font-size: rem(24);
+  padding-left: rem(32);
+}
+
+
+
+
+.side-bar__menu-text::after { /* 開いている時 */
+	content: "";
+  position: absolute;
+  transition: .3s;
+  border-style: solid;
+  border-width: rem(20) rem(10) 0 rem(10);
+  border-color: #408F95 transparent transparent transparent;
+  display: inline-block;
+  width: 0;
+  height: 0;
+  top: rem(6);
+  left: 0;
+  transform: rotate(270deg);
+}
+

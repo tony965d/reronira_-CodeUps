@@ -12,7 +12,6 @@
     $contact = esc_url(home_url( '/contact' ));
     $privacy = esc_url(home_url( '/privacy' ));
     $terms = esc_url(home_url( '/terms' ));
-
   ?>
 
 <main>
@@ -37,7 +36,6 @@
           bcn_display();
       }?>
   </div>
-
 
   <section class="blog-sub top-blog-sub">
     <div class="blog-sub__inner inner">
@@ -72,24 +70,17 @@
               </p>
             </div>
           </a>
-          
+
           <?php endwhile; ?>
           <?php endif; ?>
 
           <div class="page-nav page-nav--blog inner">
             <?php if(function_exists("wp_pagenavi")) wp_pagenavi(); ?>
           </div>
-
         </div>
-
         <?php get_sidebar(); ?>
       </div>
-
-
-    </div>
-
-    
+    </div>    
   </section>
-
 
 <?php get_footer(); ?>

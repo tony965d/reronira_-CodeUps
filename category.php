@@ -1,5 +1,6 @@
 <?php get_header(); ?>
 
+
 <?php 
     $home = esc_url(home_url('/'));
     $campaign = esc_url(home_url( '/campaign' ));
@@ -18,9 +19,10 @@
   <section class="mv-sub">
     <div class="mv-sub__inner">
     <div class="mv-sub__wrapper">
+      <div class="mv-sub__image">
       <picture class="mv-sub__image">
-        <source media="(min-width: 768px)" srcset="<?php echo get_template_directory_uri(); ?>./dist/assets/images/common/campaign_mv-pc.png">
-        <img src="<?php echo get_template_directory_uri(); ?>./dist/assets/images/common/campaign_mv.png" alt="">
+        <source media="(min-width: 768px)" srcset="<?php echo get_template_directory_uri(); ?>/dist/assets/images/common/campaign_mv-pc.png">
+        <img src="<?php echo get_template_directory_uri(); ?>/dist/assets/images/common/campaign_mv.png" alt="">
       </picture>
       <div class="mv-sub__body">
         <h2 class="mv-sub__title">Campaign</h2>
@@ -29,13 +31,13 @@
     </div>
   </section>
 
-  <div class="wp-breadcrumb inner">
+  <div class="wp-breadcrumb wp-breadcrumb--about inner">
     <?php if(function_exists('bcn_display'))
       {
           bcn_display();
       }?>
   </div>
-  
+
 
   <section class="campaign-sub top-campaign-sub">
     <div class="campaign-sub__inner inner">
@@ -43,21 +45,29 @@
 
       <div class="campaign-sub__categories categories">
         <div class="categories__all">
-          <a href="<?php echo $campaign ?>" class="<?php if(!is_front_page() && is_home()) echo 'categories__all-bg is-active'; ?>">ALL</a>
+          <a href="<?php echo $campaign ?>" class="categories__all-btn is-active">ALL</a>
         </div>
+
         <?php
           $args = [
             'taxonomy' => 'category',
             'hide_empty' => 0, 
           ];
             $terms = get_terms($args);
-            foreach ( $terms as $term ) {
-              echo '<div class="categories__category"><a class="categories__category-bg is-active" href="'.get_term_link($term).'">'.$term->name.'</a></div>';
+            
+            if ( count( $terms ) != 0 ) {
+              // タームのリスト $terms を $term に格納してループ
+              foreach ( $terms as $term ) {
+                  // 投稿でタームのスラッグを選択していれば、currentを付与
+                  if ( is_object_in_term( $post->ID, 'category', $term->slug ) ) {
+                      echo '<div class="categories__category"><a class="categories__category-bg is-active current" href="'.get_term_link($term).'">'.$term->name.'</a></div>';
+                  } else {
+                      echo '<div class="categories__category"><a class="categories__category-bg is-active" href="'.get_term_link($term).'">'.$term->name.'</a></div>';
+                  }          
+              }
             }
         ?>
       </div>  
-
-
       
     </div>
     <div class="campaign-sub__wrapper inner">
@@ -73,19 +83,19 @@
             <?php if (has_post_thumbnail()) { ?>
             <?php the_post_thumbnail('full'); ?>
             <?php } else { ?>
-            <img src="<?php echo get_template_directory_uri() ?>./dist/assets/images/common/noimage.png" alt="画像がありません">
+            <img src="<?php echo get_template_directory_uri() ?>/dist/assets/images/common/noimage.png" alt="画像がありません">
             <?php } ?> 
           </div>
   
           <div class="feature__header">
-            <a href="<?php the_permalink(); ?>" class="feature__category">
+            <div class="feature__category">
               <?php 
                 $terms = get_the_terms($post->ID,'category');
                   foreach ( $terms as $term ) {
                     echo $term->name ;
                   }
               ?>
-            </a>
+            </div>
             <div class="feature__title"><?php the_title(); ?></div>
           </div>
   
@@ -141,6 +151,7 @@
     </div>
 
   </section>
+
 
 
 

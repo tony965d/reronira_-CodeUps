@@ -1,71 +1,4 @@
-<?php get_header(); ?>
-
-<?php 
-    $home = esc_url(home_url('/'));
-    $campaign = esc_url(home_url( '/campaign' ));
-    $about = esc_url(home_url( '/about' ));
-    $information = esc_url(home_url( '/information' ));
-    $blog = esc_url(home_url( '/blog' ));
-    $voice = esc_url(home_url( '/voice' ));
-    $price = esc_url(home_url( '/price' ));
-    $faq = esc_url(home_url( '/faq' ));
-    $contact = esc_url(home_url( '/contact' ));
-    $privacy = esc_url(home_url( '/privacy' ));
-    $terms = esc_url(home_url( '/terms' ));
-  ?>
-
-<main>
-  <section class="mv-sub">
-    <div class="mv-sub__inner">
-      <div class="mv-sub__wrapper">
-        <div class="mv-sub__image">
-        <picture class="mv-sub__image">
-          <source media="(min-width: 768px)" srcset="<?php echo get_template_directory_uri(); ?>./dist/assets/images/common/blog_mv-pc.png">
-          <img src="<?php echo get_template_directory_uri(); ?>./dist/assets/images/common/blog_mv.png" alt="">
-        </picture>
-        <div class="mv-sub__body">
-          <h2 class="mv-sub__title">Blog</h2>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <div class="wp-breadcrumb inner">
-    <?php if(function_exists('bcn_display'))
-      {
-          bcn_display();
-      }?>
-  </div>
-
-  <section class="single top-single">
-    <div class="single__inner inner">
-      <div class="single__container">
-        <div class="single__wrapper">
-          <?php if (have_posts()) : ?>
-          <?php while (have_posts()) : the_post(); ?>
-            <time datetime="<?php the_time('Y.m.d'); ?>" class="single__datetime"><?php the_time('Y.m.d'); ?></time>
-            
-            <h3 class="single__title"><?php the_title(); ?></h3>
-
-            <div class="single__thumbnail">
-              <?php if (has_post_thumbnail()) { ?>
-              <?php the_post_thumbnail('full'); ?>
-              <?php } ?>
-            </div>
-
-            <div class="single__block">
-              <?php the_content(); ?>
-            </div>
-
-            <div class="page-nav page-nav--blog inner">
-              <?php if(function_exists("wp_pagenavi")) wp_pagenavi(); ?>
-            </div>
-          
-          <?php endwhile; ?>
-          <?php endif; ?>
-        </div>
-
-        <aside class="blog-sub__side-bar side-bar">
+<aside class="blog-sub__side-bar side-bar">
           <div class="side-bar__inner inner">
 
             <nav class="side-bar__article">
@@ -110,15 +43,13 @@
   
             <nav class="side-bar__voice">
               <h3 class="side-bar__title">口コミ</h3>
+  
 
               <?php
                 $voice_query = new WP_Query(
                   array(
                     'post_type'      => 'voice',
-                    'taxonomy' => 'voice_category',
-                    'term' => $term_slug,
                     'posts_per_page' => 1,
-                    'orderby' => 'rand',
                   )
                 );
               ?>
@@ -150,6 +81,7 @@
               <?php endwhile; ?>
               <?php endif; ?>
 
+
               <div class="side-bar__voice-button">
                 <a href="<?php echo $voice ?>" class="button">View more<span class="button__arrow"></span></a>
               </div>
@@ -162,10 +94,7 @@
                 $campaign_query = new WP_Query(
                   array(
                     'post_type'      => 'post',
-                    'taxonomy' => 'category',
-                    'term' => $term_slug,
                     'posts_per_page' => 2,
-                    'orderby' => 'rand',
                   )
                 );
               ?>
@@ -211,30 +140,94 @@
               <div class="side-bar__campaign-button">
                 <a href="<?php echo $campaign ?>" class="button">View more<span class="button__arrow"></span></a>
               </div>
+  
             </nav>
+  
             <nav class="side-bar__archive">
               <h3 class="side-bar__title">アーカイブ</h3>
               <ul class="side-bar__menus">
                 <li class="side-bar__menu">
-                  <p class="side-bar__menu-title">2023</p>
-                  <ul class="side-bar__menu-items">
-                    <li class="side-bar__menu-item">
-                      <a href="#">3月</a>
-                    </li>
-                    <li class="side-bar__menu-item">
-                      <a href="#">2月</a>
-                    </li>
-                    <li class="side-bar__menu-item">
-                      <a href="#">1月</a>
-                    </li>
-                  </ul>
+                  <p class="side-bar__menu-open active js-side-bar-open">2023</p>
+                  <nav class="side-bar__nav js-side-bar-nav">
+                    <ul class="side-bar__menu-items">
+                    <!-- <?php wp_get_archives('type=monthly&post_type=blog'); ?> -->
+
+                    <?php
+                        // 2023年の月別アーカイブを取得するためのパラメータ
+                      $args = array(
+                          'type' => 'monthly',
+                          'show_post_count' => false, // 記事件数を表示する
+                          'year' => 2023,
+                          'post_type' => 'blog', // 投稿タイプ名
+                          'before' => '<span class="side-bar__menu-text">',
+                          'after' => '</span>',
+                      );
+
+                      // 月別アーカイブのリストを出力
+                      wp_get_archives($args);
+                    ?>
+
+
+<!-- <?php
+                          // 2023年の月別アーカイブを取得するためのパラメータ
+                          $args = array(
+                            'type' => 'monthly',
+                            // 'year' => 2023, // 表示したい特定の年を指定
+                            'show_post_count' => false, // 記事件数を表示する
+                            'post_type' => 'blog', // 投稿タイプ名
+                            'before' => '<span class="side-bar__menu-text">',
+                            'after' => '</span>',
+                          );
+                          // 月別アーカイブのリストを出力
+                          wp_get_archives($args);
+                          ?> -->
+                    </ul>
+                  </nav>
                 </li>
+                
+
+                <!-- <li class="side-bar__menu">
+                  <p class="side-bar__menu-open active js-side-bar-open">2022</p>
+                  <nav class="side-bar__nav js-side-bar-nav">
+                    <ul class="side-bar__menu-items">
+                      <?php
+                          // 2023年の月別アーカイブを取得するためのパラメータ
+                        $args = array(
+                            'type' => 'monthly',
+                            'show_post_count' => false, // 記事件数を表示する
+                            'post_type' => 'blog', // 投稿タイプ名
+                            'before' => '<span class="side-bar__menu-text">',
+                            'after' => '</span>',
+                        );
+                        // 月別アーカイブのリストを出力
+                        wp_get_archives($args);
+                      ?>
+                    </ul>
+                  </nav>
+                </li> -->
+
+                <!-- <li class="side-bar__menu">
+                  <p class="side-bar__menu-open active js-side-bar-open">2022</p>
+                  <nav class="side-bar__nav js-side-bar-nav">
+                    <ul class="side-bar__menu-items">
+                      <li class="side-bar__menu-item">
+                        <a href="#" class="side-bar__menu-text">12月</a>
+                      </li>
+                      <li class="side-bar__menu-item">
+                        <a href="#" class="side-bar__menu-text">11月</a>
+                      </li>
+                      <li class="side-bar__menu-item">
+                        <a href="#" class="side-bar__menu-text">10月</a>
+                      </li>
+                    </ul>
+                  </nav>
+                </li> -->
+
               </ul>
+              
+                      
             </nav>
           </div>
-        </aside>
-      </div>
-    </div>
-  </section>
 
-<?php get_footer(); ?>
+  
+        </aside>
