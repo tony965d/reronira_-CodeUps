@@ -61,6 +61,56 @@
         <p class="section-header__sub-title">フォト</p>
       </div>
       <div class="about-sub__galleries">
+        <!-- <div class="about-sub__gallery js-about-sub-gallery">
+          <img src="<?php echo get_template_directory_uri() ?>./dist/assets/images/common/about-gallery1.png" alt="">
+        </div>
+        <div class="about-sub__gallery js-about-sub-gallery">
+          <img src="<?php echo get_template_directory_uri() ?>./dist/assets/images/common/about-gallery2.png" alt="">
+        </div>
+        <div class="about-sub__gallery js-about-sub-gallery">
+          <img src="<?php echo get_template_directory_uri() ?>./dist/assets/images/common/about-gallery3.png" alt="">
+        </div>
+        <div class="about-sub__gallery js-about-sub-gallery">
+          <img src="<?php echo get_template_directory_uri() ?>./dist/assets/images/common/about-gallery2.png" alt="">
+        </div> -->
+
+
+            
+
+
+              <!-- .parent {
+                display: grid;
+                grid-template-columns: repeat(2, 1fr);
+                grid-template-rows: repeat(2, 1fr);
+                grid-column-gap: 8px;
+                grid-row-gap: 8px;
+                }
+
+                .div1 { grid-area: 1 / 1 / 3 / 2; }
+                .div2 { grid-area: 1 / 2 / 2 / 3; }
+                .div3 { grid-area: 2 / 2 / 3 / 3; }  -->
+
+                
+        <!-- <?php if (have_posts()) : ?>
+        <?php while (have_posts()) : the_post(); ?>
+          <?php
+            $about_galleries = SCF::get('about_galleries');
+            foreach ($about_galleries as $fields ) { ?>
+
+            <div class="about-sub__galleries-box">
+              <div class="about-sub__galleries-item">
+                <div class="about-sub__gallery about-sub__gallery--big js-about-sub-gallery">
+                  <?php echo $fields['about_galleries-img']; ?>
+                </div>
+              </div>
+            </div>
+
+          <?php }; ?>
+        <?php endwhile; ?>
+        <?php endif; ?>
+           -->
+            
+            
         <div class="about-sub__galleries-box">
           <div class="about-sub__galleries-item">
             <div class="about-sub__gallery about-sub__gallery--big js-about-sub-gallery">
