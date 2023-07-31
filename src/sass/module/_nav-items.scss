@@ -39,6 +39,10 @@
   }
 }
 
+.nav-items__items--site-map {
+  color: $green;
+}
+
 .nav-items__unit {
   margin-top: rem(40);  
 }
@@ -79,6 +83,20 @@
 .nav-items__main:hover {
   opacity: 0.6;
 }
+
+.nav-items__main--site-map::before {
+  // content: "";
+  // position: absolute;
+  // top: 0;
+  // left: 0;
+  // width: rem(18);
+  // height: rem(18);
+  // display: inline-block;
+  // aspect-ratio: 1 / 1;
+  // background-size: cover;
+  background-image: url('../images/common/starfish_black.png');
+}
+
 
 .nav-items__item {
   margin-top: rem(24);

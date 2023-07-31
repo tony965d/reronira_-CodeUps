@@ -12,6 +12,7 @@
       $contact = esc_url(home_url( '/contact' ));
       $privacy = esc_url(home_url( '/privacy' ));
       $terms = esc_url(home_url( '/terms' ));
+      $SiteMap = esc_url(home_url( '/SiteMap' ));
     ?>
 
     <main>
@@ -23,7 +24,6 @@
                   bcn_display();
               }?>
           </div>
-
           <div class="error__back-image">
             <img src="<?php echo get_template_directory_uri() ?>./dist/assets/images/common/404_image.png" alt="">
           </div>
@@ -37,6 +37,7 @@
         </div>
       </section>
     </main>
+
     <footer class="footer top-footer top-footer--404">
       <div class="footer__inner inner">
         <nav class="footer__nav">
@@ -103,18 +104,21 @@
                   <a href="<?php echo $price ?>" class="nav-items__main">料金一覧</a>
                 </li>
                 <li class="nav-items__item">
-                  <a href="#" class="nav-items__sub">ライセンス講習</a>
+                  <a href="<?php echo $price ?>#price-1" class="nav-items__sub">ライセンス講習</a>
                 </li>
                 <li class="nav-items__item">
-                  <a href="#" class="nav-items__sub">体験ダイビング</a>
+                  <a href="<?php echo $price ?>#price-2" class="nav-items__sub">体験ダイビング</a>
                 </li>
                 <li class="nav-items__item">
-                  <a href="#" class="nav-items__sub">ファンダイビング</a>
+                  <a href="<?php echo $price ?>#price-3" class="nav-items__sub">ファンダイビング</a>
                 </li>
               </ul>
               <ul class="nav-items__items">
                 <li class="nav-items__unit nav-items__unit--pc">
                   <a href="<?php echo $faq ?>" class="nav-items__main">よくある質問</a>
+                </li>
+                <li class="nav-items__unit">
+                  <a href="<?php echo $SiteMap ?>" class="nav-items__main">サイトマップ</a>
                 </li>
                 <li class="nav-items__unit">
                   <a href="<?php echo $privacy ?>" class="nav-items__main">プライバシー<span class="u-mobile"><br></span>ポリシー</a>
@@ -131,9 +135,13 @@
         </nav>  
       </div>
       <div class="footer__copyright inner">
-        <small>Copyright © 2021 - 2023 CodeUps LLC. All Rights Reserved.</small>
+        <small>
+          &copy;2022-<?php the_time('Y'); ?> 
+          <?php echo get_bloginfo('name'); ?> Inc.
+        </small>
       </div>
-    </footer>           
+    </footer>    
+           
     <?php wp_footer(); ?>
   </body>
 </html>

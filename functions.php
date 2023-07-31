@@ -242,3 +242,32 @@ add_filter('wpcf7_autop_or_not', 'wpcf7_autop_return_false');
 function wpcf7_autop_return_false() {
 	return false;
 }
+
+
+// // the_content();のpタグを除去
+// function remove_ptags_from_content($content) {
+// 	$content = preg_replace('/<p[^>]*>/', '', $content);
+// 	$content = str_replace('</p>', '', $content);
+// 	return $content;
+// }
+// add_filter('the_content', 'remove_ptags_from_content');
+
+
+
+function add_defer( $tag ) {
+    if (is_admin()){
+        return $tag; 
+    }
+    if ( strpos( $tag, 'jquery.js' ) ){
+        return $tag;
+    }
+    return str_replace( 'src', 'defer src', $tag );
+}
+add_filter( 'script_loader_tag', 'add_defer', 10 );
+
+
+
+
+
+
+

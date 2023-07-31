@@ -1,6 +1,6 @@
 <?php get_header(); ?>
 
-<?php 
+  <?php 
     $home = esc_url(home_url('/'));
     $campaign = esc_url(home_url( '/campaign' ));
     $about = esc_url(home_url( '/about' ));
@@ -12,6 +12,7 @@
     $contact = esc_url(home_url( '/contact' ));
     $privacy = esc_url(home_url( '/privacy' ));
     $terms = esc_url(home_url( '/terms' ));
+    $SiteMap = esc_url(home_url( '/SiteMap' ));
   ?>
 
 <main>
@@ -36,7 +37,6 @@
       }?>
   </div>
 
-
   <section class="about-sub top-about-sub">
     <div class="about-sub__inner inner">
       <div class="about-sub__container">
@@ -48,32 +48,19 @@
             <img src="<?php echo get_template_directory_uri() ?>./dist/assets/images/common/about_1.png" alt="">
           </div>
         </div>
-
-        <!-- <div class="about__contents"> -->
-
         <h3 class="about-sub__title">Dive into<br>the Ocean</h3>
-
         <div class="about-sub__body">
           <p class="about-sub__text">
             ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。<br>
             ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキスト<span class="u-desktop about__text-sub">が入ります。</span>
           </p>
-
-          
         </div>
-        <!-- </div> -->
-
       </div>
-
-
       <div class="about-sub__header section-header section-header--about-sub">
         <h2 class="section-header__title"> Gallery</h2>
         <p class="section-header__sub-title">フォト</p>
       </div>
-
-
       <div class="about-sub__galleries">
-
         <div class="about-sub__galleries-box">
           <div class="about-sub__galleries-item">
             <div class="about-sub__gallery about-sub__gallery--big js-about-sub-gallery">
@@ -88,7 +75,6 @@
               <img src="<?php echo get_template_directory_uri() ?>./dist/assets/images/common/about-gallery3.png" alt="">
             </div>
           </div>
-
         </div>
         <div class="about-sub__galleries-box about-sub__galleries-box--top">
           <div class="about-sub__galleries-block">
@@ -107,11 +93,8 @@
         </div>
       </div>
     </div>
-
     <div class="about-sub__gallery-expansion js-about-sub__gallery-expansion">
-
     </div>
-
   </section>
 
 <?php get_footer(); ?>

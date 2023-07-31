@@ -4,7 +4,6 @@
   position: relative;
 }
 
-
 .voice__inner.inner {
   max-width: rem(500);
 
@@ -16,7 +15,6 @@
 .voice__inner {
   position: relative;
 }
-
  
 .voice__bg-image {
   position: absolute;
@@ -32,9 +30,6 @@
   object-fit: cover;
   aspect-ratio: 71 / 161;
 }
-
-
-
 
 .voice__background {
 
@@ -53,8 +48,6 @@
   object-fit: cover;
   aspect-ratio: 301 / 138;
 }
-
-
 
 .voice__wrapper {
   margin-top: rem(40);
@@ -80,9 +73,9 @@
   }
 }
 
-.voice__item:hover {
-  opacity: 0.6;
-}
+// .voice__item:hover {
+//   opacity: 0.6;
+// }
 
 .voice__item:first-child {
   margin-top: 0;
@@ -93,9 +86,7 @@
   @include mq(md) {
     margin-right: 0;
   }
-
 }
-
 
 .voice__item:nth-child(n + 3) {
 

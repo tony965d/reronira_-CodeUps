@@ -1,6 +1,6 @@
 <?php get_header(); ?>
 
-<?php 
+  <?php 
     $home = esc_url(home_url('/'));
     $campaign = esc_url(home_url( '/campaign' ));
     $about = esc_url(home_url( '/about' ));
@@ -12,7 +12,7 @@
     $contact = esc_url(home_url( '/contact' ));
     $privacy = esc_url(home_url( '/privacy' ));
     $terms = esc_url(home_url( '/terms' ));
-
+    $SiteMap = esc_url(home_url( '/SiteMap' ));
   ?>
 
 <main>
@@ -37,7 +37,6 @@
           bcn_display();
       }?>
   </div>
-
 
   <section class="blog-sub top-blog-sub">
     <div class="blog-sub__inner inner">
@@ -79,17 +78,10 @@
           <div class="page-nav page-nav--blog inner">
             <?php if(function_exists("wp_pagenavi")) wp_pagenavi(); ?>
           </div>
-
         </div>
-
         <?php get_sidebar(); ?>
       </div>
-
-
     </div>
-
-    
   </section>
-
 
 <?php get_footer(); ?>

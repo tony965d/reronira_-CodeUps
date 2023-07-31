@@ -1,6 +1,6 @@
 <?php get_header(); ?>
 
-<?php 
+  <?php 
     $home = esc_url(home_url('/'));
     $campaign = esc_url(home_url( '/campaign' ));
     $about = esc_url(home_url( '/about' ));
@@ -12,6 +12,7 @@
     $contact = esc_url(home_url( '/contact' ));
     $privacy = esc_url(home_url( '/privacy' ));
     $terms = esc_url(home_url( '/terms' ));
+    $SiteMap = esc_url(home_url( '/SiteMap' ));
   ?>
 
 <main>
@@ -37,11 +38,10 @@
       }?>
   </div>
 
-
   <section class="price-sub top-price-sub">
     <div class="price-sub__inner inner">
       <div class="price-sub__contents">
-        <div class="price-sub__box">
+        <div class="price-sub__box" id="price-1">
           <div class="price-sub__header">
             <div class="price-sub__header-logo">
               <img src="<?php echo get_template_directory_uri() ?>./dist/assets/images/common/price_title-logo.png" alt="">
@@ -63,7 +63,7 @@
             </div>
           </dl>
         </div>
-        <div class="price-sub__box">
+        <div class="price-sub__box" id="price-2">
           <div class="price-sub__header">
             <div class="price-sub__header-logo">
               <img src="<?php echo get_template_directory_uri() ?>./dist/assets/images/common/price_title-logo.png" alt="">
@@ -89,7 +89,7 @@
             </div>
           </dl>
         </div>
-        <div class="price-sub__box">
+        <div class="price-sub__box" id="price-3">
           <div class="price-sub__header">
             <div class="price-sub__header-logo">
               <img src="<?php echo get_template_directory_uri() ?>./dist/assets/images/common/price_title-logo.png" alt="">
@@ -137,12 +137,8 @@
             </div>
           </dl>
         </div>
-        
-        
       </div>
     </div>
   </section>
-
-
 
 <?php get_footer(); ?>

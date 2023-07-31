@@ -6,7 +6,7 @@
 
   @include mq(md) {
     max-width: rem(850);
-  }
+  } 
 } 
 
 .privacy__title {
@@ -30,6 +30,7 @@
 
 .privacy__contents ol {
   list-style: decimal;
+  padding-left: rem(25);
 }
 
 .privacy__contents ol:first-of-type {
@@ -39,8 +40,8 @@
 .privacy__contents ul {
   list-style: disc;
   margin-top: rem(40);
+  padding-left: rem(25);
 }
-
 
 .privacy__contents li {
   line-height: 2;

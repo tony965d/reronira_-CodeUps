@@ -1,6 +1,6 @@
 <?php get_header(); ?>
 
-<?php 
+  <?php 
     $home = esc_url(home_url('/'));
     $campaign = esc_url(home_url( '/campaign' ));
     $about = esc_url(home_url( '/about' ));
@@ -12,6 +12,7 @@
     $contact = esc_url(home_url( '/contact' ));
     $privacy = esc_url(home_url( '/privacy' ));
     $terms = esc_url(home_url( '/terms' ));
+    $SiteMap = esc_url(home_url( '/SiteMap' ));
   ?>
 
 <main>
@@ -37,10 +38,8 @@
       }?>
   </div>
 
-
   <section class="voice-sub top-voice-sub">
     <div class="voice-sub__inner inner">
-
       <div class="voice-sub__categories categories">
         <div class="categories__all">
           <a href="<?php echo $voice ?>" class="categories__all-btn is-active">ALL</a>
@@ -65,13 +64,12 @@
             }
         ?>
       </div>  
-
       <div class="voice-sub__container">
 
-      <?php if (have_posts()) : ?>
-      <?php while (have_posts()) : the_post(); ?>
+        <?php if (have_posts()) : ?>
+        <?php while (have_posts()) : the_post(); ?>
       
-        <a href="<?php the_permalink(); ?>" class="voice-sub__item voice-item">
+        <div class="voice-sub__item voice-item">
           <div class="voice-item__box">
             <div class="voice-item__header">
               <div class="voice-item__sub-title">
@@ -96,34 +94,19 @@
               <?php } ?>
             </div>
           </div>
+          <div class="voice-item__text">
+            <?php the_content(); ?>
+          </div>
+        </div>
           
-          <p class="voice-item__text">
-            <?php
-              if ( mb_strlen( $post->post_content, 'UTF-8' ) > 200 ) {
-                $content = mb_substr( strip_tags( $post->post_content ), 0, 200, 'UTF-8' );
-                echo $content . '…';
-              } else {
-                echo strip_tags ( $post->post_content );
-              }
-            ?>
-          </p>
-          
-        </a>
-          
-      <?php endwhile; ?>
-      <?php endif; ?>
-
+        <?php endwhile; ?>
+        <?php endif; ?>
 
       </div>
-
       <div class="page-nav page-nav--voice">
         <?php if(function_exists("wp_pagenavi")) wp_pagenavi(); ?>
       </div>
-
     </div>
-
   </section>
-
-
 
 <?php get_footer(); ?>

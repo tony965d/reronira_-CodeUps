@@ -2,8 +2,11 @@
 
 
 .mv-sub {
-
   height: rem(460);
+  
+  @include mq(md) {
+    height: rem(548);
+  }
 }
 
 .mv-sub--404 {
@@ -56,6 +59,11 @@
   top: 50%;
   transform: translateY(-50%);
   width: 100%;
+
+  @include mq(md) {
+    top: rem(284);
+    transform: unset;
+  }
 }
 
 .mv-sub__title {
@@ -68,8 +76,8 @@
   text-align: center;
 
   @include mq(md) {
-
+    font-size: rem(80);
+    line-height: 1.25;
   }
-
 }
 

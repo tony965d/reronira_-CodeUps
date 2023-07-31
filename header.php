@@ -18,6 +18,7 @@
     $contact = esc_url(home_url( '/contact' ));
     $privacy = esc_url(home_url( '/privacy' ));
     $terms = esc_url(home_url( '/terms' ));
+    $SiteMap = esc_url(home_url( '/SiteMap' ));
   ?>
 
   <body>
@@ -26,15 +27,13 @@
     <header id="header" class="header js-header">
       <div class="header__inner inner">
         <h1 class="header__logo">
-          <a href="<?php echo $home ?>" class="header__image"><img src="<?php echo get_template_directory_uri() ?>./dist/assets/images/common/CodeUps_logo.png" alt=""></a>
+          <a href="<?php echo $home ?>" class="header__image"><img src="<?php echo get_template_directory_uri() ?>/dist/assets/images/common/CodeUps_logo.png" alt=""></a>
         </h1>
-
         <div class="header__hamburger hamburger js-hamburger">
           <span></span>
           <span></span>
           <span></span>
         </div>
-        
         <nav class="header__pc-nav pc-nav">
           <ul class="pc-nav__items">
             <li class="pc-nav__item">
@@ -87,17 +86,11 @@
             </li>
           </ul>
         </nav>
-
       </div>
-
-
-
       <nav class="header__sp-nav sp-nav js-sp-nav">
         <div class="sp-nav__inner inner">
-
           <div class="sp-nav__items nav-items">
             <div class="nav-items__box">
-
               <ul class="nav-items__items">
                 <li class="nav-items__unit nav-items__unit--sp">
                   <a href="<?php echo $campaign ?>" class="nav-items__main">キャンペーン</a>
@@ -111,16 +104,11 @@
                 <li class="nav-items__item">
                   <a href="#" class="nav-items__sub">ナイトダイビング</a>
                 </li>
-  
                 <li class="nav-items__unit">
                   <a href="<?php echo $about ?>" class="nav-items__main">私たちについて</a>
                 </li>
               </ul>
-              
-              
               <ul class="nav-items__items">
-  
-  
                 <li class="nav-items__unit nav-items__unit--pc">
                   <a href="<?php echo $information ?>" class="nav-items__main">ダイビング情報</a>
                 </li>
@@ -137,10 +125,8 @@
                   <a href="<?php echo $blog ?>" class="nav-items__main">ブログ</a>
                 </li>
               </ul>
-
             </div>
             <div class="nav-items__box nav-items__box--right">
-
               <ul class="nav-items__items">
                 <li class="nav-items__unit nav-items__unit--sp">
                   <a href="<?php echo $voice ?>" class="nav-items__main">お客様の声</a>
@@ -149,42 +135,34 @@
                   <a href="<?php echo $price ?>" class="nav-items__main">料金一覧</a>
                 </li>
                 <li class="nav-items__item">
-                  <a href="#" class="nav-items__sub">ライセンス講習</a>
+                  <a href="<?php echo $price ?>#price-1" class="nav-items__sub">ライセンス講習</a>
                 </li>
                 <li class="nav-items__item">
-                  <a href="#" class="nav-items__sub">体験ダイビング</a>
+                  <a href="<?php echo $price ?>#price-2" class="nav-items__sub">体験ダイビング</a>
                 </li>
                 <li class="nav-items__item">
-                  <a href="#" class="nav-items__sub">ファンダイビング</a>
+                  <a href="<?php echo $price ?>#price-3" class="nav-items__sub">ファンダイビング</a>
                 </li>
               </ul>
-              
-              
               <ul class="nav-items__items">
                 <li class="nav-items__unit nav-items__unit--pc">
                   <a href="<?php echo $faq ?>" class="nav-items__main">よくある質問</a>
                 </li>
                 <li class="nav-items__unit">
+                  <a href="<?php echo $SiteMap ?>" class="nav-items__main">サイトマップ</a>
+                </li>
+                <li class="nav-items__unit">
                   <a href="<?php echo $privacy ?>" class="nav-items__main">プライバシー<span class="u-mobile"><br></span>ポリシー</a>
                 </li>
-                
                 <li class="nav-items__unit">
                   <a href="<?php echo $terms ?>" class="nav-items__main">利用規約</a>
                 </li>
-                
                 <li class="nav-items__unit">
                   <a href="<?php echo $contact ?>" class="nav-items__main">お問い合わせ</a>
                 </li>
               </ul>
             </div>
-            
-            
-            
           </div>
-
         </div>
-        
       </nav>
-
-
     </header>

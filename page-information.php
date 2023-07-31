@@ -1,6 +1,6 @@
 <?php get_header(); ?>
 
-<?php 
+  <?php 
     $home = esc_url(home_url('/'));
     $campaign = esc_url(home_url( '/campaign' ));
     $about = esc_url(home_url( '/about' ));
@@ -12,6 +12,7 @@
     $contact = esc_url(home_url( '/contact' ));
     $privacy = esc_url(home_url( '/privacy' ));
     $terms = esc_url(home_url( '/terms' ));
+    $SiteMap = esc_url(home_url( '/SiteMap' ));
   ?>
 
 <main>
@@ -40,9 +41,8 @@
   <section class="information-sub top-information-sub">
     <div class="information-sub__inner inner">
       <div class="information-sub__container">
-
         <ul class="information-sub__categories">
-          <li class="information-sub__category current js-information-sub-category">
+          <li id="info-1" class="information-sub__category current js-information-sub-category">
             <div class="information-sub__category-icon js-information-sub-category-icon u-desktop">
               <img src="<?php echo get_template_directory_uri(); ?>./dist/assets/images/common/information_category-icon1.png" alt="">
             </div>
@@ -51,7 +51,7 @@
             </div>
             <p class="information-sub__category-name">ライセンス<span class="u-mobile"><br></span>講習</p>
           </li>
-          <li class="information-sub__category js-information-sub-category">
+          <li id="info-2" class="information-sub__category js-information-sub-category">
             <div class="information-sub__category-icon js-information-sub-category-icon u-desktop">
               <img src="<?php echo get_template_directory_uri(); ?>./dist/assets/images/common/information_category-icon1.png" alt="">
             </div>
@@ -60,7 +60,7 @@
             </div>
             <p class="information-sub__category-name">ファン<span class="u-mobile"><br></span>ダイビング</p>
           </li>
-          <li class="information-sub__category js-information-sub-category">
+          <li id="info-3" class="information-sub__category js-information-sub-category">
             <div class="information-sub__category-icon js-information-sub-category-icon u-desktop">
               <img src="<?php echo get_template_directory_uri(); ?>./dist/assets/images/common/information_category-icon1.png" alt="">
             </div>
@@ -70,16 +70,15 @@
             <p class="information-sub__category-name">体験<span class="u-mobile"><br></span>ダイビング</p>
           </li>
         </ul>
-
         <div class="information-sub__wrapper">
           <div class="information-sub__box js-information-sub-box">
             <div class="information-sub__unit">
               <h3 class="information-sub__title">ライセンス講習</h3>
               <p class="information-sub__text">
-              泳げない人も、ちょっと水が苦手な人も、ダイビングを「安全に」楽しんでいただけるよう、スタッフがサポートいたします！
-              スキューバダイビングを楽しむためには最低限の知識とスキルが要求されます。
-              知識やスキルと言ってもそんなに難しい事ではなく、安全に楽しむ事を目的としたものです。
-              プロダイバーの指導のもと知識とスキルを習得しCカードを取得して、ダイバーになろう！
+                泳げない人も、ちょっと水が苦手な人も、ダイビングを「安全に」楽しんでいただけるよう、スタッフがサポートいたします！
+                スキューバダイビングを楽しむためには最低限の知識とスキルが要求されます。
+                知識やスキルと言ってもそんなに難しい事ではなく、安全に楽しむ事を目的としたものです。
+                プロダイバーの指導のもと知識とスキルを習得しCカードを取得して、ダイバーになろう！
               </p>
             </div>
             <div class="information-sub__image">
@@ -103,22 +102,18 @@
             <div class="information-sub__unit">
               <h3 class="information-sub__title">体験ダイビング</h3>
               <p class="information-sub__text">
-              ブランクダイバー、ライセンスを取り立ての方も安心！
-              沖縄本島を代表する「青の洞窟」（真栄田岬）やケラマ諸島などメジャーなポイントはモチロンのこと、
-              最北端「辺戸岬」や最南端の「大渡海岸」等もご用意！
+                ブランクダイバー、ライセンスを取り立ての方も安心！
+                沖縄本島を代表する「青の洞窟」（真栄田岬）やケラマ諸島などメジャーなポイントはモチロンのこと、
+                最北端「辺戸岬」や最南端の「大渡海岸」等もご用意！
               </p>
             </div>
             <div class="information-sub__image">
               <img src="<?php echo get_template_directory_uri(); ?>./dist/assets/images/common/information_image3.png" alt="">
             </div>
           </div>
-          
         </div>
       </div>
     </div>
   </section>
-
-
-
 
 <?php get_footer(); ?>

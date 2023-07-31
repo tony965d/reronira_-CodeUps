@@ -1,6 +1,6 @@
 <?php get_header(); ?>
 
-<?php 
+  <?php 
     $home = esc_url(home_url('/'));
     $campaign = esc_url(home_url( '/campaign' ));
     $about = esc_url(home_url( '/about' ));
@@ -12,6 +12,7 @@
     $contact = esc_url(home_url( '/contact' ));
     $privacy = esc_url(home_url( '/privacy' ));
     $terms = esc_url(home_url( '/terms' ));
+    $SiteMap = esc_url(home_url( '/SiteMap' ));
   ?>
 
 <main>
@@ -43,34 +44,29 @@
         <div class="single__wrapper">
           <?php if (have_posts()) : ?>
           <?php while (have_posts()) : the_post(); ?>
-            <time datetime="<?php the_time('Y.m.d'); ?>" class="single__datetime"><?php the_time('Y.m.d'); ?></time>
-            
-            <h3 class="single__title"><?php the_title(); ?></h3>
 
+            <time datetime="<?php the_time('Y.m.d'); ?>" class="single__datetime"><?php the_time('Y.m.d'); ?></time>
+            <h3 class="single__title"><?php the_title(); ?></h3>
             <div class="single__thumbnail">
               <?php if (has_post_thumbnail()) { ?>
               <?php the_post_thumbnail('full'); ?>
               <?php } ?>
             </div>
-
             <div class="single__block">
               <?php the_content(); ?>
             </div>
-
             <div class="page-nav page-nav--blog inner">
               <?php if(function_exists("wp_pagenavi")) wp_pagenavi(); ?>
             </div>
-          
+
           <?php endwhile; ?>
           <?php endif; ?>
         </div>
 
         <aside class="blog-sub__side-bar side-bar">
           <div class="side-bar__inner inner">
-
             <nav class="side-bar__article">
               <h3 class="side-bar__title">人気記事</h3>
-    
               <div class="side-bar__cards cards">
     
                 <?php
@@ -107,7 +103,6 @@
               <?php endif; ?>
               </div>
             </nav>
-  
             <nav class="side-bar__voice">
               <h3 class="side-bar__title">口コミ</h3>
 
@@ -154,7 +149,6 @@
                 <a href="<?php echo $voice ?>" class="button">View more<span class="button__arrow"></span></a>
               </div>
             </nav>
-  
             <nav class="side-bar__campaign">
               <h3 class="side-bar__title">キャンペーン</h3>
   
@@ -184,7 +178,6 @@
                     <?php } ?> 
   
                   </div>
-  
                   <div class="feature__header feature__header--side-bar">
                     <!-- <div class="feature__category">ライセンス講習</div> -->
                     <div class="feature__title feature__title--side-bar"><?php the_title(); ?></div>

@@ -12,7 +12,6 @@ jQuery(function ($) { // この中であればWordpressでも「$」が使用可
       $('.js-sp-nav').fadeIn(500);
       $('body').css('overflow', 'hidden');
     }
-    
   });
 
 
@@ -28,7 +27,6 @@ jQuery(function ($) { // この中であればWordpressでも「$」が使用可
   var mySwiper = new Swiper ('.js-campaign-swiper', {
     slidesPerView: 1.26,
     spaceBetween: 24,
-    
     loop: true,
     autoplay: {     
         delay: 3000,   
@@ -46,10 +44,7 @@ jQuery(function ($) { // この中であればWordpressでも「$」が使用可
           prevEl: '.swiper-button-prev',
         },
       },
-
     },
-
-
   });
 
 
@@ -98,7 +93,7 @@ jQuery(function ($) { // この中であればWordpressでも「$」が使用可
 
 
   //要素の取得とスピードの設定
-  var box = $('.js-item-image'),
+  var box = $('.js-voice-item-image'),
       speed = 700;  
   
   //.price__imageの付いた全ての要素に対して下記の処理を行う
@@ -199,7 +194,6 @@ jQuery(function ($) { // この中であればWordpressでも「$」が使用可
   //               return false;
   //    });
   // });
-
   
 
   $(function () {
@@ -240,7 +234,6 @@ jQuery(function ($) { // この中であればWordpressでも「$」が使用可
       }
     });
   });
-
 
 
    $(".js-about-sub-gallery img").click(function () {
@@ -285,7 +278,6 @@ jQuery(function ($) { // この中であればWordpressでも「$」が使用可
       // 最初のコンテンツは表示
         // $(".js-information-sub-box:first-of-type").css("display", "flex");
       
-
       // タブをクリックすると
       $(".js-information-sub-category").on("click", function () {
         // 現在選択されているタブからcurrentを外す
@@ -306,17 +298,7 @@ jQuery(function ($) { // この中であればWordpressでも「$」が使用可
         }
       });
       $(".js-information-sub-category.current").trigger("click");
-
   });
-
-
-  // $(function() {
-  //     $('.side-bar__menu').click(function () {
-  //   $('.side-bar__menu-items').slideToggle(300);
-  //     });
-  // });
-
-
 
 
 	$(function() {
@@ -328,7 +310,6 @@ jQuery(function ($) { // この中であればWordpressでも「$」が使用可
 	});
 
 
-
 	$(function() {
 		//クリックで動く
 		$('.js-side-bar-open').click(function(){
@@ -337,71 +318,52 @@ jQuery(function ($) { // この中であればWordpressでも「$」が使用可
 		});
 	});
 
-  
+
+  jQuery(document).ready(function($) {
+    // 別ページで指定したIDに対してスムーズスクロールを行う
+    function scrollToTarget() {
+      var target = $(window.location.hash);
+      if (target.length) {
+        var headerHeight = $('header').outerHeight(); // ヘッダーの高さを取得
+        var targetOffset = target.offset().top - headerHeight;
+        $('html, body').animate({
+          scrollTop: targetOffset
+        }, 800);
+      }
+    }
+    // ページロード時にスムーズスクロールを実行
+    scrollToTarget();
+    $("#info-3").trigger("click");
+    // ハッシュが変更された場合にスムーズスクロールを実行
+    $(window).on('hashchange', function() {
+      scrollToTarget();
+    });
+  });
 
 
 
+  // jQuery(document).ready(function($) {
+  //   // ページロード時にスムーズスクロールを実行
+  //   scrollToTarget();
 
+  //   // ハッシュが変更された場合にスムーズスクロールを実行
+  //   $(window).on('hashchange', function() {
+  //     scrollToTarget();
+  //   });
 
+  //   // 指定したIDの要素をクリックした状態にする
+  //   function clickTarget() {
+  //     var target = $(window.location.hash);
+  //     if (target.length) {
+  //       target.click();
+  //     }
+  //   }
 
-
-
-
-
-
-
-
-
+  //   // ページロード時に指定したIDの要素をクリックした状態にする
+  //   clickTarget();
+  // });
 
 
 
 
 });
-
-
-    //  // クリックしたタブのインデックス番号と同じコンテンツを表示
-    //  $(".js-information-sub-box").hide().eq(index).fadeIn(300);
-    //  // クリックしたタブに対応するアイコンをフェードイン
-    //  $(".js-information-sub-category-icon").hide().eq(index).fadeIn(300);
-    //  // クリックしたタブ以外のアイコンをフェードアウト
-    //  $(".js-information-sub-category-icon").not(":eq(" + index + ")").fadeOut(300);
-    //  // クリックしたタブに対応するサブアイコンをフェードアウト
-    //  $(".js-information-sub-category-icon-sub").hide().eq(index).fadeIn(300);
-    //  // クリックしたタブ以外のサブアイコンをフェードイン
-    //  $(".js-information-sub-category-icon-sub").not(":eq(" + index + ")").fadeOut(300);
-  
- 
-
-      // // クリックしたタブのインデックス番号と同じコンテンツを表示
-      // $(".js-information-sub-box").hide().eq(index).fadeIn(300);
-
-      // // アイコンのフェードイン/フェードアウト
-      // $(".js-information-sub-category-icon").each(function (i) {
-      //   if (i === index) {
-      //     $(this).fadeIn(300);
-      //   } else {
-      //     $(this).fadeOut(300);
-      //   }
-      // });
-
-      // // サブアイコンのフェードイン/フェードアウト
-      // $(".js-information-sub-category-icon-sub").each(function (i) {
-      //   if (i === index) {
-      //     $(this).fadeOut(300);
-      //   } else {
-      //     $(this).fadeIn(300);
-      //   }
-      // });
-
-    
-
-    // // クリックしたタブのインデックス番号と同じコンテンツを表示
-    // $(".js-information-sub-box").hide().eq(index).fadeIn(300);
-
-    // // アイコンのフェードイン/フェードアウト
-    // $(".js-information-sub-category-icon").hide().eq(index).fadeIn(300);
-    // $(".js-information-sub-category-icon").not(":eq(" + index + ")").fadeOut(300);
-
-    // // サブアイコンのフェードイン/フェードアウト
-    // $(".js-information-sub-category-icon-sub").hide().eq(index).fadeIn(300);
-    // $(".js-information-sub-category-icon-sub").not(":eq(" + index + ")").fadeOut(300);

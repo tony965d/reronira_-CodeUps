@@ -1,6 +1,6 @@
 <?php get_header(); ?>
 
-  <?php 
+   <?php 
       $home = esc_url(home_url('/'));
       $campaign = esc_url(home_url( '/campaign' ));
       $about = esc_url(home_url( '/about' ));
@@ -12,6 +12,7 @@
       $contact = esc_url(home_url( '/contact' ));
       $privacy = esc_url(home_url( '/privacy' ));
       $terms = esc_url(home_url( '/terms' ));
+      $SiteMap = esc_url(home_url( '/SiteMap' ));
     ?>
 
     <main>
@@ -93,7 +94,7 @@
                     <?php $campaign_query->the_post(); ?>
 
                     <div class="swiper-slide campaign__swiper-slide">
-                      <a href="<?php the_permalink(); ?>" class="campaign__feature feature">
+                      <div class="campaign__feature feature">
                         <div class="feature__image">
                           <?php if (has_post_thumbnail()) { ?>
                           <?php the_post_thumbnail('full'); ?>
@@ -124,7 +125,7 @@
                           </div>
                         </div>
                         <?php }; ?>
-                      </a>
+                      </div>
                     </div>
                     <?php wp_reset_postdata(); ?>
                     <?php endwhile; ?>
@@ -225,7 +226,11 @@
 
               <a href="<?php the_permalink(); ?>" class="cards__card card">
                 <div class="card__image">
-                  <img src="<?php echo get_template_directory_uri() ?>/dist/assets/images/common/blog_1.png" alt="">
+                  <?php if (has_post_thumbnail()) { ?>
+                  <?php the_post_thumbnail('full'); ?>
+                  <?php } else { ?>
+                  <?php } ?>
+                  <!-- <img src="<?php echo get_template_directory_uri() ?>/dist/assets/images/common/blog_1.png" alt=""> -->
                 </div>
                 <div class="card__body">
                   <div class="card__header">
@@ -252,8 +257,6 @@
             <div class="blog__button">
               <a href="<?php echo $blog ?>" class="button">View more<span class="button__arrow"></span></a>
             </div>
-            
-  
           </div>
         </div>
       </section>
@@ -284,7 +287,7 @@
             <?php while ( $voice_query->have_posts() ) : ?>
             <?php $voice_query->the_post(); ?>
 
-              <a href="<?php the_permalink(); ?>" class="voice__item voice-item">
+              <div class="voice__item voice-item">
                 <div class="voice-item__box">
                   <div class="voice-item__header">
                     <div class="voice-item__sub-title">
@@ -311,17 +314,10 @@
                     <?php } ?>
                   </div>
                 </div>
-                <p class="voice-item__text">
-                  <?php
-                    if ( mb_strlen( $post->post_content, 'UTF-8' ) > 169 ) {
-                      $content = mb_substr( strip_tags( $post->post_content ), 0, 169, 'UTF-8' );
-                      echo $content . '…';
-                    } else {
-                      echo strip_tags ( $post->post_content );
-                    }
-                  ?>
-                </p>
-              </a>
+                <div class="voice-item__text">
+                  <?php the_content(); ?>
+                </div>
+              </div>
 
             <?php wp_reset_postdata(); ?>
             <?php endwhile; ?>
@@ -331,7 +327,6 @@
           <div class="voice__button">
             <a href="<?php echo $voice ?>" class="button">View more<span class="button__arrow"></span></a>
           </div>
-          
         </div>
       </section>
 

@@ -31,7 +31,7 @@
 
 .page-nav__right a {
   position: relative;
-  display: inline-block;
+  display: block;
   height: rem(38);
   width: rem(38);
   border: solid 1px #408F95;
@@ -65,7 +65,7 @@
 
 .page-nav__left a {
   position: relative;
-  display: inline-block;
+  display: block;
   height: rem(38);
   width: rem(38);
   border: solid 1px #408F95;

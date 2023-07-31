@@ -1,6 +1,6 @@
 <?php get_header(); ?>
 
-<?php 
+  <?php 
     $home = esc_url(home_url('/'));
     $campaign = esc_url(home_url( '/campaign' ));
     $about = esc_url(home_url( '/about' ));
@@ -12,6 +12,7 @@
     $contact = esc_url(home_url( '/contact' ));
     $privacy = esc_url(home_url( '/privacy' ));
     $terms = esc_url(home_url( '/terms' ));
+    $SiteMap = esc_url(home_url( '/SiteMap' ));
   ?>
 
 <main>
@@ -43,20 +44,17 @@
         <div class="single__wrapper">
           <?php if (have_posts()) : ?>
           <?php while (have_posts()) : the_post(); ?>
+          
             <time datetime="<?php the_time('Y.m.d'); ?>" class="single__datetime"><?php the_time('Y.m.d'); ?></time>
-            
             <h3 class="single__title"><?php the_title(); ?></h3>
-
             <div class="single__thumbnail">
               <?php if (has_post_thumbnail()) { ?>
               <?php the_post_thumbnail('full'); ?>
               <?php } ?>
             </div>
-
             <div class="single__block">
               <?php the_content(); ?>
             </div>
-
             <div class="page-nav page-nav--single">
               <div class="page-nav__left">
                 <?php next_post_link('%link',''); ?>
@@ -69,9 +67,7 @@
           <?php endwhile; ?>
           <?php endif; ?>
         </div>
-
         <?php get_sidebar(); ?>
-        
       </div>
     </div>
   </section>

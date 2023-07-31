@@ -6,7 +6,6 @@
   
   @include mq(md) {
     max-width: rem(1130);
-
   }
 }
 
@@ -38,6 +37,10 @@
   }
 }
 
+// .voice-sub__item:hover {
+//   opacity: 0.6;
+// }
+
 .voice-sub__item:nth-child(n + 3) {
 
   @include mq(md) {
@@ -51,3 +54,4 @@
     margin-right: 0;
   }
 }
+
