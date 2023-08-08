@@ -103,9 +103,10 @@
 .campaign__button {
   text-align: center;
   margin-top: rem(31);
+  padding-bottom: rem(4);
 
   @include mq(md) {
-    margin-top: rem(70);
+    margin-top: rem(72);
   }
 
 }

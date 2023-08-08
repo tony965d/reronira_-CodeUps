@@ -1,10 +1,29 @@
 @use "global" as *;
 
+.blog-sub {
+  // position: relative;
+}
+
+// .blog-sub::before {
+//   content: '';
+//   position: absolute;
+//   bottom: 0;
+//   left: 0;
+//   width: 100%;
+//   height: rem(61);
+//   background-image: url("../images/common/blog_back-wave.png");
+//   background-size: cover;
+// }
+
 .blog-sub__inner.inner {
   max-width: rem(500);
+  padding-right: rem(21);
+  padding-left: rem(21);
 
   @include mq(md) {
     max-width: rem(1130);
+    padding-left: rem(25);
+    padding-right: rem(25);
   }
 }
 
@@ -22,7 +41,7 @@
 
   @include mq(md) {
     // gap: rem(40);
-    display: block;
+    // display: block;
     width: 65.37037%;
   }
 }

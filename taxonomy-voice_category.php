@@ -64,12 +64,12 @@
             }
         ?>
       </div>  
-      <div class="voice-sub__container">
+      <div class="voice-sub__container voice-items">
 
         <?php if (have_posts()) : ?>
         <?php while (have_posts()) : the_post(); ?>
       
-        <div class="voice-sub__item voice-item">
+        <div class="voice-items__voice-item voice-items__voice-item--sub voice-item">
           <div class="voice-item__box">
             <div class="voice-item__header">
               <div class="voice-item__sub-title">

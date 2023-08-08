@@ -24,8 +24,32 @@ jQuery(function ($) { // この中であればWordpressでも「$」が使用可
   });
 
 
+  // var mySwiper = new Swiper ('.js-campaign-swiper', {
+  //   slidesPerView: 1.26,
+  //   spaceBetween: 24,
+  //   loop: true,
+  //   autoplay: {     
+  //       delay: 3000,   
+  //   },          
+  //   speed: 500,    
+  //   breakpoints: {
+  //     // スライドの表示枚数：500px以上の場合
+  //     768: {
+  //       // slidesPerView: 'auto',
+  //       spaceBetween: 40,
+  //       slidesPerView: 3.485,
+  //       // slidesPerView: 4,
+  //       navigation: {
+  //         nextEl: '.swiper-button-next',
+  //         prevEl: '.swiper-button-prev',
+  //       },
+  //     },
+  //   },
+  // });
+
+
   var mySwiper = new Swiper ('.js-campaign-swiper', {
-    slidesPerView: 1.26,
+    slidesPerView: "auto",
     spaceBetween: 24,
     loop: true,
     autoplay: {     
@@ -35,10 +59,7 @@ jQuery(function ($) { // この中であればWordpressでも「$」が使用可
     breakpoints: {
       // スライドの表示枚数：500px以上の場合
       768: {
-        // slidesPerView: 'auto',
         spaceBetween: 40,
-        slidesPerView: 3.485,
-        // slidesPerView: 4,
         navigation: {
           nextEl: '.swiper-button-next',
           prevEl: '.swiper-button-prev',
@@ -46,6 +67,8 @@ jQuery(function ($) { // この中であればWordpressでも「$」が使用可
       },
     },
   });
+
+
 
 
   // $(".price__slide").on("inview", function (event, isInView) {
@@ -236,20 +259,20 @@ jQuery(function ($) { // この中であればWordpressでも「$」が使用可
   });
 
 
-   $(".js-about-sub-gallery img").click(function () {
+   $(".js-gallery img").click(function () {
     // まず、クリックした画像の HTML(<img>タグ全体)を.js-about-sub__gallery-expansion内にコピー
-    $(".js-about-sub__gallery-expansion").html($(this).prop("outerHTML"));
+    $(".js-gallery-expansion").html($(this).prop("outerHTML"));
     //そして、fadeInで表示する。
-    $(".js-about-sub__gallery-expansion").fadeIn(200);
+    $(".js-gallery-expansion").fadeIn(200);
     // $('body').css('overflow', 'hidden');
     return false;
   });
   
   // コース画像モーダル非表示イベント
   // モーダル画像背景 または 拡大画像そのものをクリックで発火
-  $(".js-about-sub__gallery-expansion").click(function () {
+  $(".js-gallery-expansion").click(function () {
     // 非表示にする
-    $(".js-about-sub__gallery-expansion").fadeOut(200);
+    $(".js-gallery-expansion").fadeOut(200);
     // $('body').css('overflow', 'auto');
     return false;
   });
@@ -301,6 +324,27 @@ jQuery(function ($) { // この中であればWordpressでも「$」が使用可
   });
 
 
+  // $(function() {
+  //   // about-2 メニュータブがクリックされたときの処理
+  //   $(".js-nav-info-2").click(function() {
+  //     // スクロールアニメーションで about ページへスクロール
+
+  //     $(".current").removeClass("current");
+  //       // クリックされたタブにcurrentクラスを付与
+  //       $('#info-2').addClass("current");
+  //       // クリックされた要素が何番目か取得（クリックしたタブのインデックス番号を取得）
+  //       const index = $(this).index();
+  //       // クリックしたタブのインデックス番号と同じコンテンツを表示
+  //       $(".js-information-sub-box").hide().eq(index).fadeIn(300);
+  //   });
+  // });
+
+
+
+
+
+
+
 	$(function() {
 		//クリックで動く
 		$('.js-faq-nav-open').click(function(){
@@ -319,26 +363,51 @@ jQuery(function ($) { // この中であればWordpressでも「$」が使用可
 	});
 
 
-  jQuery(document).ready(function($) {
-    // 別ページで指定したIDに対してスムーズスクロールを行う
-    function scrollToTarget() {
-      var target = $(window.location.hash);
-      if (target.length) {
-        var headerHeight = $('header').outerHeight(); // ヘッダーの高さを取得
-        var targetOffset = target.offset().top - headerHeight;
-        $('html, body').animate({
-          scrollTop: targetOffset
-        }, 800);
-      }
-    }
-    // ページロード時にスムーズスクロールを実行
-    scrollToTarget();
-    $("#info-3").trigger("click");
-    // ハッシュが変更された場合にスムーズスクロールを実行
-    $(window).on('hashchange', function() {
-      scrollToTarget();
-    });
-  });
+
+  // $(function() {
+	// 	//クリックで動く
+	// 	$('.js-nav-info-1').click(function(){
+  //     $(".current").removeClass("current");
+  //       // クリックされたタブにcurrentクラスを付与
+  //       $('#info-1').addClass("current");
+	// 		$(this).next('.js-side-bar-nav').slideToggle();
+	// 	});
+	// });
+
+
+  // $(function() {
+	// 	//クリックで動く
+	// 	$('.js-nav-info-2').click(function(){
+	// 		$(".current").removeClass("current");
+  //       // クリックされたタブにcurrentクラスを付与
+  //       $('#info-2').addClass("current");
+	// 		$(this).next('.js-side-bar-nav').slideToggle();
+	// 	});
+	// });
+
+  
+
+
+  // jQuery(document).ready(function($) {
+  //   // 別ページで指定したIDに対してスムーズスクロールを行う
+  //   function scrollToTarget() {
+  //     var target = $(window.location.hash);
+  //     if (target.length) {
+  //       var headerHeight = $('header').outerHeight(); // ヘッダーの高さを取得
+  //       var targetOffset = target.offset().top - headerHeight;
+  //       $('html, body').animate({
+  //         scrollTop: targetOffset
+  //       }, 800);
+  //     }
+  //   }
+  //   // ページロード時にスムーズスクロールを実行
+  //   scrollToTarget();
+  //   $("#info-3").trigger("click");
+  //   // ハッシュが変更された場合にスムーズスクロールを実行
+  //   $(window).on('hashchange', function() {
+  //     scrollToTarget();
+  //   });
+  // });
 
 
 

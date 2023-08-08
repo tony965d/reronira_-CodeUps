@@ -53,47 +53,47 @@
   margin-top: rem(40);
 
   @include mq(md) {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-between;
+    // display: flex;
+    // flex-direction: row;
+    // flex-wrap: wrap;
+    // justify-content: space-between;
     margin-top: rem(30);
   }
 }
 
-.voice__item {
-  margin-top: rem(40);
-  display: block;
+// // .voice__item {
+// //   margin-top: rem(40);
+// //   display: block;
 
-  @include mq(md) {
-    // width: 48.1%;
-    width: calc(50% - rem(40) / 2);
-    margin-top: 0;
-    margin-right: rem(40);
-  }
-}
+// //   @include mq(md) {
+// //     // width: 48.1%;
+// //     width: calc(50% - rem(40) / 2);
+// //     margin-top: 0;
+// //     margin-right: rem(40);
+// //   }
+// // }
 
-// .voice__item:hover {
-//   opacity: 0.6;
+// // .voice__item:hover {
+// //   opacity: 0.6;
+// // }
+
+// .voice__item:first-child {
+//   margin-top: 0;
 // }
 
-.voice__item:first-child {
-  margin-top: 0;
-}
+// .voice__item:nth-child(2n) {
 
-.voice__item:nth-child(2n) {
+//   @include mq(md) {
+//     margin-right: 0;
+//   }
+// }
 
-  @include mq(md) {
-    margin-right: 0;
-  }
-}
+// .voice__item:nth-child(n + 3) {
 
-.voice__item:nth-child(n + 3) {
-
-  @include mq(md) {
-    margin-top: rem(30);
-  }
-}
+//   @include mq(md) {
+//     margin-top: rem(30);
+//   }
+// }
 
 .voice__button {
   margin-top: rem(39);

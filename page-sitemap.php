@@ -41,7 +41,7 @@
   <section class="site-map top-site-map">
     <div class="site-map__inner inner">
       <div class="site-map__container">
-        <div class="site-map__nav-items nav-items">
+        <div class="site-map__nav-items nav-items nav-items--site-map">
           <div class="nav-items__box">
             <ul class="nav-items__items nav-items__items--site-map">
               <li class="nav-items__unit nav-items__unit--sp">
@@ -78,7 +78,7 @@
               </li>
             </ul>
           </div>
-          <div class="nav-items__box nav-items__box--right">
+          <div class="nav-items__box nav-items__box--right nav-items__box--right-site-map">
             <ul class="nav-items__items nav-items__items--site-map">
               <li class="nav-items__unit nav-items__unit--sp">
                 <a href="<?php echo $voice ?>" class="nav-items__main nav-items__main--site-map">お客様の声</a>

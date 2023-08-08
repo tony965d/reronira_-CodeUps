@@ -5,7 +5,12 @@
   align-items: center;
   justify-content: center;
   flex-wrap: wrap;
-  gap: rem(21);
+  gap: rem(16) rem(21);
+
+  @include mq(md) {
+    justify-content: flex-start;
+    gap: rem(32);
+  }
 }
 
 

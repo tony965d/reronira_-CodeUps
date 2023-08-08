@@ -69,7 +69,7 @@
             <img src="<?php echo get_template_directory_uri() ?>./dist/assets/images/common/noimage.png" alt="画像がありません">
             <?php } ?> 
           </div>
-          <div class="feature__header">
+          <div class="feature__header feature__header--campaign">
             <div class="feature__category">
               <?php 
                 $terms = get_the_terms($post->ID,'category');
@@ -78,7 +78,7 @@
                   }
               ?>
             </div>
-            <div class="feature__title"><?php the_title(); ?></div>
+            <div class="feature__title feature__title--campaign"><?php the_title(); ?></div>
           </div>
   
           <?php

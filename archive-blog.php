@@ -41,15 +41,15 @@
   <section class="blog-sub top-blog-sub">
     <div class="blog-sub__inner inner">
       <div class="blog-sub__container">
-        <div class="blog-sub__cards blog-cards">
+        <div class="blog-sub__cards cards">
 
           <?php if (have_posts()) : ?>
           <?php while (have_posts()) : the_post(); ?>
         
-          <a href="<?php the_permalink(); ?>" class="blog-cards__card card card--blog">
+          <a href="<?php the_permalink(); ?>" class="cards__card card card--blog">
             <div class="card__image card__image--blog">
               <?php if (has_post_thumbnail()) { ?>
-              <?php the_post_thumbnail('full'); ?>
+              <?php the_post_thumbnail(''); ?>
               <?php } else { ?>
               <img src="<?php echo get_template_directory_uri(); ?>../images/common/noimage.jpg" alt="画像がありません">
               <?php } ?> 
@@ -61,8 +61,8 @@
               </div>
               <p class="card__text">
                 <?php
-                  if ( mb_strlen( $post->post_content, 'UTF-8' ) > 26 ) {
-                    $content = mb_substr( strip_tags( $post->post_content ), 0, 26, 'UTF-8' );
+                  if ( mb_strlen( $post->post_content, 'UTF-8' ) > 85 ) {
+                    $content = mb_substr( strip_tags( $post->post_content ), 0, 85, 'UTF-8' );
                     echo $content . '…';
                   } else {
                     echo strip_tags ( $post->post_content );

@@ -52,7 +52,7 @@
         <div class="about-sub__body">
           <p class="about-sub__text">
             ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。<br>
-            ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキスト<span class="u-desktop about__text-sub">が入ります。</span>
+            ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。</span>
           </p>
         </div>
       </div>
@@ -60,90 +60,30 @@
         <h2 class="section-header__title"> Gallery</h2>
         <p class="section-header__sub-title">フォト</p>
       </div>
+
+
+      <?php if (have_posts()) : ?>
+      <?php while (have_posts()) : the_post(); ?>
+      
       <div class="about-sub__galleries">
-        <!-- <div class="about-sub__gallery js-about-sub-gallery">
-          <img src="<?php echo get_template_directory_uri() ?>./dist/assets/images/common/about-gallery1.png" alt="">
-        </div>
-        <div class="about-sub__gallery js-about-sub-gallery">
-          <img src="<?php echo get_template_directory_uri() ?>./dist/assets/images/common/about-gallery2.png" alt="">
-        </div>
-        <div class="about-sub__gallery js-about-sub-gallery">
-          <img src="<?php echo get_template_directory_uri() ?>./dist/assets/images/common/about-gallery3.png" alt="">
-        </div>
-        <div class="about-sub__gallery js-about-sub-gallery">
-          <img src="<?php echo get_template_directory_uri() ?>./dist/assets/images/common/about-gallery2.png" alt="">
-        </div> -->
 
-
-            
-
-
-              <!-- .parent {
-                display: grid;
-                grid-template-columns: repeat(2, 1fr);
-                grid-template-rows: repeat(2, 1fr);
-                grid-column-gap: 8px;
-                grid-row-gap: 8px;
-                }
-
-                .div1 { grid-area: 1 / 1 / 3 / 2; }
-                .div2 { grid-area: 1 / 2 / 2 / 3; }
-                .div3 { grid-area: 2 / 2 / 3 / 3; }  -->
-
-                
-        <!-- <?php if (have_posts()) : ?>
-        <?php while (have_posts()) : the_post(); ?>
-          <?php
-            $about_galleries = SCF::get('about_galleries');
-            foreach ($about_galleries as $fields ) { ?>
-
-            <div class="about-sub__galleries-box">
-              <div class="about-sub__galleries-item">
-                <div class="about-sub__gallery about-sub__gallery--big js-about-sub-gallery">
-                  <?php echo $fields['about_galleries-img']; ?>
-                </div>
-              </div>
-            </div>
-
-          <?php }; ?>
-        <?php endwhile; ?>
-        <?php endif; ?>
-           -->
-            
-            
-        <div class="about-sub__galleries-box">
-          <div class="about-sub__galleries-item">
-            <div class="about-sub__gallery about-sub__gallery--big js-about-sub-gallery">
-              <img src="<?php echo get_template_directory_uri() ?>./dist/assets/images/common/about-gallery1.png" alt="">
-            </div>
+        <?php
+          $galleries = SCF::get('galleries');
+          foreach ($galleries as $fields ) { 
+            $gallery_url = wp_get_attachment_image_src($fields['gallery'] , 'full');   
+          ?>
+          <div class="about-sub__gallery js-gallery">
+            <img src="<?php echo $gallery_url[0]; ?>" alt="">
           </div>
-          <div class="about-sub__galleries-block">
-            <div class="about-sub__gallery js-about-sub-gallery">
-              <img src="<?php echo get_template_directory_uri() ?>./dist/assets/images/common/about-gallery2.png" alt="">
-            </div>
-            <div class="about-sub__gallery about-sub__gallery--top js-about-sub-gallery">
-              <img src="<?php echo get_template_directory_uri() ?>./dist/assets/images/common/about-gallery3.png" alt="">
-            </div>
-          </div>
-        </div>
-        <div class="about-sub__galleries-box about-sub__galleries-box--top">
-          <div class="about-sub__galleries-block">
-            <div class="about-sub__gallery js-about-sub-gallery">
-              <img src="<?php echo get_template_directory_uri() ?>./dist/assets/images/common/about-gallery4.png" alt="">
-            </div>
-            <div class="about-sub__gallery about-sub__gallery--top js-about-sub-gallery">
-              <img src="<?php echo get_template_directory_uri() ?>./dist/assets/images/common/about-gallery5.png" alt="">
-            </div>
-          </div>
-          <div class="about-sub__galleries-item">
-            <div class="about-sub__gallery about-sub__gallery--big js-about-sub-gallery">
-              <img src="<?php echo get_template_directory_uri() ?>./dist/assets/images/common/about-gallery6.png" alt="">
-            </div>
-          </div>
-        </div>
+        <?php }; ?>
+
       </div>
+
+      <?php endwhile; ?>
+      <?php endif; ?>
+      
     </div>
-    <div class="about-sub__gallery-expansion js-about-sub__gallery-expansion">
+    <div class="about-sub__gallery-expansion js-gallery-expansion">
     </div>
   </section>
 

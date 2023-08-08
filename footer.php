@@ -105,13 +105,13 @@
                   <a href="<?php echo $information ?>" class="nav-items__main">ダイビング情報</a>
                 </li>
                 <li class="nav-items__item">
-                  <a href="<?php echo $information ?>#info-1" class="nav-items__sub">ライセンス講習</a>
+                  <a href="<?php echo $information ?>#info-1" class="nav-items__sub js-nav-info-1">ライセンス講習</a>
                 </li>
                 <li class="nav-items__item">
-                  <a href="<?php echo $information ?>#info-2" class="nav-items__sub">体験ダイビング</a>
+                  <a href="<?php echo $information ?>#info-2" class="nav-items__sub js-nav-info-2">体験ダイビング</a>
                 </li>
                 <li class="nav-items__item">
-                  <a href="<?php echo $information ?>#info-3" class="nav-items__sub">ファンダイビング</a>
+                  <a href="<?php echo $information ?>#info-3" class="nav-items__sub js-nav-info-3">ファンダイビング</a>
                 </li>
                 <li class="nav-items__unit">
                   <a href="<?php echo $blog ?>" class="nav-items__main">ブログ</a>

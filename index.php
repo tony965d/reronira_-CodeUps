@@ -563,9 +563,8 @@
             <h2 class="section-header__title">Voice</h2>
             <p class="section-header__sub-title">お客様の声</p>
           </div>
-          <div class="voice__wrapper">
-
-            <a href="#" class="voice__item voice-item">
+          <div class="voice__wrapper voice-items">
+            <a href="#" class="voice-items__voice-item voice-item">
               <div class="voice-item__box">
                 <div class="voice-item__header">
                   <div class="voice-item__sub-title">
@@ -587,7 +586,7 @@
               </p>
             </a>
   
-            <a href="#" class="voice__item voice-item">
+            <a href="#" class="voice-items__voice-item voice-item">
               <div class="voice-item__box">
                 <div class="voice-item__header">
                   <div class="voice-item__sub-title">
@@ -608,47 +607,32 @@
                 ここにテキストが入ります。ここにテキストが入ります。
               </p>
             </a>
-            
           </div>
-
           <div class="voice__button">
             <a href="#" class="button">View more<span class="button__arrow"></span></a>
           </div>
-
-
-
         </div>
       </section>
-
-
 
       <section class="price top-price">
         <div class="price__inner inner">
           <div class="price__background u-desktop">
             <img src="./assets/images/common/price_goldfish.png" alt="">
           </div>
-
           <div class="price__header section-header">
             <h2 class="section-header__title">Price</h2>
             <p class="section-header__sub-title">料金一覧</p>
           </div>
-
           <div class="price__wrapper">
             <div class="price__image js-price__image u-mobile">
               <img src="./assets/images/common/price_1.png" alt="">
             </div>
-
             <div class="price__image js-price__image u-desktop">
               <img src="./assets/images/common/price_2.png" alt="">
             </div>
-
-
             <div class="price__contents">
-
               <div class="price__box">
-  
                 <h3 class="price__sub-title">ライセンス講習</h3>
-  
                 <dl class="price__menu menu-contents">
                   <div class="menu-contents__item menu-item">
                     <dt class="menu-item__name">オープンウォーターダイバーコース</dt>
@@ -663,12 +647,9 @@
                     <dd class="menu-item__value">¥70,000</dd>
                   </div>
                 </dl>
-
               </div>
               <div class="price__box">
-  
                 <h3 class="price__sub-title">体験ダイビング</h3>
-  
                 <dl class="price__menu menu-contents">
                   <div class="menu-contents__item menu-item">
                     <dt class="menu-item__name">ビーチ体験ダイビング(半日)</dt>
@@ -687,12 +668,9 @@
                     <dd class="menu-item__value">¥18,000</dd>
                   </div>
                 </dl>
-
               </div>
               <div class="price__box">
-  
                 <h3 class="price__sub-title">ファンダイビング</h3>
-  
                 <dl class="price__menu menu-contents">
                   <div class="menu-contents__item menu-item">
                     <dt class="menu-item__name">ビーチダイビング(2ダイブ)</dt>
@@ -711,12 +689,9 @@
                     <dd class="menu-item__value">¥10,000</dd>
                   </div>
                 </dl>
-
               </div>
               <div class="price__box">
-  
                 <h3 class="price__sub-title">スペシャルダイビング</h3>
-  
                 <dl class="price__menu menu-contents">
                   <div class="menu-contents__item menu-item">
                     <dt class="menu-item__name">貸切ダイビング(2ダイブ)</dt>
@@ -727,96 +702,70 @@
                     <dd class="menu-item__value">¥32,000</dd>
                   </div>
                 </dl>
-
               </div>
             </div>
-            
           </div>
-
           <div class="price__button">
             <a href="#" class="button">View more<span class="button__arrow"></span></a>
           </div>
-           
         </div>
-
       </section>
 
       <section class="contact top-contact">
         <div class="contact__inner inner">
-
           <div class="contact__background">
             <img src="./assets/images/common/contact_goldfish.png" alt="">
           </div>
-
           <div class="contact__wrapper">
-            
             <div class="contact__block inner">
               <div class="contact__logo">
                 <img src="./assets/images/common/CodeUps_contact_logo.png" alt="">
               </div>
               <div class="contact__content">
                 <ul class="contact__body">
-
                   <li class="contact__info">
                     <p>沖縄県那覇市1-1</p>
                   </li>
-
                   <li class="contact__info">
                     <p>TEL:<span>0120-000-0000</span></p>
                   </li>
-
                   <li class="contact__info">
                     <p>営業時間:<span>8:30-19:00</span></p>
                   </li>
-                  
                   <li class="contact__info">
                     <p>定休日:<span>毎週火曜日</span></p>
                   </li>
                 </ul>
-
                 <div class="contact__map">
                   <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d57273.02319565179!2d127.64350204644842!3d26.210859430208657!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x34e5697141a6b58b%3A0x2cd8aff616585e98!2z5rKW57iE55yM6YKj6KaH5biC!5e0!3m2!1sja!2sjp!4v1687230539574!5m2!1sja!2sjp" width="295" height="160" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                 </div>
-
               </div>
-
             </div>
-
             <div class="contact__box inner">
               <div class="contact__header section-header section-header--contact">
                 <h2 class="section-header__title">Contact</h2>
                 <p class="section-header__sub-title">お問い合わせ</p>
               </div>
               <p class="contact__text">ご予約・お問い合わせはコチラ</p>
-
               <div class="contact__button">
                 <a href="#" class="button">Contact us<span class="button__arrow"></span></a>
               </div>
-
-
             </div>
-
           </div>
-  
         </div>
       </section>
-      
-      
     </main>
-    
     
     <footer class="footer top-footer">
       <a href="#header" class="page-top" id="page-top">
         <div class="page-top__button"></div>
       </a>
       <div class="footer__inner inner">
-        
         <nav class="footer__nav">
           <div class="footer__box">
             <a href="#" class="footer__logo">
               <img src="./assets/images/common/CodeUps_footer_logo.png" alt="">
             </a>
-            
             <ul class="footer__sns-links">
               <li class="footer__sns-link">
                 <a href="#" class="footer__facebook">
@@ -830,8 +779,6 @@
               </li>
             </ul>
           </div>
-
-
           <div class="footer__nav-items nav-items">
             <ul class="nav-items__item nav-items__item--top">
               <li class="nav-items__unit">
@@ -849,7 +796,6 @@
               <li class="nav-items__li">
                 <a href="#" class="nav-items__sub">ナイトダイビング</a>
               </li>
-
               <li class="nav-items__unit">
                 <div class="nav-items__icon">
                   <img src="./assets/images/common/starfish.png" alt="">
@@ -857,8 +803,6 @@
                 <a href="<?php echo $about ?>" class="nav-items__main">私たちについて</a>
               </li>
             </ul>
-            
-            
             <ul class="nav-items__item nav-items__item--top">
               <li class="nav-items__unit">
                 <div class="nav-items__icon">
@@ -882,8 +826,6 @@
                 <a href="#" class="nav-items__main">ブログ</a>
               </li>
             </ul>
-            
-            
             <ul class="nav-items__item nav-items__item--top">
               <li class="nav-items__unit">
                 <div class="nav-items__icon">
@@ -907,8 +849,6 @@
                 <a href="#" class="nav-items__sub">ファンダイビング</a>
               </li>
             </ul>
-            
-            
             <ul class="nav-items__item nav-items__item--top">
               <li class="nav-items__unit">
                 <div class="nav-items__icon">
@@ -922,14 +862,12 @@
                 </div>
                 <a href="#" class="nav-items__main">プライバシー<span class="u-mobile"><br></span>ポリシー</a>
               </li>
-              
               <li class="nav-items__unit">
                 <div class="nav-items__icon">
                   <img src="./assets/images/common/starfish.png" alt="">
                 </div>
                 <a href="#" class="nav-items__main">利用規約</a>
               </li>
-              
               <li class="nav-items__unit">
                 <div class="nav-items__icon">
                   <img src="./assets/images/common/starfish.png" alt="">
@@ -937,16 +875,12 @@
                 <a href="#" class="nav-items__main">お問い合わせ</a>
               </li>
             </ul>
-            
           </div>
-          
         </nav>  
-        
       </div>
       <div class="footer__copyright inner">
         <small>Copyright © 2021 - 2023 CodeUps LLC. All Rights Reserved.</small>
       </div>
     </footer>
-    
     
   </body>

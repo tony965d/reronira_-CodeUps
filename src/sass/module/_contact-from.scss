@@ -4,12 +4,17 @@
 .contact-form__content {
   display: flex;
   flex-direction: column;
-  border-bottom: dotted 1px #408F95;
+  // border-bottom: dotted 1px #408F95;
   padding-bottom: rem(24);
   margin-top: rem(24);
+  background-image: linear-gradient(to right, #408F95 3px, transparent 3px);
+  background-size: 4px 1px;
+  background-repeat: repeat-x;
+  background-position: left bottom;
   
   @include mq(md) {
-    padding-bottom: rem(40);
+    // padding-bottom: rem(40);
+    padding-bottom: rem(41);
     margin-top: rem(40);
     flex-direction: row;
   }
@@ -21,6 +26,17 @@
   @include mq(md) {
     margin-top: 0;
   }
+}
+
+.contact-form__content--campaign {
+
+  @include mq(md) {
+    padding-bottom: rem(36);
+  }
+}
+
+.contact-form__content--textarea {
+  height: rem(240);
 }
 
 .contact-form__title {
@@ -37,7 +53,7 @@
   // width: 68.6%;
   width: 100%;
   border: solid 1px #408F95;
-  padding: rem(8) rem(16) rem(8) rem(16);
+  padding: rem(7) rem(16) rem(7) rem(16);
 } 
 
 .contact-form__required {
@@ -45,20 +61,31 @@
   color: $white;
   font-size: rem(12);
   font-weight: $normal;
+  letter-spacing: 0.4em;
   padding: rem(2) rem(16);
+  padding-right: rem(11);
   margin-left: rem(8);
 }
 
 .contact-form__check-box {
   display: flex;
   flex-direction: column;
-  padding-bottom: rem(24);
+  // padding-bottom: rem(24);
+  // padding-bottom: rem(21);
+  padding-bottom: rem(23);
   margin-top: rem(24);
-  border-bottom: dotted 1px #408F95;
+  background-image: linear-gradient(to right, #408F95 3px, transparent 3px);
+  background-size: 4px 1px;
+  background-repeat: repeat-x;
+  background-position: left bottom;
+  // border-bottom: dotted 1px #408F95;
+  
+  
   
   @include mq(md) {
     flex-direction: row;
-    padding-bottom: rem(40);
+    // padding-bottom: rem(40);
+    padding-bottom: rem(42);
     margin-top: rem(40);
   }
 }
@@ -87,8 +114,14 @@
 
 .contact-form__menu-item {
   width: 100%;
-  padding: rem(6) rem(0) rem(6) rem(8);
+  padding: rem(10) rem(0) rem(10) rem(8);
   border: solid 1px #408F95;
+  font-size: rem(12);
+  line-height: 1.45;
+  
+  @include mq(md) {
+    padding: rem(6) rem(0) rem(6) rem(8);
+  }
 } 
 
 
@@ -100,7 +133,8 @@
 
 .contact-form__content .wpcf7-form-control-wrap {
   width: 100%;
-  margin-top: rem(18);
+  // margin-top: rem(18);
+  margin-top: rem(16);
 
   @include mq(md) {
     width: 68.6%;
@@ -110,11 +144,13 @@
 
 .contact-form__check-box .wpcf7-form-control-wrap {
   width: 100%;
-  margin-top: rem(18);
+  // margin-top: rem(18);
+  margin-top: rem(16);
   
   @include mq(md) {
     width: 68.6%;
     margin-top: 0;
+    margin-left: rem(-5);
   }
 }
 
@@ -130,12 +166,16 @@
 
 .contact-form__acceptance .wpcf7-list-item input[type="checkbox"] {
   position: relative;
-  width: rem(22);
-  height: rem(22);
   display: inline-block;
+  width: rem(22);
+  height: rem(21);
+  // height: rem(22);
   vertical-align: rem(-8);
   border: 1px solid #408F95;
+  margin: 0;
   margin-right: rem(16);
+  margin-bottom: rem(5);
+
 }
 
 
@@ -159,16 +199,19 @@
   margin-top: rem(24);
   
   @include mq(md) {
-    margin-top: rem(40);
+    // margin-top: rem(40);
+    margin-top: rem(36);
   }
 }
 
 .contact-form__textarea {
   // width: 68.6%;
   width: 100%;
+  height: rem(200);
   border: solid 1px #408F95;
   padding: rem(8) rem(16) rem(8) rem(16);
 }
+
 
 
 .contact-form__check {
@@ -179,6 +222,7 @@
 
 .contact-form__check .wpcf7-list-item {
   margin-top: rem(4);
+  line-height: 1.4;
 }
 
 .contact-form__check .wpcf7-list-item.first {
@@ -187,11 +231,22 @@
 
 .contact-form__check .wpcf7-list-item input[type="checkbox"] {
   position: relative;
-  width: rem(16);
+  width: rem(15);
   height: rem(14);
   display: inline-block;
   vertical-align: rem(-5);
   border: 1px solid #408F95;
+  margin: 0;
+  margin-bottom: 4px;
+  margin-top: rem(2);
+  margin-right: rem(6);
+  
+  @include mq(md) {
+    width: rem(16);
+    margin-left: rem(4);
+  }
+
+
 }
 
 

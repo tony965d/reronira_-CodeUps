@@ -4,26 +4,102 @@
 .nav-items {
   display: flex;
   flex-direction: row;
-  gap: rem(10);
+  gap: rem(16);
+
+  @include mq(md) {
+    gap: rem(120);
+  }
+}
+
+.nav-items--site-map {
+  gap: rem(27);
+
+  @include mq(md) {
+    gap: rem(144);
+  }
+}
+
+.nav-items--site-map .nav-items__box {
+  width: calc(168 / 345 * 100%);
+
+  @include mq(md) {
+    width: calc(460 / 1080 * 100%);
+    gap: rem(144);
+  }
+}
+.nav-items--site-map .nav-items__box.nav-items__box--right {
+  // width: 47%;
+  width: calc(150 / 345 * 100%);
+
+  
+  @include mq(md) {
+    // width: 50%;
+    width: calc(476 / 1080 *100%);
+  }
 }
 
 
 .nav-items__box {
-  width: 50%;
+  // width: 50%;
+  width: calc(168 / 334 * 100%);
   
   @include mq(md) {
     display: flex;
     flex-direction: row;
-    width: 50%;
-    gap: rem(50);
+    // width: 50%;
+    // gap: rem(50);
+
+    gap: rem(120);
+    width: calc(436 / 1080 * 100%);
   }
 }
 
-.nav-items__box--right {
-  width: 47%;
+.nav-items__box.nav-items__box--right {
+  width: calc(150 / 334 * 100%);
+
+  @include mq(md) {
+    width: calc(452 / 1080 * 100%);
+  }
+}
+
+.nav-items__box.nav-items__box--right-site-map {
+
+  @include mq(md) {
+    width: calc(476 / 1080 * 100%);
+  }
+}
+
+
+
+.nav-items__box .nav-items__items:first-child {
+  width: 100%;
+
+  @include mq(md) {
+    width: calc(166 / 436 * 100%);
+  }
+}
+
+.nav-items__box .nav-items__items:nth-child(2) {
+  width: 100%;
   
   @include mq(md) {
-    width: 50%;
+    width: calc(150 / 436 * 100%);
+  }
+}
+
+.nav-items__box--right .nav-items__items:first-child {
+  width: 100%;
+  
+  @include mq(md) {
+    width: calc(150 / 452 * 100%);
+  }
+}
+
+.nav-items__box--right .nav-items__items:nth-child(2) {
+  width: 100%;
+  
+  @include mq(md) {
+    width: calc(182 / 452 * 100%);
   }
 }
 
@@ -41,6 +117,33 @@
 
 .nav-items__items--site-map {
   color: $green;
+}
+
+.nav-items__box .nav-items__items--site-map:first-child {
+  
+  @include mq(md) {
+    width: calc(166 / 460 * 100%);
+    color: $green;
+  }
+}
+
+.nav-items__box .nav-items__items--site-map:nth-child(2)  {
+
+  @include mq(md) {
+    width: calc(150 / 460 * 100%);
+  }
+}
+.nav-items__box--right .nav-items__items--site-map:first-child  {
+
+  @include mq(md) {
+    width: calc(150 / 476 * 100%);
+  }
+}
+.nav-items__box--right .nav-items__items--site-map:nth-child(2)  {
+
+  @include mq(md) {
+    width: calc(182 / 476 * 100%);
+  }
 }
 
 .nav-items__unit {

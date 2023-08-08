@@ -11,17 +11,29 @@
 
 .privacy__title {
   color: $green;
-  font-size: rem(32);
   font-weight: 500;
+  font-size: rem(24);
+
+  @include mq(md) {
+    font-size: rem(32);
+  }
 }
 
 .privacy__contents {
   margin-top: rem(40);
+
+  @include mq(md) {
+    margin-top: rem(38);
+  }
 }
 
 .privacy__contents p {
-  margin-top: rem(40);
+  margin-top: rem(32);
   line-height: 2;
+
+  // @include mq(md) {
+  //   margin-top: rem(40);
+  // }
 }
 
 .privacy__contents p:first-child {
@@ -34,13 +46,21 @@
 }
 
 .privacy__contents ol:first-of-type {
-  margin-top: rem(40);
+  margin-top: rem(32);
+
+  // @include mq(md) {
+  //   margin-top: rem(40);
+  // }
 }
 
 .privacy__contents ul {
+  margin-top: rem(32);
   list-style: disc;
-  margin-top: rem(40);
   padding-left: rem(25);
+
+  // @include mq(md) {
+  //   margin-top: rem(40);
+  // }
 }
 
 .privacy__contents li {

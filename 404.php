@@ -18,7 +18,7 @@
     <main>
       <section class="error">
         <div class="error__inner inner">
-          <div class="wp-breadcrumb wp-breadcrumb--error">
+          <div class="wp-breadcrumb wp-breadcrumb--404">
             <?php if(function_exists('bcn_display'))
               {
                   bcn_display();

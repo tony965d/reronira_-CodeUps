@@ -41,12 +41,12 @@
   <section class="blog-sub top-blog-sub">
     <div class="blog-sub__inner inner">
       <div class="blog-sub__container">
-        <div class="blog-sub__cards blog-cards">
+        <div class="blog-sub__cards cards">
 
           <?php if (have_posts()) : ?>
           <?php while (have_posts()) : the_post(); ?>
         
-          <a href="<?php the_permalink(); ?>" class="blog-cards__card card card--blog">
+          <a href="<?php the_permalink(); ?>" class="cards__card card card--blog">
             <div class="card__image card__image--blog">
               <?php if (has_post_thumbnail()) { ?>
               <?php the_post_thumbnail('full'); ?>

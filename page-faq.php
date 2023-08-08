@@ -41,104 +41,22 @@
   <section class="faq top-faq">
     <div class="faq__inner inner">
       <div class="faq__container">
-        <div class="faq__block">
-          <h3 class="faq__nav-open active js-faq-nav-open">ここに質問が入ります。</h3>
-          <nav class="faq__nav js-faq-nav">
-            <ul class="faq__nav-items">
-              <li class="faq__nav-item">
-                <p class="faq__nav-text">
-                  ここに質問の答えが入りますここに質問の答えが入りますここに質問の答えが入ります
-                  ここに質問の答えが入りますここに質問の答えが入りますここに質問の答えが入ります
-                  ここに質問の答えが入りますここに質問の答えが入りますここに質問の答えが入ります
-                </p>
-              </li>
-            </ul>
-          </nav>
-        </div>
-        <div class="faq__block">
-          <h3 class="faq__nav-open active js-faq-nav-open">ここに質問が入ります。</h3>
-          <nav class="faq__nav js-faq-nav">
-            <ul class="faq__nav-items">
-              <li class="faq__nav-item">
-                <p class="faq__nav-text">
-                  ここに質問の答えが入りますここに質問の答えが入りますここに質問の答えが入ります
-                  ここに質問の答えが入りますここに質問の答えが入りますここに質問の答えが入ります
-                  ここに質問の答えが入りますここに質問の答えが入りますここに質問の答えが入ります
-                </p>
-              </li>
-            </ul>
-          </nav>
-        </div>
-        <div class="faq__block">
-          <h3 class="faq__nav-open active js-faq-nav-open">ここに質問が入ります。</h3>
-          <nav class="faq__nav js-faq-nav">
-            <ul class="faq__nav-items">
-              <li class="faq__nav-item">
-                <p class="faq__nav-text">
-                  ここに質問の答えが入りますここに質問の答えが入りますここに質問の答えが入ります
-                  ここに質問の答えが入りますここに質問の答えが入りますここに質問の答えが入ります
-                  ここに質問の答えが入りますここに質問の答えが入りますここに質問の答えが入ります
-                </p>
-              </li>
-            </ul>
-          </nav>
-        </div>
-        <div class="faq__block">
-          <h3 class="faq__nav-open active js-faq-nav-open">ここに質問が入ります。</h3>
-          <nav class="faq__nav js-faq-nav">
-            <ul class="faq__nav-items">
-              <li class="faq__nav-item">
-                <p class="faq__nav-text">
-                  ここに質問の答えが入りますここに質問の答えが入りますここに質問の答えが入ります
-                  ここに質問の答えが入りますここに質問の答えが入りますここに質問の答えが入ります
-                  ここに質問の答えが入りますここに質問の答えが入りますここに質問の答えが入ります
-                </p>
-              </li>
-            </ul>
-          </nav>
-        </div>
-        <div class="faq__block">
-          <h3 class="faq__nav-open active js-faq-nav-open">ここに質問が入ります。</h3>
-          <nav class="faq__nav js-faq-nav">
-            <ul class="faq__nav-items">
-              <li class="faq__nav-item">
-                <p class="faq__nav-text">
-                  ここに質問の答えが入りますここに質問の答えが入りますここに質問の答えが入ります
-                  ここに質問の答えが入りますここに質問の答えが入りますここに質問の答えが入ります
-                  ここに質問の答えが入りますここに質問の答えが入りますここに質問の答えが入ります
-                </p>
-              </li>
-            </ul>
-          </nav>
-        </div>
-        <div class="faq__block">
-          <h3 class="faq__nav-open active js-faq-nav-open">ここに質問が入ります。</h3>
-          <nav class="faq__nav js-faq-nav">
-            <ul class="faq__nav-items">
-              <li class="faq__nav-item">
-                <p class="faq__nav-text">
-                  ここに質問の答えが入りますここに質問の答えが入りますここに質問の答えが入ります
-                  ここに質問の答えが入りますここに質問の答えが入りますここに質問の答えが入ります
-                  ここに質問の答えが入りますここに質問の答えが入りますここに質問の答えが入ります
-                </p>
-              </li>
-            </ul>
-          </nav>
-        </div>
-        <div class="faq__block">
-          <h3 class="faq__nav-open active js-faq-nav-open">ここに質問が入ります。</h3>
-          <nav class="faq__nav js-faq-nav">
-            <ul class="faq__nav-items">
-              <li class="faq__nav-item">
-                <p class="faq__nav-text">
-                  ここに質問の答えが入りますここに質問の答えが入りますここに質問の答えが入ります
-                  ここに質問の答えが入りますここに質問の答えが入りますここに質問の答えが入ります
-                  ここに質問の答えが入りますここに質問の答えが入りますここに質問の答えが入ります
-                </p>
-              </li>
-            </ul>
-          </nav>
-        </div>
+        
+        <?php
+          $FAQ = SCF::get('FAQ');
+          foreach ($FAQ as $fields ) 
+          { ?>
+          <div class="faq__block">
+            <h3 class="faq__nav-open active js-faq-nav-open"><?php echo $fields['faq_question']; ?></h3>
+            <nav class="faq__nav js-faq-nav">
+              <ul class="faq__nav-items">
+                <li class="faq__nav-item">
+                  <p class="faq__nav-text"><?php echo $fields['faq_answer']; ?></p>
+                </li>
+              </ul>
+            </nav>
+          </div>
+        <?php }; ?>
       </div>
     </div>
   </section>

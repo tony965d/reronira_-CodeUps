@@ -58,33 +58,30 @@ add_action( 'after_setup_theme', 'my_setup' );
  *
  * @codex https://wpdocs.osdn.jp/%E3%83%8A%E3%83%93%E3%82%B2%E3%83%BC%E3%82%B7%E3%83%A7%E3%83%B3%E3%83%A1%E3%83%8B%E3%83%A5%E3%83%BC
  */
-function my_script_init()
-{
+function my_script_init() {
 	
 	wp_enqueue_style('swiper-css', '//cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css', array(), '8.0.0', 'all' );
-	wp_enqueue_style('google-font', '//fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Noto+Serif+JP&display=swap', array(), '8.0.0', 'all'); 
+	wp_enqueue_style( 'google-fonts', '//fonts.googleapis.com/css2?family=Gotu&family=Lato:wght@400;700&family=Noto+Sans+JP:wght@500&display=swap', array(), null );
 	wp_enqueue_style( 'style-css', get_template_directory_uri() . '/dist/assets/css/style.css', array(), '1.0.1', 'all' );
 	
 	wp_enqueue_script('jquery', '//code.jquery.com/jquery-3.6.0.js', array('jquery'), '1.0.1', true ); 
 	wp_enqueue_script('swiper-js', '//cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js',array('jquery'), '1.0.1',true );
 	wp_enqueue_script( 'inview-js', get_template_directory_uri() . '/dist/assets/js/jquery.inview.min.js' );
 	wp_enqueue_script( 'script-js', get_template_directory_uri() . '/dist/assets/js/script.js', array( 'jquery' ), '1.0.1', true );
-	
-
-
-
-	// wp_enqueue_style('swiper-css', 'https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css');
-	// wp_enqueue_style('google-font', 'https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Noto+Serif+JP&display=swap'); 
-	// wp_enqueue_script('jquery', 'https://code.jquery.com/jquery-3.6.0.js', array(), '1.0.1', true); 
-	// wp_enqueue_script('swiper-js', 'https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js');
-	// wp_enqueue_style( 'style-css', get_template_directory_uri() . './dist/assets/css/style.css', array(), filemtime(get_theme_file_path('./dist/assets/css/style.css')), 'all' );
-	// wp_enqueue_style( 'inview-js', get_template_directory_uri() . './dist/assets/js/jquery.inview.min.js', array(), filemtime(get_theme_file_path('./dist/assets/js/jquery.inview.min.js')), true );
-	// wp_enqueue_script( 'script-js', get_template_directory_uri() . './dist/assets/js/script.js', array( 'jquery' ), filemtime(get_theme_file_path('./dist/assets/js/script.js')), true );
-
 }
 add_action('wp_enqueue_scripts', 'my_script_init');
 
 
+function add_defer( $tag ) {
+	if (is_admin()){
+			return $tag; 
+	}
+	if ( strpos( $tag, 'jquery.js' ) ){
+			return $tag;
+	}
+	return str_replace( 'src', 'defer src', $tag );
+}
+add_filter( 'script_loader_tag', 'add_defer', 10 );
 
 
 /**
@@ -213,9 +210,28 @@ function change_set_blog($query) {
 			return;
 	if ( $query->is_post_type_archive('blog') ) { //カスタム投稿タイプを指定
 			$query->set( 'posts_per_page', '10' ); //表示件数を指定
-	}
+	} 
 }
 add_action( 'pre_get_posts', 'change_set_blog' );
+
+
+
+
+// function change_set_blog($query) {
+// 	if ( is_admin() || ! $query->is_main_query() )
+// 			return;
+
+// 	if ( $query->is_post_type_archive('blog') ) { //カスタム投稿タイプを指定
+// 			if ( wp_is_mobile() ) {
+// 					// SPの場合（767px以下の画面幅）
+// 					$query->set( 'posts_per_page', 6 ); //表示件数を6件に指定
+// 			} else {
+// 					// PCの場合
+// 					$query->set( 'posts_per_page', 10 ); //表示件数を10件に指定
+// 			}
+// 		}
+// 	}
+// add_action( 'pre_get_posts', 'change_set_blog' );
 
 
 
@@ -254,20 +270,28 @@ function wpcf7_autop_return_false() {
 
 
 
-function add_defer( $tag ) {
-    if (is_admin()){
-        return $tag; 
-    }
-    if ( strpos( $tag, 'jquery.js' ) ){
-        return $tag;
-    }
-    return str_replace( 'src', 'defer src', $tag );
-}
-add_filter( 'script_loader_tag', 'add_defer', 10 );
+// function get_other_post_titles() {
+//     $post_titles = array();
 
+//     // ここで他の記事を取得して配列にタイトルを追加する処理を行います
+//     // 例: 最新5件の投稿を取得する場合
+//     $args = array(
+//         'post_type' => 'post',
+//         'posts_per_page' => 5,
+//     );
 
+//     $query = new WP_Query($args);
 
+//     if ($query->have_posts()) {
+//         while ($query->have_posts()) {
+//             $query->the_post();
+//             $post_titles[] = get_the_title();
+//         }
+//     }
 
+//     wp_reset_postdata();
 
+//     return $post_titles;
+// }
 
 

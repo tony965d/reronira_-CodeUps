@@ -48,8 +48,24 @@
             </div>
             <h3 class="price-sub__sub-title">ライセンス講習</h3>
           </div>
+
+          <?php if (have_posts()) : ?>
+          <?php while (have_posts()) : the_post(); ?>
+         
           <dl class="price-sub__menu menu-contents">
-            <div class="menu-contents__item menu-item menu-item--price">
+
+            <?php
+              $license = SCF::get('license');
+              foreach ($license as $fields ) { ?>
+
+              <div class="menu-contents__item menu-item menu-item--price">
+                <dt class="menu-item__name menu-item__name--price"><?php echo $fields['license_item']; ?></dt>
+                <dd class="menu-item__value menu-item__value--price"><?php echo $fields['license_price']; ?></dd>
+              </div>
+            <?php }; ?>
+
+
+            <!-- <div class="menu-contents__item menu-item menu-item--price">
               <dt class="menu-item__name menu-item__name--price">オープンウォーター<span class="u-mobile"><br></span>ダイバーコース</dt>
               <dd class="menu-item__value menu-item__value--price">¥50,000</dd>
             </div>
@@ -60,9 +76,14 @@
             <div class="menu-contents__item menu-item menu-item--price">
               <dt class="menu-item__name menu-item__name--price">レスキュー＋EFRコース</dt>
               <dd class="menu-item__value menu-item__value--price">¥70,000</dd>
-            </div>
+            </div> -->
+
           </dl>
+          <?php endwhile; ?>
+          <?php endif; ?>
         </div>
+
+
         <div class="price-sub__box" id="price-2">
           <div class="price-sub__header">
             <div class="price-sub__header-logo">
@@ -70,8 +91,23 @@
             </div>
             <h3 class="price-sub__sub-title">体験ダイビング</h3>
           </div>
+
+          <?php if (have_posts()) : ?>
+          <?php while (have_posts()) : the_post(); ?>
+          
           <dl class="price-sub__menu menu-contents">
-            <div class="menu-contents__item menu-item menu-item--price">
+
+            <?php
+              $experience = SCF::get('experience');
+              foreach ($experience as $fields ) { ?>
+
+              <div class="menu-contents__item menu-item menu-item--price">
+                <dt class="menu-item__name menu-item__name--price"><?php echo $fields['experience_item']; ?></dt>
+                <dd class="menu-item__value menu-item__value--price"><?php echo $fields['experience_price']; ?></dd>
+              </div>
+            <?php }; ?>
+
+            <!-- <div class="menu-contents__item menu-item menu-item--price">
               <dt class="menu-item__name menu-item__name--price">ビーチ体験ダイビング<span class="u-mobile"><br></span>(半日)</dt>
               <dd class="menu-item__value menu-item__value--price">¥7,000</dd>
             </div>
@@ -86,9 +122,14 @@
             <div class="menu-contents__item menu-item menu-item--price">
               <dt class="menu-item__name menu-item__name--price">ボート体験ダイビング<span class="u-mobile"><br></span>(1日)</dt>
               <dd class="menu-item__value menu-item__value--price">¥18,000</dd>
-            </div>
+            </div> -->
+
           </dl>
+          <?php endwhile; ?>
+          <?php endif; ?>
         </div>
+
+
         <div class="price-sub__box" id="price-3">
           <div class="price-sub__header">
             <div class="price-sub__header-logo">
@@ -96,12 +137,25 @@
             </div>
             <h3 class="price-sub__sub-title">ファンダイビング</h3>
           </div>
+
+
+          <?php if (have_posts()) : ?>
+          <?php while (have_posts()) : the_post(); ?>
+          
           <dl class="price-sub__menu menu-contents">
-            <div class="menu-contents__item menu-item menu-item--price">
-              <dt class="menu-item__name menu-item__name--price">ビーチダイビング<span class="u-mobile"><br></span>(2ダイブ)</dt>
-              <dd class="menu-item__value menu-item__value--price">¥14,000</dd>
-            </div>
-            <div class="menu-contents__item menu-item menu-item--price">
+
+            <?php
+              $fun = SCF::get('fun');
+              foreach ($fun as $fields ) { ?>
+                
+              <div class="menu-contents__item menu-item menu-item--price">
+                <dt class="menu-item__name menu-item__name--price"><?php echo $fields['fun_item']; ?></dt>
+                <dd class="menu-item__value menu-item__value--price"><?php echo $fields['fun_price']; ?></dd>
+              </div>
+            <?php }; ?>
+
+
+            <!-- <div class="menu-contents__item menu-item menu-item--price">
               <dt class="menu-item__name menu-item__name--price">ボートダイビング<span class="u-mobile"><br></span>(2ダイブ)</dt>
               <dd class="menu-item__value menu-item__value--price">¥18,000</dd>
             </div>
@@ -112,9 +166,13 @@
             <div class="menu-contents__item menu-item menu-item--price">
               <dt class="menu-item__name menu-item__name--price">ナイトダイビング<span class="u-mobile"><br></span>(1ダイブ)</dt>
               <dd class="menu-item__value menu-item__value--price">¥10,000</dd>
-            </div>
+            </div> -->
           </dl>
+          <?php endwhile; ?>
+          <?php endif; ?>
         </div>
+
+
         <div class="price-sub__box">
           <div class="price-sub__header">
             <div class="price-sub__header-logo">
@@ -122,8 +180,25 @@
             </div>
             <h3 class="price-sub__sub-title">スペシャルダイビング</h3>
           </div>
+
+
+          <?php if (have_posts()) : ?>
+          <?php while (have_posts()) : the_post(); ?>
+          
           <dl class="price-sub__menu menu-contents">
-            <div class="menu-contents__item menu-item menu-item--price">
+
+            <?php
+              $special = SCF::get('special');
+              foreach ($special as $fields ) { ?>
+                
+              <div class="menu-contents__item menu-item menu-item--price">
+                <dt class="menu-item__name menu-item__name--price"><?php echo $fields['special_item']; ?></dt>
+                <dd class="menu-item__value menu-item__value--price"><?php echo $fields['special_price']; ?></dd>
+              </div>
+            <?php }; ?>
+
+
+            <!-- <div class="menu-contents__item menu-item menu-item--price">
               <dt class="menu-item__name menu-item__name--price">貸切ダイビング<span class="u-mobile"><br></span>(2ダイブ)</dt>
               <dd class="menu-item__value menu-item__value--price">¥24,000</dd>
             </div>
@@ -134,9 +209,14 @@
             <div class="menu-contents__item menu-item menu-item--price">
               <dt class="menu-item__name menu-item__name--price">ナイトダイビング<span class="u-mobile"><br></span>(2ダイブ)</dt>
               <dd class="menu-item__value menu-item__value--price">¥14,000</dd>
-            </div>
+            </div> -->
+
+
           </dl>
+          <?php endwhile; ?>
+          <?php endif; ?>
         </div>
+
       </div>
     </div>
   </section>

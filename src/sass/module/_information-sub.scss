@@ -96,9 +96,11 @@
 
 .information-sub__title {
   border-bottom: solid 1px #408F95;
-
+  font-size: rem(24);
+  line-height: 1.0;
+  padding-bottom: rem(8);
+  
   @include mq(md) {
-    font-size: rem(24);
   }
 }
 

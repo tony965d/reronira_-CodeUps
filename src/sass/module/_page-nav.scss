@@ -10,12 +10,17 @@
   margin-top: rem(80);
 }
 
-.page-nav--blog {
-  margin-top: rem(80);
-}
+// .page-nav--blog {
+//   margin-top: rem(80);
+// }
 
 .page-nav--voice {
-  margin-top: rem(72);
+  // margin-top: rem(72);
+  margin-top: rem(80);
+  
+  @include mq(md) {
+    margin-top: rem(68);
+  }
 }
 
 .page-nav--single {
@@ -27,6 +32,10 @@
   @include mq(md) {
     margin-top: rem(80);
   }
+}
+
+.page-nav--single .page-nav__right {
+  margin-right: rem(32);
 }
 
 .page-nav__right a {

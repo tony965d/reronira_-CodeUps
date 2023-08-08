@@ -1,0 +1,73 @@
+@use "global" as *;
+
+.voice-items {
+
+  @include mq(md) {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+}
+
+.voice-items__voice-item {
+  margin-top: rem(40);
+  display: block;
+
+  @include mq(md) {
+    width: calc(50% - rem(40) / 2);
+    margin-top: 0;
+    margin-right: rem(40);
+  }
+}
+
+// .voice-items__voice-item:hover {
+//   opacity: 0.6;
+// }
+
+.voice-items__voice-item:first-child {
+  margin-top: 0;
+}
+
+.voice-items__voice-item:nth-child(2n) {
+
+  @include mq(md) {
+    margin-right: 0;
+  }
+}
+
+.voice-items__voice-item:nth-child(n + 3) {
+
+  @include mq(md) {
+    margin-top: rem(30);
+  }
+}
+
+
+
+
+
+.voice-items__voice-item--sub {
+
+  @include mq(md) {
+    padding-top: rem(48);
+  }
+}
+
+// .voice-items__voice-item--sub:hover {
+//   opacity: 0.6;
+// }
+
+.voice-items__voice-item--sub:nth-child(n + 3) {
+
+  @include mq(md) {
+    margin-top: rem(80);
+  }
+}
+
+.voice-items__voice-item--sub:nth-child(2n) {
+
+  @include mq(md) {
+    margin-right: 0;
+  }
+}

@@ -45,7 +45,7 @@
           <?php if (have_posts()) : ?>
           <?php while (have_posts()) : the_post(); ?>
 
-            <?php the_content(); ?>
+            <!-- <?php the_content(); ?> -->
             <?php echo do_shortcode('[contact-form-7 id="944" title="お問い合わせ"]'); ?>
             
           <?php endwhile; ?>
@@ -56,7 +56,7 @@
       </section>
     </main>       
     
-    <footer class="footer top-footer">
+    <footer class="footer top-footer top-footer--contact">
       <a href="#header" class="page-top" id="page-top">
         <div class="page-top__button"></div>
       </a>

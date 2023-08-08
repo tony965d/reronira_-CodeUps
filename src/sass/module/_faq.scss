@@ -20,16 +20,18 @@
 	font-size: rem(16);
   font-weight: $normal;
 	padding-top: rem(16);
-	padding-bottom: rem(16);
   padding-left: rem(16);
+  padding-right: rem(60);
+	padding-bottom: rem(16);
 	background: #408F95;
   cursor: pointer;
   
   @include mq(md) {
     font-size: rem(20);
     padding-top: rem(26);
-    padding-bottom: rem(26);
+    padding-right: rem(112);
     padding-left: rem(40);
+    padding-bottom: rem(26);
   }
 }
 
@@ -87,7 +89,11 @@
 .faq__nav {
   display: none; 
   border: solid 1px #408F95;
-  margin-top: rem(16);
+  margin-top: 0;
+  
+  @include mq(md) {
+    margin-top: rem(16);
+  }
 }
 
 
@@ -100,3 +106,6 @@
   }
 }
 
+.faq__nav-text {
+  line-height: 1.44;
+}

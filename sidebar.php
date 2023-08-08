@@ -17,13 +17,14 @@
   <div class="side-bar__inner inner">
     <nav class="side-bar__article">
       <h3 class="side-bar__title">人気記事</h3>
-      <div class="side-bar__cards cards">
+      <div class="side-bar__cards cards cards--side-bar">
 
         <?php
           $blog_query = new WP_Query(
             array(
               'post_type'      => 'blog',
               'posts_per_page' => 3,
+              'orderby' => 'comment_count'
             )
           );
         ?>
@@ -32,7 +33,7 @@
       <?php while ( $blog_query->have_posts() ) : ?>
       <?php $blog_query->the_post(); ?>
       
-        <a href="<?php the_permalink(); ?>" class="cards__card card card--side-bar">
+        <a href="<?php the_permalink(); ?>" class="cards__card card">
           <div class="card__image card__image--side-bar">
             <?php if (has_post_thumbnail()) { ?>
             <?php the_post_thumbnail('full'); ?>
@@ -61,7 +62,7 @@
           array(
             'post_type'      => 'voice',
             'posts_per_page' => 1,
-            'orderby' => 'rand',
+            // 'orderby' => 'rand',
           )
         );
       ?>
