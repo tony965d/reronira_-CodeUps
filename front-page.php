@@ -605,14 +605,14 @@
                 <li class="nav-items__unit nav-items__unit--pc">
                   <a href="<?php echo $information ?>" class="nav-items__main">ダイビング情報</a>
                 </li>
-                <li class="nav-items__item">
-                  <a href="<?php echo $information ?>#info-1" class="nav-items__sub">ライセンス講習</a>
+                <li class="nav-items__item js-nav-info">
+                  <a href="<?php echo $information ?>#info-license" class="nav-items__sub">ライセンス講習</a>
                 </li>
-                <li class="nav-items__item">
-                  <a href="<?php echo $information ?>#info-2" class="nav-items__sub">体験ダイビング</a>
+                <li class="nav-items__item js-nav-info">
+                  <a href="<?php echo $information ?>#info-experience" class="nav-items__sub">体験ダイビング</a>
                 </li>
-                <li class="nav-items__item">
-                  <a href="<?php echo $information ?>#info-3" class="nav-items__sub">ファンダイビング</a>
+                <li class="nav-items__item js-nav-info">
+                  <a href="<?php echo $information ?>#info-fun" class="nav-items__sub">ファンダイビング</a>
                 </li>
                 <li class="nav-items__unit">
                   <a href="<?php echo $blog ?>" class="nav-items__main">ブログ</a>
@@ -665,6 +665,8 @@
         </small>
       </div>
     </footer>           
+    
+
     <?php wp_footer(); ?>
   </body>
 </html>

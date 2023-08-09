@@ -277,93 +277,47 @@ jQuery(function ($) { // この中であればWordpressでも「$」が使用可
     return false;
   });
 
-  
-  // // タブメニュー
-  // $(function () {
-  //   // 最初のコンテンツは表示
-  //   $(".js-information-sub-box:first-of-type").css("display", "block");
-  //   // タブをクリックすると
-  //   $(".js-information-sub-category").on("click", function () {
-  //     // 現在選択されているタブからcurrentを外す
-  //     $(".current").removeClass("current");
-  //     // クリックされたタブにcurrentクラスを付与
-  //     $(this).addClass("current");
-  //     // クリックされた要素が何番目か取得（クリックしたタブのインデックス番号を取得）
-  //     const index = $(this).index();
-  //     // クリックしたタブのインデックス番号と同じコンテンツを表示
-  //     $(".js-information-sub-box").hide().eq(index).fadeIn(300);
-  //   });
-  // });
 
 
-  // タブメニュー
+
   $(function () {
-      // 最初のコンテンツは表示
-        // $(".js-information-sub-box:first-of-type").css("display", "flex");
-      
-      // タブをクリックすると
-      $(".js-information-sub-category").on("click", function () {
-        
-        // 現在選択されているタブからcurrentを外す
-        $(".current").removeClass("current");
-        // クリックされたタブにcurrentクラスを付与
-        $(this).addClass("current");
-        // クリックされた要素が何番目か取得（クリックしたタブのインデックス番号を取得）
-        const index = $(this).index();
-        // クリックしたタブのインデックス番号と同じコンテンツを表示
-        $(".js-information-sub-box").hide().eq(index).fadeIn(300);
-        
-        if (window.innerWidth >= 768) {
-          $(".js-information-sub-category-icon").hide().eq(index).fadeIn(0);
-          $(".js-information-sub-category-icon-sub").show().eq(index).fadeOut(0);
-        } else if (window.innerWidth <= 768)  {
-          $(".js-information-sub-category-icon").hide();
-          $(".js-information-sub-category-icon-sub").hide();
-        }
-      });
-      $(".js-information-sub-category.current").trigger("click");
+    // URLのハッシュ部分（id）を取得
+    const urlHash = location.hash;
+    // そのidを持つ要素がなかったら処理を抜ける
+    if (!$(urlHash).length) return;
+
+    // タブの要素を開く処理
+    $(urlHash).click();
+  });
+
+
+  $(window).on('load', function() {
+    let headerHeight = $('.js-header').outerHeight();
+    let urlHash = location.hash;
+    if (urlHash) {
+      let position = $(urlHash).offset().top - headerHeight;
+      $('html, body').animate({ scrollTop: position }, 0);
+    }
   });
 
 
 
-  $(document).ready(function() {
-    $(".js-nav-info").click(function(e) {
-      e.preventDefault();
-      var target = $(this.hash);
-      if (target.length) {
-        $("html, body").animate({
-          scrollTop: target.offset().top
-        }, 1000, function() {
-          // タブをクリックした後に、セクションのタブも勝手にクリックしてみてや
-          target.trigger("click");
-        });
-      }
-    });
+  // .js-information-category クラスの要素がクリックされた時の処理
+  $(".js-information-category").click(function () {
+
+    // クリックされた要素から .current クラスを取り除く
+    $(".js-information-category").removeClass('current');
+    // クリックされた要素自体に .current クラスを追加する
+    $(this).addClass('current');
+    
+    // クリックされた要素のインデックス番号を取得
+    const index = $(this).index();
+    
+    // .js-information-box クラスの要素から .current クラスを取り除く
+    $(".js-information-box").removeClass('current');
+    // インデックス番号に対応する .js-information-box 要素に .current クラスを追加する
+    $(".js-information-box").eq(index).addClass('current');
   });
-  
-  
-
-
-
-
-  // $(function() {
-  //   // about-2 メニュータブがクリックされたときの処理
-  //   $(".js-nav-info-2").click(function() {
-  //     // スクロールアニメーションで about ページへスクロール
-
-  //     $(".current").removeClass("current");
-  //       // クリックされたタブにcurrentクラスを付与
-  //       $('#info-2').addClass("current");
-  //       // クリックされた要素が何番目か取得（クリックしたタブのインデックス番号を取得）
-  //       const index = $(this).index();
-  //       // クリックしたタブのインデックス番号と同じコンテンツを表示
-  //       $(".js-information-sub-box").hide().eq(index).fadeIn(300);
-  //   });
-  // });
-
-
-
-
 
 
 
@@ -383,78 +337,6 @@ jQuery(function ($) { // この中であればWordpressでも「$」が使用可
 			$(this).next('.js-side-bar-nav').slideToggle();
 		});
 	});
-
-
-
-  // $(function() {
-	// 	//クリックで動く
-	// 	$('.js-nav-info-1').click(function(){
-  //     $(".current").removeClass("current");
-  //       // クリックされたタブにcurrentクラスを付与
-  //       $('#info-1').addClass("current");
-	// 		$(this).next('.js-side-bar-nav').slideToggle();
-	// 	});
-	// });
-
-
-  // $(function() {
-	// 	//クリックで動く
-	// 	$('.js-nav-info-2').click(function(){
-	// 		$(".current").removeClass("current");
-  //       // クリックされたタブにcurrentクラスを付与
-  //       $('#info-2').addClass("current");
-	// 		$(this).next('.js-side-bar-nav').slideToggle();
-	// 	});
-	// });
-
-  
-
-
-  // jQuery(document).ready(function($) {
-  //   // 別ページで指定したIDに対してスムーズスクロールを行う
-  //   function scrollToTarget() {
-  //     var target = $(window.location.hash);
-  //     if (target.length) {
-  //       var headerHeight = $('header').outerHeight(); // ヘッダーの高さを取得
-  //       var targetOffset = target.offset().top - headerHeight;
-  //       $('html, body').animate({
-  //         scrollTop: targetOffset
-  //       }, 800);
-  //     }
-  //   }
-  //   // ページロード時にスムーズスクロールを実行
-  //   scrollToTarget();
-  //   $("#info-3").trigger("click");
-  //   // ハッシュが変更された場合にスムーズスクロールを実行
-  //   $(window).on('hashchange', function() {
-  //     scrollToTarget();
-  //   });
-  // });
-
-
-
-  // jQuery(document).ready(function($) {
-  //   // ページロード時にスムーズスクロールを実行
-  //   scrollToTarget();
-
-  //   // ハッシュが変更された場合にスムーズスクロールを実行
-  //   $(window).on('hashchange', function() {
-  //     scrollToTarget();
-  //   });
-
-  //   // 指定したIDの要素をクリックした状態にする
-  //   function clickTarget() {
-  //     var target = $(window.location.hash);
-  //     if (target.length) {
-  //       target.click();
-  //     }
-  //   }
-
-  //   // ページロード時に指定したIDの要素をクリックした状態にする
-  //   clickTarget();
-  // });
-
-
 
 
 });
