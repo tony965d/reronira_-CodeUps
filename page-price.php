@@ -41,7 +41,7 @@
   <section class="price-sub top-price-sub">
     <div class="price-sub__inner inner">
       <div class="price-sub__contents">
-        <div class="price-sub__box" id="price-1">
+        <div class="price-sub__box" id="price-license">
           <div class="price-sub__header">
             <div class="price-sub__header-logo">
               <img src="<?php echo get_template_directory_uri() ?>/dist/assets/images/common/price_title-logo.png" alt="">
@@ -64,7 +64,6 @@
               </div>
             <?php }; ?>
 
-
             <!-- <div class="menu-contents__item menu-item menu-item--price">
               <dt class="menu-item__name menu-item__name--price">オープンウォーター<span class="u-mobile"><br></span>ダイバーコース</dt>
               <dd class="menu-item__value menu-item__value--price">¥50,000</dd>
@@ -84,7 +83,7 @@
         </div>
 
 
-        <div class="price-sub__box" id="price-2">
+        <div class="price-sub__box" id="price-experience">
           <div class="price-sub__header">
             <div class="price-sub__header-logo">
               <img src="<?php echo get_template_directory_uri() ?>/dist/assets/images/common/price_title-logo.png" alt="">
@@ -130,14 +129,13 @@
         </div>
 
 
-        <div class="price-sub__box" id="price-3">
+        <div class="price-sub__box" id="price-fun">
           <div class="price-sub__header">
             <div class="price-sub__header-logo">
               <img src="<?php echo get_template_directory_uri() ?>/dist/assets/images/common/price_title-logo.png" alt="">
             </div>
             <h3 class="price-sub__sub-title">ファンダイビング</h3>
           </div>
-
 
           <?php if (have_posts()) : ?>
           <?php while (have_posts()) : the_post(); ?>
@@ -153,7 +151,6 @@
                 <dd class="menu-item__value menu-item__value--price"><?php echo $fields['fun_price']; ?></dd>
               </div>
             <?php }; ?>
-
 
             <!-- <div class="menu-contents__item menu-item menu-item--price">
               <dt class="menu-item__name menu-item__name--price">ボートダイビング<span class="u-mobile"><br></span>(2ダイブ)</dt>
@@ -181,7 +178,6 @@
             <h3 class="price-sub__sub-title">スペシャルダイビング</h3>
           </div>
 
-
           <?php if (have_posts()) : ?>
           <?php while (have_posts()) : the_post(); ?>
           
@@ -197,7 +193,6 @@
               </div>
             <?php }; ?>
 
-
             <!-- <div class="menu-contents__item menu-item menu-item--price">
               <dt class="menu-item__name menu-item__name--price">貸切ダイビング<span class="u-mobile"><br></span>(2ダイブ)</dt>
               <dd class="menu-item__value menu-item__value--price">¥24,000</dd>
@@ -210,7 +205,6 @@
               <dt class="menu-item__name menu-item__name--price">ナイトダイビング<span class="u-mobile"><br></span>(2ダイブ)</dt>
               <dd class="menu-item__value menu-item__value--price">¥14,000</dd>
             </div> -->
-
 
           </dl>
           <?php endwhile; ?>

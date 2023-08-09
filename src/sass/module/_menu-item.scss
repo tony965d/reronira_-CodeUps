@@ -17,6 +17,7 @@
   gap: unset;
   margin-top: 0;
   border: solid 1px #408F95;
+  border-bottom: none;
   // padding-right: rem(16);
   
   @include mq(md) {
@@ -24,6 +25,14 @@
     padding: 0 rem(16);
   }
 }
+
+.menu-item--price:last-child {
+  border-bottom: solid 1px #408F95;
+
+}
+
+
+
 
 // .menu-item--price:first-child .menu-item__value--price {
 //   line-height: 1.65;

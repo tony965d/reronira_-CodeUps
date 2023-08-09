@@ -61,7 +61,7 @@
         <?php if (have_posts()): ?>
         <?php while (have_posts()) : the_post(); ?>
   
-        <div class="campaign-sub__feature feature">
+        <div id="post-<?php the_ID(); ?>" class="campaign-sub__feature feature">
           <div class="feature__image">
             <?php if (has_post_thumbnail()) { ?>
             <?php the_post_thumbnail('full'); ?>

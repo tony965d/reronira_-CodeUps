@@ -444,8 +444,6 @@
                 </dl>
               </div>
 
-
-
               <div class="price__box">
                 <h3 class="price__sub-title">ファンダイビング</h3>
                 <dl class="price__menu menu-contents">
@@ -460,8 +458,6 @@
                       <dd class="menu-item__value"><?php echo $fields['fun_price']; ?></dd>
                     </div>
                   <?php }; ?>
-
-
 
                   <!-- <div class="menu-contents__item menu-item">
                     <dt class="menu-item__name">ビーチダイビング(2ダイブ)</dt>
@@ -589,13 +585,13 @@
                   <a href="<?php echo $campaign ?>" class="nav-items__main">キャンペーン</a>
                 </li>
                 <li class="nav-items__item">
-                  <a href="#" class="nav-items__sub">ライセンス取得</a>
+                  <a href="<?php echo $campaign ?>#post-282" class="nav-items__sub">ライセンス取得</a>
                 </li>
                 <li class="nav-items__item">
-                  <a href="#" class="nav-items__sub">貸切体験ダイビング</a>
+                  <a href="<?php echo $campaign ?>#post-283" class="nav-items__sub">貸切体験ダイビング</a>
                 </li>
                 <li class="nav-items__item">
-                  <a href="#" class="nav-items__sub">ナイトダイビング</a>
+                  <a href="<?php echo $campaign ?>#post-501" class="nav-items__sub">ナイトダイビング</a>
                 </li>
                 <li class="nav-items__unit">
                   <a href="<?php echo $about ?>" class="nav-items__main">私たちについて</a>
@@ -628,13 +624,13 @@
                   <a href="<?php echo $price ?>" class="nav-items__main">料金一覧</a>
                 </li>
                 <li class="nav-items__item">
-                  <a href="<?php echo $price ?>#price-1" class="nav-items__sub">ライセンス講習</a>
+                  <a href="<?php echo $price ?>#price-license" class="nav-items__sub">ライセンス講習</a>
                 </li>
                 <li class="nav-items__item">
-                  <a href="<?php echo $price ?>#price-2" class="nav-items__sub">体験ダイビング</a>
+                  <a href="<?php echo $price ?>#price-experience" class="nav-items__sub">体験ダイビング</a>
                 </li>
                 <li class="nav-items__item">
-                  <a href="<?php echo $price ?>#price-3" class="nav-items__sub">ファンダイビング</a>
+                  <a href="<?php echo $price ?>#price-fun" class="nav-items__sub">ファンダイビング</a>
                 </li>
               </ul>
               <ul class="nav-items__items">
@@ -665,7 +661,6 @@
         </small>
       </div>
     </footer>           
-    
 
     <?php wp_footer(); ?>
   </body>

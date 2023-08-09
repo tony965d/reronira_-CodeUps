@@ -291,14 +291,21 @@ jQuery(function ($) { // この中であればWordpressでも「$」が使用可
   });
 
 
-  $(window).on('load', function() {
-    let headerHeight = $('.js-header').outerHeight();
-    let urlHash = location.hash;
+
+  //ページ内でハッシュ付きのリンクをクリックした際に、指定されたセクションにスムーズにスクロールしながら移動する
+  
+  $(window).on('load', function() {  //ページのロードが完了した際に処理を実行するためのコードです。
+    let headerHeight = $('.js-header').outerHeight(); // ヘッダーの高さを取得する
+    let urlHash = location.hash; // URL内のハッシュ部分（アンカー）を取得する
+    
+    // URLにハッシュが存在する場合の処理
     if (urlHash) {
-      let position = $(urlHash).offset().top - headerHeight;
-      $('html, body').animate({ scrollTop: position }, 0);
+      let position = $(urlHash).offset().top - headerHeight; // スクロール位置を計算する（ヘッダーの高さを考慮して調整）
+      $('html, body').animate({ scrollTop: position }, 0); // アニメーション付きでスクロールする
     }
   });
+
+
 
 
 
