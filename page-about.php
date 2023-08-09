@@ -20,8 +20,8 @@
     <div class="mv-sub__inner">
     <div class="mv-sub__wrapper">
       <picture class="mv-sub__image">
-        <source media="(min-width: 768px)" srcset="<?php echo get_template_directory_uri(); ?>./dist/assets/images/common/about_mv-pc.png">
-        <img src="<?php echo get_template_directory_uri(); ?>./dist/assets/images/common/about_mv.png" alt="">
+        <source media="(min-width: 768px)" srcset="<?php echo get_template_directory_uri(); ?>/dist/assets/images/common/about_mv-pc.png">
+        <img src="<?php echo get_template_directory_uri(); ?>/dist/assets/images/common/about_mv.png" alt="">
       </picture>
       <div class="mv-sub__body">
         <h2 class="mv-sub__title">About us</h2>
@@ -42,10 +42,10 @@
       <div class="about-sub__container">
         <div class="about-sub__wrapper">
           <div class="about-sub__back-image">
-            <img src="<?php echo get_template_directory_uri() ?>./dist/assets/images/common/about_2.png" alt="">
+            <img src="<?php echo get_template_directory_uri() ?>/dist/assets/images/common/about_2.png" alt="">
           </div>
           <div class="about-sub__image">
-            <img src="<?php echo get_template_directory_uri() ?>./dist/assets/images/common/about_1.png" alt="">
+            <img src="<?php echo get_template_directory_uri() ?>/dist/assets/images/common/about_1.png" alt="">
           </div>
         </div>
         <h3 class="about-sub__title">Dive into<br>the Ocean</h3>

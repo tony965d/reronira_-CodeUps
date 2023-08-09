@@ -303,6 +303,7 @@ jQuery(function ($) { // この中であればWordpressでも「$」が使用可
       
       // タブをクリックすると
       $(".js-information-sub-category").on("click", function () {
+        
         // 現在選択されているタブからcurrentを外す
         $(".current").removeClass("current");
         // クリックされたタブにcurrentクラスを付与
@@ -311,7 +312,7 @@ jQuery(function ($) { // この中であればWordpressでも「$」が使用可
         const index = $(this).index();
         // クリックしたタブのインデックス番号と同じコンテンツを表示
         $(".js-information-sub-box").hide().eq(index).fadeIn(300);
-
+        
         if (window.innerWidth >= 768) {
           $(".js-information-sub-category-icon").hide().eq(index).fadeIn(0);
           $(".js-information-sub-category-icon-sub").show().eq(index).fadeOut(0);
@@ -322,6 +323,27 @@ jQuery(function ($) { // この中であればWordpressでも「$」が使用可
       });
       $(".js-information-sub-category.current").trigger("click");
   });
+
+
+
+  $(document).ready(function() {
+    $(".js-nav-info").click(function(e) {
+      e.preventDefault();
+      var target = $(this.hash);
+      if (target.length) {
+        $("html, body").animate({
+          scrollTop: target.offset().top
+        }, 1000, function() {
+          // タブをクリックした後に、セクションのタブも勝手にクリックしてみてや
+          target.trigger("click");
+        });
+      }
+    });
+  });
+  
+  
+
+
 
 
   // $(function() {

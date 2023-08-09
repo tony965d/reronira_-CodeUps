@@ -21,8 +21,8 @@
     <div class="mv-sub__wrapper">
       <div class="mv-sub__image">
       <picture class="mv-sub__image">
-        <source media="(min-width: 768px)" srcset="<?php echo get_template_directory_uri(); ?>./dist/assets/images/common/information_mv-pc.png">
-        <img src="<?php echo get_template_directory_uri(); ?>./dist/assets/images/common/information_mv.png" alt="">
+        <source media="(min-width: 768px)" srcset="<?php echo get_template_directory_uri(); ?>/dist/assets/images/common/information_mv-pc.png">
+        <img src="<?php echo get_template_directory_uri(); ?>/dist/assets/images/common/information_mv.png" alt="">
       </picture>
       <div class="mv-sub__body">
         <h2 class="mv-sub__title">Information</h2>
@@ -42,30 +42,30 @@
     <div class="information-sub__inner inner">
       <div class="information-sub__container">
         <ul class="information-sub__categories">
-          <li id="info-1" class="information-sub__category current js-information-sub-category">
+          <li id="info-license" class="information-sub__category current js-information-sub-category">
             <div class="information-sub__category-icon js-information-sub-category-icon u-desktop">
-              <img src="<?php echo get_template_directory_uri(); ?>./dist/assets/images/common/information_category-icon1.png" alt="">
+              <img src="<?php echo get_template_directory_uri(); ?>/dist/assets/images/common/information_category-icon1.png" alt="">
             </div>
             <div class="information-sub__category-icon-sub js-information-sub-category-icon-sub u-desktop">
-              <img src="<?php echo get_template_directory_uri(); ?>./dist/assets/images/common/information_category-icon01.png" alt="">
+              <img src="<?php echo get_template_directory_uri(); ?>/dist/assets/images/common/information_category-icon01.png" alt="">
             </div>
             <p class="information-sub__category-name">ライセンス<span class="u-mobile"><br></span>講習</p>
           </li>
-          <li id="info-2" class="information-sub__category js-information-sub-category">
+          <li id="info-experience" class="information-sub__category js-information-sub-category">
             <div class="information-sub__category-icon js-information-sub-category-icon u-desktop">
-              <img src="<?php echo get_template_directory_uri(); ?>./dist/assets/images/common/information_category-icon1.png" alt="">
+              <img src="<?php echo get_template_directory_uri(); ?>/dist/assets/images/common/information_category-icon1.png" alt="">
             </div>
             <div class="information-sub__category-icon-sub js-information-sub-category-icon-sub u-desktop">
-              <img src="<?php echo get_template_directory_uri(); ?>./dist/assets/images/common/information_category-icon01.png" alt="">
+              <img src="<?php echo get_template_directory_uri(); ?>/dist/assets/images/common/information_category-icon01.png" alt="">
             </div>
             <p class="information-sub__category-name">ファン<span class="u-mobile"><br></span>ダイビング</p>
           </li>
-          <li id="info-3" class="information-sub__category js-information-sub-category">
+          <li id="info-fun" class="information-sub__category js-information-sub-category">
             <div class="information-sub__category-icon js-information-sub-category-icon u-desktop">
-              <img src="<?php echo get_template_directory_uri(); ?>./dist/assets/images/common/information_category-icon1.png" alt="">
+              <img src="<?php echo get_template_directory_uri(); ?>/dist/assets/images/common/information_category-icon1.png" alt="">
             </div>
             <div class="information-sub__category-icon-sub js-information-sub-category-icon-sub u-desktop">
-              <img src="<?php echo get_template_directory_uri(); ?>./dist/assets/images/common/information_category-icon01.png" alt="">
+              <img src="<?php echo get_template_directory_uri(); ?>/dist/assets/images/common/information_category-icon01.png" alt="">
             </div>
             <p class="information-sub__category-name">体験<span class="u-mobile"><br></span>ダイビング</p>
           </li>
@@ -82,7 +82,7 @@
               </p>
             </div>
             <div class="information-sub__image">
-              <img src="<?php echo get_template_directory_uri(); ?>./dist/assets/images/common/information_image1.png" alt="">
+              <img src="<?php echo get_template_directory_uri(); ?>/dist/assets/images/common/information_image1.png" alt="">
             </div>
           </div>
           <div class="information-sub__box js-information-sub-box">
@@ -95,7 +95,7 @@
               </p>
             </div>
             <div class="information-sub__image">
-              <img src="<?php echo get_template_directory_uri(); ?>./dist/assets/images/common/information_image2.png" alt="">
+              <img src="<?php echo get_template_directory_uri(); ?>/dist/assets/images/common/information_image2.png" alt="">
             </div>
           </div>
           <div class="information-sub__box js-information-sub-box">
@@ -108,7 +108,7 @@
               </p>
             </div>
             <div class="information-sub__image">
-              <img src="<?php echo get_template_directory_uri(); ?>./dist/assets/images/common/information_image3.png" alt="">
+              <img src="<?php echo get_template_directory_uri(); ?>/dist/assets/images/common/information_image3.png" alt="">
             </div>
           </div>
         </div>

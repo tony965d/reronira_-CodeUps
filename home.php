@@ -20,8 +20,8 @@
     <div class="mv-sub__inner">
     <div class="mv-sub__wrapper">
       <picture class="mv-sub__image">
-        <source media="(min-width: 768px)" srcset="<?php echo get_template_directory_uri(); ?>./dist/assets/images/common/campaign_mv-pc.png">
-        <img src="<?php echo get_template_directory_uri(); ?>./dist/assets/images/common/campaign_mv.png" alt="">
+        <source media="(min-width: 768px)" srcset="<?php echo get_template_directory_uri(); ?>/dist/assets/images/common/campaign_mv-pc.png">
+        <img src="<?php echo get_template_directory_uri(); ?>/dist/assets/images/common/campaign_mv.png" alt="">
       </picture>
       <div class="mv-sub__body">
         <h2 class="mv-sub__title">Campaign</h2>
@@ -66,7 +66,7 @@
             <?php if (has_post_thumbnail()) { ?>
             <?php the_post_thumbnail('full'); ?>
             <?php } else { ?>
-            <img src="<?php echo get_template_directory_uri() ?>./dist/assets/images/common/noimage.png" alt="画像がありません">
+            <img src="<?php echo get_template_directory_uri() ?>/dist/assets/images/common/noimage.png" alt="画像がありません">
             <?php } ?> 
           </div>
           <div class="feature__header feature__header--campaign">

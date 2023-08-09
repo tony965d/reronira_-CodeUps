@@ -21,8 +21,8 @@
       <div class="mv-sub__wrapper">
         <div class="mv-sub__image">
         <picture class="mv-sub__image">
-          <source media="(min-width: 768px)" srcset="<?php echo get_template_directory_uri(); ?>./dist/assets/images/common/privacy_mv-pc.png">
-          <img src="<?php echo get_template_directory_uri(); ?>./dist/assets/images/common/privacy_mv.png" alt="">
+          <source media="(min-width: 768px)" srcset="<?php echo get_template_directory_uri(); ?>/dist/assets/images/common/privacy_mv-pc.png">
+          <img src="<?php echo get_template_directory_uri(); ?>/dist/assets/images/common/privacy_mv.png" alt="">
         </picture>
         <div class="mv-sub__body">
           <h2 class="mv-sub__title">Terms of Service</h2>

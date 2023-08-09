@@ -25,7 +25,7 @@
               }?>
           </div>
           <div class="error__back-image">
-            <img src="<?php echo get_template_directory_uri() ?>./dist/assets/images/common/404_image.png" alt="">
+            <img src="<?php echo get_template_directory_uri() ?>/dist/assets/images/common/404_image.png" alt="">
           </div>
           <div class="error__container">
             <h2 class="error__title">404</h2>
@@ -43,17 +43,17 @@
         <nav class="footer__nav">
           <div class="footer__box">
             <a href="<?php echo $home ?>" class="footer__logo">
-              <img src="<?php echo get_template_directory_uri() ?>./dist/assets/images/common/CodeUps_footer_logo.png" alt="">
+              <img src="<?php echo get_template_directory_uri() ?>/dist/assets/images/common/CodeUps_footer_logo.png" alt="">
             </a>
             <ul class="footer__sns-links">
               <li class="footer__sns-link">
                 <a href="#" class="footer__facebook">
-                  <img src="<?php echo get_template_directory_uri() ?>./dist/assets/images/common/FacebookLogo.png" alt="">
+                  <img src="<?php echo get_template_directory_uri() ?>/dist/assets/images/common/FacebookLogo.png" alt="">
                 </a>
               </li>
               <li class="footer__sns-link">
                 <a href="#" class="footer__insta">
-                  <img src="<?php echo get_template_directory_uri() ?>./dist/assets/images/common/InstagramLogo.png" alt="">
+                  <img src="<?php echo get_template_directory_uri() ?>/dist/assets/images/common/InstagramLogo.png" alt="">
                 </a>
               </li>
             </ul>

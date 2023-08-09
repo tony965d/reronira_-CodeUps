@@ -21,8 +21,8 @@
       <div class="mv-sub__wrapper">
         <div class="mv-sub__image">
         <picture class="mv-sub__image">
-          <source media="(min-width: 768px)" srcset="<?php echo get_template_directory_uri(); ?>./dist/assets/images/common/price_mv-pc.png">
-          <img src="<?php echo get_template_directory_uri(); ?>./dist/assets/images/common/price_mv.png" alt="">
+          <source media="(min-width: 768px)" srcset="<?php echo get_template_directory_uri(); ?>/dist/assets/images/common/price_mv-pc.png">
+          <img src="<?php echo get_template_directory_uri(); ?>/dist/assets/images/common/price_mv.png" alt="">
         </picture>
         <div class="mv-sub__body">
           <h2 class="mv-sub__title">Price</h2>
@@ -44,7 +44,7 @@
         <div class="price-sub__box" id="price-1">
           <div class="price-sub__header">
             <div class="price-sub__header-logo">
-              <img src="<?php echo get_template_directory_uri() ?>./dist/assets/images/common/price_title-logo.png" alt="">
+              <img src="<?php echo get_template_directory_uri() ?>/dist/assets/images/common/price_title-logo.png" alt="">
             </div>
             <h3 class="price-sub__sub-title">ライセンス講習</h3>
           </div>
@@ -87,7 +87,7 @@
         <div class="price-sub__box" id="price-2">
           <div class="price-sub__header">
             <div class="price-sub__header-logo">
-              <img src="<?php echo get_template_directory_uri() ?>./dist/assets/images/common/price_title-logo.png" alt="">
+              <img src="<?php echo get_template_directory_uri() ?>/dist/assets/images/common/price_title-logo.png" alt="">
             </div>
             <h3 class="price-sub__sub-title">体験ダイビング</h3>
           </div>
@@ -133,7 +133,7 @@
         <div class="price-sub__box" id="price-3">
           <div class="price-sub__header">
             <div class="price-sub__header-logo">
-              <img src="<?php echo get_template_directory_uri() ?>./dist/assets/images/common/price_title-logo.png" alt="">
+              <img src="<?php echo get_template_directory_uri() ?>/dist/assets/images/common/price_title-logo.png" alt="">
             </div>
             <h3 class="price-sub__sub-title">ファンダイビング</h3>
           </div>
@@ -176,7 +176,7 @@
         <div class="price-sub__box">
           <div class="price-sub__header">
             <div class="price-sub__header-logo">
-              <img src="<?php echo get_template_directory_uri() ?>./dist/assets/images/common/price_title-logo.png" alt="">
+              <img src="<?php echo get_template_directory_uri() ?>/dist/assets/images/common/price_title-logo.png" alt="">
             </div>
             <h3 class="price-sub__sub-title">スペシャルダイビング</h3>
           </div>

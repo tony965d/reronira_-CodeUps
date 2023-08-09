@@ -21,8 +21,8 @@
           <div class="mv-sub__wrapper">
             <div class="mv-sub__image">
             <picture class="mv-sub__image">
-              <source media="(min-width: 768px)" srcset="<?php echo get_template_directory_uri(); ?>./dist/assets/images/common/contact_mv-pc.png">
-              <img src="<?php echo get_template_directory_uri(); ?>./dist/assets/images/common/contact_mv.png" alt="">
+              <source media="(min-width: 768px)" srcset="<?php echo get_template_directory_uri(); ?>/dist/assets/images/common/contact_mv-pc.png">
+              <img src="<?php echo get_template_directory_uri(); ?>/dist/assets/images/common/contact_mv.png" alt="">
             </picture>
             <div class="mv-sub__body">
               <h2 class="mv-sub__title">Contact</h2>
@@ -64,17 +64,17 @@
         <nav class="footer__nav">
           <div class="footer__box">
             <a href="<?php echo $home ?>" class="footer__logo">
-              <img src="<?php echo get_template_directory_uri() ?>./dist/assets/images/common/CodeUps_footer_logo.png" alt="">
+              <img src="<?php echo get_template_directory_uri() ?>/dist/assets/images/common/CodeUps_footer_logo.png" alt="">
             </a>
             <ul class="footer__sns-links">
               <li class="footer__sns-link">
                 <a href="#" class="footer__facebook">
-                  <img src="<?php echo get_template_directory_uri() ?>./dist/assets/images/common/FacebookLogo.png" alt="">
+                  <img src="<?php echo get_template_directory_uri() ?>/dist/assets/images/common/FacebookLogo.png" alt="">
                 </a>
               </li>
               <li class="footer__sns-link">
                 <a href="#" class="footer__insta">
-                  <img src="<?php echo get_template_directory_uri() ?>./dist/assets/images/common/InstagramLogo.png" alt="">
+                  <img src="<?php echo get_template_directory_uri() ?>/dist/assets/images/common/InstagramLogo.png" alt="">
                 </a>
               </li>
             </ul>
