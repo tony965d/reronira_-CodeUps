@@ -1,18 +1,6 @@
 @use "global" as *;
 
 
-
-.single__container {
-  display: flex;
-  flex-direction: column;
-
-  @include mq(md) {
-    flex-direction: row;
-    gap: rem(80);
-  }
-}
-
-
 .single__wrapper {
   width: 100%;
 

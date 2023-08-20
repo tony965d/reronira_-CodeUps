@@ -28,15 +28,6 @@
 }
 
 
-.blog-sub__container {
-  
-  @include mq(md) {
-    display: flex;
-    gap: rem(80);
-  }
-}
-
-
 .blog-sub__cards {
 
   @include mq(md) {

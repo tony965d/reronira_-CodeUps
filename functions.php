@@ -22,31 +22,42 @@ function my_setup() {
 			'caption',
 		)
 	);
-	
-	// global $campaign;
-  // $campaign = esc_url(home_url( '/campaign' ));
 
-	// global $about;
-  // $about = esc_url(home_url( '/about/' ));
+	global $home;
+	$home = esc_url(home_url('/'));
 
-	// global $information;
-  // $information = esc_url(home_url( '/information/' ));
+	global $campaign;
+  $campaign = esc_url(home_url( '/campaign' ));
 
-	// global $blog;
-  // $blog = esc_url(home_url( '/blog/' ));
+	global $about;
+  $about = esc_url(home_url( '/about' ));
 
-	// global $voice;
-  // $voice = esc_url(home_url( '/voice/' ));
+	global $information;
+  $information = esc_url(home_url( '/information' ));
 
-	// global $price;
-  // $price = esc_url(home_url( '/price/' ));
+	global $blog;
+  $blog = esc_url(home_url( '/blog' ));
 
-	// global $faq;
-  // $faq = esc_url(home_url( '/faq/' ));
+	global $voice;
+  $voice = esc_url(home_url( '/voice' ));
 
-	// global $contact;
-  // $contact = esc_url(home_url( '/contact/' ));
+	global $price;
+  $price = esc_url(home_url( '/price' ));
 
+	global $faq;
+  $faq = esc_url(home_url( '/faq' ));
+
+	global $contact;
+  $contact = esc_url(home_url( '/contact' ));
+
+	global $privacy;
+	$privacy = esc_url(home_url( '/privacy' ));
+
+	global $termsOfService;
+	$termsOfService = esc_url(home_url( '/terms' ));
+
+	global $SiteMap;
+	$SiteMap = esc_url(home_url( '/SiteMap' ));
 
 }
 add_action( 'after_setup_theme', 'my_setup' );
@@ -295,3 +306,63 @@ function wpcf7_autop_return_false() {
 // }
 
 
+
+
+
+//Contact Form 7 のドロップダウンメニューを動的に表示する
+
+	//Contact Form 7 のカスタマイズ
+	function filter_wpcf7_form_tag( $scanned_tag, $replace ) {
+		if(!empty($scanned_tag)){
+						//nameで判別
+						if($scanned_tag['name'] == 'drop-menu'){
+								
+						//カスタム投稿タイプの取得
+						global $post;
+						$args = array(
+						'posts_per_page' => -1, 
+						'post_type' => 'post',
+						'order' => 'DESC',
+						);
+
+						$customPosts = get_posts($args);
+						if($customPosts){
+								foreach($customPosts as $post){
+										setup_postdata( $post );
+										$title = get_the_title();
+										
+										//$scanned_tagに情報を追加
+										$scanned_tag['values'][] = $title;
+										$scanned_tag['labels'][] = $title;
+								}
+						}
+						wp_reset_postdata();
+						}
+			}
+			return $scanned_tag; 
+	}; 
+	//wpcf7_add_form_tag と言う関数でショートコードと実際のフォームでどのように出力するかを決めている
+	add_filter( 'wpcf7_form_tag', 'filter_wpcf7_form_tag', 11, 2 );
+	add_filter('protected_title_format', 'remove_protected');
+	function remove_protected($title) {
+			return '%s';
+	}
+
+	
+
+// 	function wpcf7_custom_item_error_position( $items, $result ) {
+//     $class = 'wpcf7-custom-item-error';
+//     $names = array( 'catalog' ); // name属性を指定
+
+//     if ( isset( $items['invalid_fields'] ) ) {
+//         foreach ( $items['invalid_fields'] as $k => $v ) {
+//             $orig = $v['into'];
+//             $name = substr( $orig, strrpos($orig, ".") + 1 );
+//             if ( in_array( $name, $names ) ) {
+//                 $items['invalid_fields'][$k]['into'] = ".{$class}.{$name}";
+//             }
+//         }
+//     }
+//     return $items;
+// }
+// add_filter( 'wpcf7_ajax_json_echo', 'wpcf7_custom_item_error_position', 10, 2 );

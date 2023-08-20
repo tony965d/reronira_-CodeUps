@@ -346,4 +346,14 @@ jQuery(function ($) { // この中であればWordpressでも「$」が使用可
 	});
 
 
+//Comtact Form 7でエラーが出た時上に動く
+  var wpcf7Elm = document.querySelector( '.wpcf7' );
+ 
+  wpcf7Elm.addEventListener( 'wpcf7invalid', function( event ) {
+    let speed = 1000;
+    jQuery("html, body").animate({scrollTop:0}, speed, "swing");
+  }, false );
+
+
+
 });

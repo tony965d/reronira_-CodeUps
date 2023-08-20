@@ -1,20 +1,5 @@
 <?php get_header(); ?>
 
-   <?php 
-      $home = esc_url(home_url('/'));
-      $campaign = esc_url(home_url( '/campaign' ));
-      $about = esc_url(home_url( '/about' ));
-      $information = esc_url(home_url( '/information' ));
-      $blog = esc_url(home_url( '/blog' ));
-      $voice = esc_url(home_url( '/voice' ));
-      $price = esc_url(home_url( '/price' ));
-      $faq = esc_url(home_url( '/faq' ));
-      $contact = esc_url(home_url( '/contact' ));
-      $privacy = esc_url(home_url( '/privacy' ));
-      $terms = esc_url(home_url( '/terms' ));
-      $SiteMap = esc_url(home_url( '/SiteMap' ));
-    ?>
-
     <main>
       <section class="mv">
         <div class="mv__wrapper">
@@ -189,7 +174,7 @@
                   ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキスト<span class="u-desktop about__text-sub">が入ります。</span>
                 </p>
                 <div class="about__button">
-                  <a href="<?php $about ?>" class="button">View more<span class="button__arrow"></span></a>
+                  <a href="<?php echo $about ?>" class="button">View more<span class="button__arrow"></span></a>
                 </div>
               </div>
             </div>
@@ -644,7 +629,7 @@
                   <a href="<?php echo $privacy ?>" class="nav-items__main">プライバシー<span class="u-mobile"><br></span>ポリシー</a>
                 </li>
                 <li class="nav-items__unit">
-                  <a href="<?php echo $terms ?>" class="nav-items__main">利用規約</a>
+                  <a href="<?php echo $termsOfService ?>" class="nav-items__main">利用規約</a>
                 </li>
                 <li class="nav-items__unit">
                   <a href="<?php echo $contact ?>" class="nav-items__main">お問い合わせ</a>

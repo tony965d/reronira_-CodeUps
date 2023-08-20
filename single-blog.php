@@ -1,20 +1,5 @@
 <?php get_header(); ?>
 
-  <?php 
-    $home = esc_url(home_url('/'));
-    $campaign = esc_url(home_url( '/campaign' ));
-    $about = esc_url(home_url( '/about' ));
-    $information = esc_url(home_url( '/information' ));
-    $blog = esc_url(home_url( '/blog' ));
-    $voice = esc_url(home_url( '/voice' ));
-    $price = esc_url(home_url( '/price' ));
-    $faq = esc_url(home_url( '/faq' ));
-    $contact = esc_url(home_url( '/contact' ));
-    $privacy = esc_url(home_url( '/privacy' ));
-    $terms = esc_url(home_url( '/terms' ));
-    $SiteMap = esc_url(home_url( '/SiteMap' ));
-  ?>
-
 <main>
   <section class="mv-sub">
     <div class="mv-sub__inner">
@@ -40,7 +25,7 @@
 
   <section class="single top-single">
     <div class="single__inner inner">
-      <div class="single__container">
+      <div class="single__two-columns two-columns">
         <div class="single__wrapper">
           <?php if (have_posts()) : ?>
           <?php while (have_posts()) : the_post(); ?>

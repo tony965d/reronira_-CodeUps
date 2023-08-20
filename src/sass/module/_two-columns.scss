@@ -1,0 +1,13 @@
+@use "global" as *;
+
+
+.two-columns {
+  display: flex;
+  flex-direction: column;
+
+  @include mq(md) {
+    flex-direction: row;
+    align-items: flex-start;
+    gap: rem(80);
+  }
+}

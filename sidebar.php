@@ -1,16 +1,16 @@
   <?php 
-    $home = esc_url(home_url('/'));
-    $campaign = esc_url(home_url( '/campaign' ));
-    $about = esc_url(home_url( '/about' ));
-    $information = esc_url(home_url( '/information' ));
-    $blog = esc_url(home_url( '/blog' ));
-    $voice = esc_url(home_url( '/voice' ));
-    $price = esc_url(home_url( '/price' ));
-    $faq = esc_url(home_url( '/faq' ));
-    $contact = esc_url(home_url( '/contact' ));
-    $privacy = esc_url(home_url( '/privacy' ));
-    $terms = esc_url(home_url( '/terms' ));
-    $SiteMap = esc_url(home_url( '/SiteMap' ));
+    global $home; 
+    global $campaign;
+    global $about;
+    global $information;
+    global $blog; 
+    global $voice; 
+    global $price; 
+    global $faq; 
+    global $contact; 
+    global $privacy; 
+    global $termsOfService; 
+    global $SiteMap; 
   ?>
 
 <aside class="blog-sub__side-bar side-bar">
