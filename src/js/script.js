@@ -346,13 +346,18 @@ jQuery(function ($) { // この中であればWordpressでも「$」が使用可
 	});
 
 
-//Comtact Form 7でエラーが出た時上に動く
-  var wpcf7Elm = document.querySelector( '.wpcf7' );
- 
-  wpcf7Elm.addEventListener( 'wpcf7invalid', function( event ) {
-    let speed = 1000;
-    jQuery("html, body").animate({scrollTop:0}, speed, "swing");
-  }, false );
+  //Comtact Form 7でエラーが出た時上に動く
+  
+  var wpcf7Elm = document.querySelector('.wpcf7');
+
+  if (wpcf7Elm) {
+    wpcf7Elm.addEventListener('wpcf7invalid', function(event) {
+      let speed = 0;
+      let scrollTopValue = window.innerWidth < 768 ? 400 : 500; // スマホの場合は1000、それ以外は500
+      jQuery("html, body").animate({scrollTop: scrollTopValue}, speed, "swing");
+    }, false);
+  }
+
 
 
 

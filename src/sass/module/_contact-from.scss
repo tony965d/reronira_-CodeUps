@@ -8,7 +8,7 @@
   padding-bottom: rem(24);
   margin-top: rem(24);
   background-image: linear-gradient(to right, #408F95 3px, transparent 3px);
-  background-size: 4px 1px;
+  background-size: rem(4) rem(0.5);
   background-repeat: repeat-x;
   background-position: left bottom;
   
@@ -75,7 +75,7 @@
   padding-bottom: rem(23);
   margin-top: rem(24);
   background-image: linear-gradient(to right, #408F95 3px, transparent 3px);
-  background-size: 4px 1px;
+  background-size: rem(4) rem(0.5);
   background-repeat: repeat-x;
   background-position: left bottom;
   // border-bottom: dotted 1px #408F95;

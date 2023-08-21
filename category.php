@@ -16,7 +16,7 @@
     </div>
   </section>
 
-  <div class="wp-breadcrumb wp-breadcrumb--about inner">
+  <div class="wp-breadcrumb wp-breadcrumb--sub inner">
     <?php if(function_exists('bcn_display'))
       {
           bcn_display();
