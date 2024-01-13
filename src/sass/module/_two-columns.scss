@@ -1,7 +1,32 @@
 @use "global" as *;
 
 
-.two-columns {
+// .two-columns {
+//   display: flex;
+//   flex-direction: column;
+
+//   @include mq(md) {
+//     flex-direction: row;
+//     align-items: flex-start;
+//     gap: rem(80);
+//   }
+// }
+
+.two-columns__inner.inner {
+  max-width: rem(500);
+  padding-right: rem(15);
+  padding-left: rem(15);
+
+  @include mq(md) {
+    max-width: rem(1130);
+    padding-left: rem(25);
+    padding-right: rem(25);
+  }
+}
+
+
+
+.two-columns__container {
   display: flex;
   flex-direction: column;
 
@@ -9,5 +34,24 @@
     flex-direction: row;
     align-items: flex-start;
     gap: rem(80);
+  }
+}
+
+
+.two-columns__left {
+  width: 100%;
+
+  @include mq(md) {
+    width: 65.37037%;
+  }
+}
+
+
+.two-columns__side-bar {
+  margin-top: rem(80);
+
+  @include mq(md) {
+    width: 27.222222%;
+    margin-top: 0;
   }
 }

@@ -4,7 +4,6 @@
   <section class="mv-sub">
     <div class="mv-sub__inner">
       <div class="mv-sub__wrapper">
-        <div class="mv-sub__image">
         <picture class="mv-sub__image">
           <source media="(min-width: 768px)" srcset="<?php echo get_template_directory_uri(); ?>/dist/assets/images/common/privacy_mv-pc.png">
           <img src="<?php echo get_template_directory_uri(); ?>/dist/assets/images/common/privacy_mv.png" alt="">
@@ -33,13 +32,13 @@
                 <a href="<?php echo $campaign ?>" class="nav-items__main nav-items__main--site-map">キャンペーン</a>
               </li>
               <li class="nav-items__item">
-                <a href="<?php echo $campaign ?>#post-282" class="nav-items__sub">ライセンス取得</a>
+                <a href="<?php echo $category ?>/fun" class="nav-items__sub">ファンダイビング</a>
               </li>
               <li class="nav-items__item">
-                <a href="<?php echo $campaign ?>#post-283" class="nav-items__sub">貸切体験ダイビング</a>
+                <a href="<?php echo $category ?>/license" class="nav-items__sub">ライセンス講習</a>
               </li>
               <li class="nav-items__item">
-                <a href="<?php echo $campaign ?>#post-501" class="nav-items__sub">ナイトダイビング</a>
+                <a href="<?php echo $category ?>/experience" class="nav-items__sub">体験ダイビング</a>
               </li>
               <li class="nav-items__unit">
                 <a href="<?php echo $about ?>" class="nav-items__main nav-items__main--site-map">私たちについて</a>
@@ -59,7 +58,7 @@
                 <a href="<?php echo $information ?>#info-fun" class="nav-items__sub">ファンダイビング</a>
               </li>
               <li class="nav-items__unit">
-                <a href="<?php echo $blog ?>" class="nav-items__main nav-items__main--site-map">ブログ</a>
+                <a href="<?php echo $blog_page ?>" class="nav-items__main nav-items__main--site-map">ブログ</a>
               </li>
             </ul>
           </div>

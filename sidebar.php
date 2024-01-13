@@ -3,7 +3,7 @@
     global $campaign;
     global $about;
     global $information;
-    global $blog; 
+    global $blog_page; 
     global $voice; 
     global $price; 
     global $faq; 
@@ -11,9 +11,11 @@
     global $privacy; 
     global $termsOfService; 
     global $SiteMap; 
+    global $category;
   ?>
 
-<aside class="blog-sub__side-bar side-bar">
+
+<aside class="two-columns__side-bar side-bar">
   <div class="side-bar__inner inner">
     <nav class="side-bar__article">
       <h3 class="side-bar__title">人気記事</h3>
@@ -43,7 +45,7 @@
           </div>
           <div class="card__body card__body--side-bar">
             <div class="card__header card__header--side-bar">
-              <time datetime="<?php the_time('Y.m.d'); ?>" class="card__date"><?php the_time('Y.m.d'); ?></time>
+              <time datetime="<?php the_time('c'); ?>" class="card__date"><?php the_time('Y.m.d'); ?></time>
               <p class="card__title"><?php the_title(); ?></p>
             </div>
           </div>

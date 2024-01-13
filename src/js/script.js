@@ -346,6 +346,7 @@ jQuery(function ($) { // この中であればWordpressでも「$」が使用可
 	});
 
 
+
   //Comtact Form 7でエラーが出た時上に動く
   
   var wpcf7Elm = document.querySelector('.wpcf7');

@@ -4,64 +4,36 @@
       <section class="mv">
         <div class="mv__wrapper">
           <div class="mv__images">
-            <div class="swiper js-mv-swiper u-desktop">
+            <div class="swiper js-mv-swiper">
               <div class="swiper-wrapper">
-
-                <?php if (have_posts()) : ?>
-                <?php while (have_posts()) : the_post(); ?>
-                
+                <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
+                <?php
+                    // 画像データを取得
+                    $group_name_pc = get_field('mv_image-pc');
+                    $group_name = get_field('mv_image');
+                    
+                    if ($group_name_pc && $group_name) :
+                ?>
                 <picture class="swiper-slide mv__image">
-                  <source media="(min-width: 768px)" srcset="<?php the_field('mv-pc_1'); ?>">
-                  <img src="<?php the_field('mv_1'); ?>" alt="">
+                    <source media="(min-width: 768px)" srcset="<?php echo esc_url($group_name_pc['mv-pc_1']); ?>">
+                    <img src="<?php echo esc_url($group_name['mv_1']); ?>" alt="">
                 </picture>
                 <picture class="swiper-slide mv__image">
-                  <source media="(min-width: 768px)" srcset="<?php the_field('mv-pc_2'); ?>">
-                  <img src="<?php the_field('mv_2'); ?>" alt="">
+                    <source media="(min-width: 768px)" srcset="<?php echo esc_url($group_name_pc['mv-pc_2']); ?>">
+                    <img src="<?php echo esc_url($group_name['mv_2']); ?>" alt="">
                 </picture>
                 <picture class="swiper-slide mv__image">
-                  <source media="(min-width: 768px)" srcset="<?php the_field('mv-pc_3'); ?>">
-                  <img src="<?php the_field('mv_3'); ?>" alt="">
+                    <source media="(min-width: 768px)" srcset="<?php echo esc_url($group_name_pc['mv-pc_3']); ?>">
+                    <img src="<?php echo esc_url($group_name['mv_3']); ?>" alt="">
                 </picture>
                 <picture class="swiper-slide mv__image">
-                  <source media="(min-width: 768px)" srcset="<?php the_field('mv-pc_4'); ?>">
-                  <img src="<?php the_field('mv_4'); ?>" alt="">
+                    <source media="(min-width: 768px)" srcset="<?php echo esc_url($group_name_pc['mv-pc_4']); ?>">
+                    <img src="<?php echo esc_url($group_name['mv_4']); ?>" alt="">
                 </picture>
-
-                <?php endwhile; ?>
                 <?php endif; ?>
-
-                <!-- <div class="swiper-slide mv__image">
-                  <img src="<?php echo get_template_directory_uri() ?>/dist/assets/images/common/mv_pc1.png" alt="">
-                </div>
-                <div class="swiper-slide mv__image">
-                  <img src="<?php echo get_template_directory_uri() ?>/dist/assets/images/common/mv_pc2.png" alt="">
-                </div>
-                <div class="swiper-slide mv__image">
-                  <img src="<?php echo get_template_directory_uri() ?>/dist/assets/images/common/mv_pc3.png" alt="">
-                </div>
-                <div class="swiper-slide mv__image">
-                  <img src="<?php echo get_template_directory_uri() ?>/dist/assets/images/common/mv_pc4.png" alt="">
-                </div> -->
-
+                <?php endwhile; endif; ?>
               </div>
             </div>
-            <div class="swiper js-mv-swiper u-mobile">
-              <div class="swiper-wrapper">
-                <div class="swiper-slide mv__image">
-                  <img src="<?php echo get_template_directory_uri() ?>/dist/assets/images/common/mv_1.png" alt="">
-                </div>
-                <div class="swiper-slide mv__image">
-                  <img src="<?php echo get_template_directory_uri() ?>/dist/assets/images/common/mv_2.png" alt="">
-                </div>
-                <div class="swiper-slide mv__image">
-                  <img src="<?php echo get_template_directory_uri() ?>/dist/assets/images/common/mv_3.png" alt="">
-                </div>
-                <div class="swiper-slide mv__image">
-                  <img src="<?php echo get_template_directory_uri() ?>/dist/assets/images/common/mv_4.png" alt="">
-                </div>
-              </div>
-            </div>
-          </div>
           <div class="mv__body">
             <h2 class="mv__title">DIVING</h2>
             <p class="mv__sub-title">into the ocean</p>
@@ -244,7 +216,7 @@
                 </div>
                 <div class="card__body">
                   <div class="card__header">
-                    <time datetime="<?php the_time('Y.m.d'); ?>" class="card__date"><?php the_time('Y.m.d'); ?></time>
+                    <time datetime="<?php the_time('c'); ?>" class="card__date"><?php the_time('Y.m.d'); ?></time>
                     <p class="card__title"><?php the_title(); ?></p>
                   </div>
                   <p class="card__text">
@@ -265,7 +237,7 @@
               <?php endif; ?>
             </div>
             <div class="blog__button">
-              <a href="<?php echo $blog ?>" class="button">View more<span class="button__arrow"></span></a>
+              <a href="<?php echo $blog_page ?>" class="button">View more<span class="button__arrow"></span></a>
             </div>
           </div>
         </div>
@@ -570,13 +542,13 @@
                   <a href="<?php echo $campaign ?>" class="nav-items__main">キャンペーン</a>
                 </li>
                 <li class="nav-items__item">
-                  <a href="<?php echo $campaign ?>#post-282" class="nav-items__sub">ライセンス取得</a>
+                  <a href="<?php echo $category ?>/fun" class="nav-items__sub">ファンダイビング</a>
                 </li>
                 <li class="nav-items__item">
-                  <a href="<?php echo $campaign ?>#post-283" class="nav-items__sub">貸切体験ダイビング</a>
+                  <a href="<?php echo $category ?>/license" class="nav-items__sub">ライセンス講習</a>
                 </li>
                 <li class="nav-items__item">
-                  <a href="<?php echo $campaign ?>#post-501" class="nav-items__sub">ナイトダイビング</a>
+                  <a href="<?php echo $category ?>/experience" class="nav-items__sub">体験ダイビング</a>
                 </li>
                 <li class="nav-items__unit">
                   <a href="<?php echo $about ?>" class="nav-items__main">私たちについて</a>
@@ -596,7 +568,7 @@
                   <a href="<?php echo $information ?>#info-fun" class="nav-items__sub">ファンダイビング</a>
                 </li>
                 <li class="nav-items__unit">
-                  <a href="<?php echo $blog ?>" class="nav-items__main">ブログ</a>
+                  <a href="<?php echo $blog_page ?>" class="nav-items__main">ブログ</a>
                 </li>
               </ul>
             </div>

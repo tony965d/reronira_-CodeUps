@@ -35,8 +35,8 @@ function my_setup() {
 	global $information;
   $information = esc_url(home_url( '/information' ));
 
-	global $blog;
-  $blog = esc_url(home_url( '/blog' ));
+	global $blog_page;
+  $blog_page = esc_url(home_url( '/blog' ));
 
 	global $voice;
   $voice = esc_url(home_url( '/voice' ));
@@ -58,6 +58,9 @@ function my_setup() {
 
 	global $SiteMap;
 	$SiteMap = esc_url(home_url( '/SiteMap' ));
+	
+	global $category;
+	$category = esc_url(home_url( '/category' ));
 
 }
 add_action( 'after_setup_theme', 'my_setup' );
@@ -83,6 +86,7 @@ function my_script_init() {
 add_action('wp_enqueue_scripts', 'my_script_init');
 
 
+///// JavaScriptファイルを遅延読み込みする /////
 function add_defer( $tag ) {
 	if (is_admin()){
 			return $tag; 
@@ -247,15 +251,24 @@ add_action( 'pre_get_posts', 'change_set_blog' );
 
 
 
+// function change_set_voice($query) {
+// 	if ( is_admin() || ! $query->is_main_query() )
+// 			return;
+// 	if ( $query->is_post_type_archive('voice') ) { //カスタム投稿タイプを指定
+// 			$query->set( 'posts_per_page', '6' ); //表示件数を指定
+// 	}
+// }
+// add_action( 'pre_get_posts', 'change_set_voice' );
+
+
+
 function change_set_voice($query) {
-	if ( is_admin() || ! $query->is_main_query() )
-			return;
-	if ( $query->is_post_type_archive('voice') ) { //カスタム投稿タイプを指定
-			$query->set( 'posts_per_page', '6' ); //表示件数を指定
+	if ((is_post_type_archive('voice') || is_tax('voice_category')) && $query->is_main_query()) {
+			$query->set('posts_per_page', 6); // 6 件表示に設定。必要に応じて変更してください。
 	}
 }
-add_action( 'pre_get_posts', 'change_set_voice' );
 
+add_action('pre_get_posts', 'change_set_voice');
 
 
 
@@ -366,3 +379,42 @@ function wpcf7_autop_return_false() {
 //     return $items;
 // }
 // add_filter( 'wpcf7_ajax_json_echo', 'wpcf7_custom_item_error_position', 10, 2 );
+
+
+
+
+
+
+//WordPress管理画面の「投稿」を任意の名前に変更する方法
+function Change_menulabel() {
+	global $menu;
+	global $submenu;
+	$name = 'キャンペーン';
+	$menu[5][0] = $name;
+	$submenu['edit.php'][5][0] = $name.'一覧';
+	$submenu['edit.php'][10][0] = '新規追加';
+}
+function Change_objectlabel() {
+	global $wp_post_types;
+	$name = 'キャンペーン';
+	$labels = &$wp_post_types['post']->labels;
+	$labels->name = $name;
+	$labels->singular_name = $name;
+	$labels->add_new = _x('追加', $name);
+	$labels->add_new_item = $name.'の新規追加';
+	$labels->edit_item = $name.'の編集';
+	$labels->new_item = '新規'.$name;
+	$labels->view_item = $name.'を表示';
+	$labels->search_items = $name.'を検索';
+	$labels->not_found = $name.'が見つかりませんでした';
+	$labels->not_found_in_trash = 'ゴミ箱に'.$name.'は見つかりませんでした';
+}
+add_action( 'init', 'Change_objectlabel' );
+add_action( 'admin_menu', 'Change_menulabel' );
+
+
+
+
+///// WPのバージョンを非表示 /////
+remove_action('wp_head', 'wp_generator');
+

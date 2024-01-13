@@ -3,16 +3,15 @@
 <main>
   <section class="mv-sub">
     <div class="mv-sub__inner">
-    <div class="mv-sub__wrapper">
-      <div class="mv-sub__image">
-      <picture class="mv-sub__image">
-        <source media="(min-width: 768px)" srcset="<?php echo get_template_directory_uri(); ?>/dist/assets/images/common/voice_mv-pc.png">
-        <img src="<?php echo get_template_directory_uri(); ?>/dist/assets/images/common/voice_mv.png" alt="">
-      </picture>
-      <div class="mv-sub__body">
-        <h2 class="mv-sub__title">Voice</h2>
+      <div class="mv-sub__wrapper">
+        <picture class="mv-sub__image">
+          <source media="(min-width: 768px)" srcset="<?php echo get_template_directory_uri(); ?>/dist/assets/images/common/voice_mv-pc.png">
+          <img src="<?php echo get_template_directory_uri(); ?>/dist/assets/images/common/voice_mv.png" alt="">
+        </picture>
+        <div class="mv-sub__body">
+          <h2 class="mv-sub__title">Voice</h2>
+        </div>
       </div>
-    </div>
     </div>
   </section>
 
@@ -41,7 +40,7 @@
               foreach ( $terms as $term ) {
                   // 投稿でタームのスラッグを選択していれば、currentを付与
                   if ( is_object_in_term( $post->ID, 'voice_category', $term->slug ) ) {
-                      echo '<div class="categories__category"><a class="categories__category-bg is-active current" href="'.get_term_link($term).'">'.$term->name.'</a></div>';
+                      echo '<div class="__category"><a class="categories__category-bg is-active current" href="'.get_term_link($term).'">'.$term->name.'</a></div>';
                   } else {
                       echo '<div class="categories__category"><a class="categories__category-bg is-active" href="'.get_term_link($term).'">'.$term->name.'</a></div>';
                   }          

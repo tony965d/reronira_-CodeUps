@@ -3,16 +3,15 @@
 <main>
   <section class="mv-sub">
     <div class="mv-sub__inner">
-    <div class="mv-sub__wrapper">
-      <div class="mv-sub__image">
-      <picture class="mv-sub__image">
-        <source media="(min-width: 768px)" srcset="<?php echo get_template_directory_uri(); ?>/dist/assets/images/common/information_mv-pc.png">
-        <img src="<?php echo get_template_directory_uri(); ?>/dist/assets/images/common/information_mv.png" alt="">
-      </picture>
-      <div class="mv-sub__body">
-        <h2 class="mv-sub__title">Information</h2>
+      <div class="mv-sub__wrapper">
+        <picture class="mv-sub__image">
+          <source media="(min-width: 768px)" srcset="<?php echo get_template_directory_uri(); ?>/dist/assets/images/common/information_mv-pc.png">
+          <img src="<?php echo get_template_directory_uri(); ?>/dist/assets/images/common/information_mv.png" alt="">
+        </picture>
+        <div class="mv-sub__body">
+          <h2 class="mv-sub__title">Information</h2>
+        </div>
       </div>
-    </div>
     </div>
   </section>
 

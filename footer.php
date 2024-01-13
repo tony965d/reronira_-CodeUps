@@ -3,7 +3,7 @@
       global $campaign;
       global $about;
       global $information;
-      global $blog; 
+      global $blog_page; 
       global $voice; 
       global $price; 
       global $faq; 
@@ -11,6 +11,7 @@
       global $privacy; 
       global $termsOfService; 
       global $SiteMap; 
+      global $category;
     ?>
       
       <section class="contact top-contact top-contact--sub">
@@ -88,13 +89,13 @@
                   <a href="<?php echo $campaign ?>" class="nav-items__main">キャンペーン</a>
                 </li>
                 <li class="nav-items__item">
-                  <a href="<?php echo $campaign ?>#post-282" class="nav-items__sub">ライセンス取得</a>
+                  <a href="<?php echo $category ?>/fun" class="nav-items__sub">ファンダイビング</a>
                 </li>
                 <li class="nav-items__item">
-                  <a href="<?php echo $campaign ?>#post-283" class="nav-items__sub">貸切体験ダイビング</a>
+                  <a href="<?php echo $category ?>/license" class="nav-items__sub">ライセンス講習</a>
                 </li>
                 <li class="nav-items__item">
-                  <a href="<?php echo $campaign ?>#post-501" class="nav-items__sub">ナイトダイビング</a>
+                  <a href="<?php echo $category ?>/experience" class="nav-items__sub">体験ダイビング</a>
                 </li>
                 <li class="nav-items__unit">
                   <a href="<?php echo $about ?>" class="nav-items__main">私たちについて</a>
@@ -114,7 +115,7 @@
                   <a href="<?php echo $information ?>#info-fun" class="nav-items__sub">ファンダイビング</a>
                 </li>
                 <li class="nav-items__unit">
-                  <a href="<?php echo $blog ?>" class="nav-items__main">ブログ</a>
+                  <a href="<?php echo $blog_page ?>" class="nav-items__main">ブログ</a>
                 </li>
               </ul>
             </div>

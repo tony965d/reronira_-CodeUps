@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="ja">
   <head>
+    <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width,initial-scale=1.0" />
     <meta name="format-detection" content="telephone=no" />
     <?php wp_head(); ?>
@@ -11,7 +12,7 @@
     global $campaign;
     global $about;
     global $information;
-    global $blog; 
+    global $blog_page; 
     global $voice; 
     global $price; 
     global $faq; 
@@ -19,6 +20,7 @@
     global $privacy; 
     global $termsOfService; 
     global $SiteMap; 
+    global $category;
   ?>
 
   <body>
@@ -55,7 +57,7 @@
               </a>    
             </li>
             <li class="pc-nav__item">
-              <a href="<?php echo $blog ?>" class="pc-nav__menu">
+              <a href="<?php echo $blog_page; ?>" class="pc-nav__menu">
                 <div class="pc-nav__title">Blog</div>
                 <p class="pc-nav__sub-title">ブログ</p>
               </a>   
@@ -96,13 +98,13 @@
                   <a href="<?php echo $campaign ?>" class="nav-items__main">キャンペーン</a>
                 </li>
                 <li class="nav-items__item">
-                  <a href="<?php echo $campaign ?>#post-282" class="nav-items__sub">ライセンス取得</a>
+                  <a href="<?php echo $category ?>/fun" class="nav-items__sub">ファンダイビング</a>
                 </li>
                 <li class="nav-items__item">
-                  <a href="<?php echo $campaign ?>#post-283" class="nav-items__sub">貸切体験ダイビング</a>
+                  <a href="<?php echo $category ?>/license" class="nav-items__sub">ライセンス講習</a>
                 </li>
                 <li class="nav-items__item">
-                  <a href="<?php echo $campaign ?>#post-501" class="nav-items__sub">ナイトダイビング</a>
+                  <a href="<?php echo $category ?>/experience" class="nav-items__sub">体験ダイビング</a>
                 </li>
                 <li class="nav-items__unit">
                   <a href="<?php echo $about ?>" class="nav-items__main">私たちについて</a>
@@ -122,7 +124,7 @@
                   <a href="<?php echo $information ?>#info-fun" class="nav-items__sub">ファンダイビング</a>
                 </li>
                 <li class="nav-items__unit">
-                  <a href="<?php echo $blog ?>" class="nav-items__main">ブログ</a>
+                  <a href="<?php echo $blog_page ?>" class="nav-items__main">ブログ</a>
                 </li>
               </ul>
             </div>

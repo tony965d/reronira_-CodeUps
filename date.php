@@ -3,16 +3,15 @@
 <main>
   <section class="mv-sub">
     <div class="mv-sub__inner">
-    <div class="mv-sub__wrapper">
-      <div class="mv-sub__image">
-      <picture class="mv-sub__image">
-        <source media="(min-width: 768px)" srcset="<?php echo get_template_directory_uri(); ?>/dist/assets/images/common/blog_mv-pc.png">
-        <img src="<?php echo get_template_directory_uri(); ?>/dist/assets/images/common/blog_mv.png" alt="">
-      </picture>
-      <div class="mv-sub__body">
-        <h2 class="mv-sub__title">Blog</h2>
+      <div class="mv-sub__wrapper">
+        <picture class="mv-sub__image">
+          <source media="(min-width: 768px)" srcset="<?php echo get_template_directory_uri(); ?>/dist/assets/images/common/blog_mv-pc.png">
+          <img src="<?php echo get_template_directory_uri(); ?>/dist/assets/images/common/blog_mv.png" alt="">
+        </picture>
+        <div class="mv-sub__body">
+          <h2 class="mv-sub__title">Blog</h2>
+        </div>
       </div>
-    </div>
     </div>
   </section>
 
@@ -23,10 +22,10 @@
       }?>
   </div>
 
-  <section class="blog-sub top-blog-sub">
-    <div class="blog-sub__inner inner">
-      <div class="blog-sub__two-columns two-columns">
-        <div class="blog-sub__cards cards">
+  <section class="two-columns top-two-columns">
+    <div class="two-columns__inner inner">
+      <div class="two-columns__container">
+        <div class="two-columns__left cards">
 
           <?php if (have_posts()) : ?>
           <?php while (have_posts()) : the_post(); ?>
@@ -41,7 +40,7 @@
             </div>
             <div class="card__body card__body--blog">
               <div class="card__header">
-                <time datetime="<?php the_time('Y.m.d'); ?>" class="card__date"><?php the_time('Y.m.d'); ?></time>
+                <time datetime="<?php the_time('c'); ?>" class="card__date"><?php the_time('Y.m.d'); ?></time>
                 <p class="card__title"><?php the_title(); ?></p>
               </div>
               <p class="card__text">
